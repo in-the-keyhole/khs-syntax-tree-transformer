@@ -4,7 +4,7 @@
 
 ##Installation and Execution
 
-1. Clone 
+1. Clone Repo
 2. Import as Maven Project into Eclipse or Intellij 
 3. Execute main method below with following command line arguments 
 
