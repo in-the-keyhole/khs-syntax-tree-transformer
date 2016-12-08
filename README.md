@@ -8,6 +8,6 @@
 2. Import as Maven Project into Eclipse or Intellij 
 3. Execute main method below with following parameters 
 
-  $java khs.transformer.CommandLine demo.json khs.example 
+     $java khs.transformer.CommandLine demo.json khs.example 
   
 > Check for a `Program.java` program in the project directory. 
