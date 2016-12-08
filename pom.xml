@@ -46,11 +46,6 @@
 			<artifactId>h2</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>com.keyholesoftware</groupId>
-			<artifactId>khs-grokola-api-stats-client</artifactId>
-			<version>0.0.3-SNAPSHOT</version>
-		</dependency>
 
 		 <dependency>
             <groupId>org.apache.velocity</groupId>
