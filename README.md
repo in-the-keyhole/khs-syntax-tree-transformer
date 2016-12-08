@@ -6,7 +6,7 @@
 
 1. Clone 
 2. Import as Maven Project into Eclipse or Intellij 
-3. Execute main method below with following parameters 
+3. Execute main method below with following command line arguments 
 
 ```$java khs.transformer.CommandLine demo.json khs.example ```
   
