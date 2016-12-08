@@ -1,0 +1,176 @@
+ {
+  "name" : "Program",
+  "typeName" : "CLASS",
+  "variables" : [ {
+    "name" : "CONST-PI",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "fileLevel" : null,
+    "variables" : [ ]
+  }, {
+    "name" : "WORK-1",
+    "typeName" : "VARIABLE",
+    "value" : "ZERO",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "fileLevel" : null,
+    "variables" : [ ]
+  }, {
+    "name" : "WORK-2",
+    "typeName" : "VARIABLE",
+    "value" : "ZERO",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "fileLevel" : null,
+    "variables" : [ ]
+  }, {
+    "name" : "PRINT-LINE",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : true,
+    "fileLevel" : null,
+    "variables" : [ {
+      "name" : "EDT-ID",
+      "typeName" : "VARIABLE",
+      "value" : "SPACES",
+      "isLocal" : false,
+      "isWorking" : true,
+      "isArray" : false,
+      "fileLevel" : null,
+      "variables" : [ ]
+    }, {
+      "name" : "FILLER",
+      "typeName" : "VARIABLE",
+      "value" : "' Perimeter '",
+      "isLocal" : false,
+      "isWorking" : true,
+      "isArray" : false,
+      "fileLevel" : null,
+      "variables" : [ ]
+    }, {
+      "name" : "EDT-3-15-CIR",
+      "typeName" : "VARIABLE",
+      "value" : null,
+      "isLocal" : false,
+      "isWorking" : true,
+      "isArray" : false,
+      "fileLevel" : null,
+      "variables" : [ ]
+    }, {
+      "name" : "FILLER",
+      "typeName" : "VARIABLE",
+      "value" : "' Radius '",
+      "isLocal" : false,
+      "isWorking" : true,
+      "isArray" : false,
+      "fileLevel" : null,
+      "variables" : [ ]
+    }, {
+      "name" : "EDT-3-15-RAD",
+      "typeName" : "VARIABLE",
+      "value" : null,
+      "isLocal" : false,
+      "isWorking" : true,
+      "isArray" : false,
+      "fileLevel" : null,
+      "variables" : [ ]
+    }, {
+      "name" : "FILLER",
+      "typeName" : "VARIABLE",
+      "value" : "' Pi '",
+      "isLocal" : false,
+      "isWorking" : true,
+      "isArray" : false,
+      "fileLevel" : null,
+      "variables" : [ ]
+    }, {
+      "name" : "EDT-1-15-PI",
+      "typeName" : "VARIABLE",
+      "value" : null,
+      "isLocal" : false,
+      "isWorking" : true,
+      "isArray" : false,
+      "fileLevel" : null,
+      "variables" : [ ]
+    } ]
+  } ],
+  "functions" : [ {
+    "name" : "A-PARA",
+    "typeName" : "FUNCTION",
+    "methods" : [ {
+      "name" : "123.46TOWORK-1",
+      "typeName" : "METHOD",
+      "type" : {
+        "name" : null,
+        "typeName" : "MOVE",
+        "varName" : "WORK-1",
+        "value" : "123.46"
+      }
+    }, {
+      "name" : "2TOWORK-2",
+      "typeName" : "METHOD",
+      "type" : {
+        "typeName" : "ADD",
+        "value" : "2",
+        "var1" : "WORK-2",
+        "var2" : null
+      }
+    }, {
+      "name" : "3GIVINGWORK-3",
+      "typeName" : "METHOD",
+      "type" : {
+        "typeName" : "MULTI",
+        "value" : "3",
+        "var1" : "WORK-2",
+        "var2" : "WORK-3"
+      }
+    }, {
+      "name" : "C-PARA",
+      "typeName" : "METHOD",
+      "type" : {
+        "name" : "C-PARA",
+        "typeName" : "CALL"
+      }
+    } ]
+  }, {
+    "name" : "B-PARA",
+    "typeName" : "FUNCTION",
+    "methods" : [ {
+      "name" : "PITOCONST-PI",
+      "typeName" : "METHOD",
+      "type" : {
+        "name" : null,
+        "typeName" : "MOVE",
+        "varName" : "CONST-PI",
+        "value" : "PI"
+      }
+    }, {
+      "name" : "ZEROTOEDT-ID",
+      "typeName" : "METHOD",
+      "type" : {
+        "name" : null,
+        "typeName" : "MOVE",
+        "varName" : "EDT-ID",
+        "value" : "ZERO"
+      }
+    } ]
+  }, {
+    "name" : "C-PARA",
+    "typeName" : "FUNCTION",
+    "methods" : [ {
+      "name" : "B-PARA",
+      "typeName" : "METHOD",
+      "type" : {
+        "name" : "B-PARA",
+        "typeName" : "CALL"
+      }
+    } ]
+  } ]
+}
