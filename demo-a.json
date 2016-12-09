@@ -1,4 +1,4 @@
-{
+ {
   "name" : "Program",
   "typeName" : "CLASS",
   "variables" : [ {
@@ -8,7 +8,7 @@
     "isLocal" : false,
     "isWorking" : true,
     "isArray" : false,
-    "varLevel" : "77",
+    "fileLevel" : null,
     "variables" : [ ]
   }, {
     "name" : "WORK-1",
@@ -17,7 +17,7 @@
     "isLocal" : false,
     "isWorking" : true,
     "isArray" : false,
-    "varLevel" : "77",
+    "fileLevel" : null,
     "variables" : [ ]
   }, {
     "name" : "WORK-2",
@@ -26,46 +26,33 @@
     "isLocal" : false,
     "isWorking" : true,
     "isArray" : false,
-    "varLevel" : "77",
+    "fileLevel" : null,
     "variables" : [ ]
-  },
-  
-  {
-    "name" : "WORK-3",
-    "typeName" : "VARIABLE",
-    "value" : "ZERO",
-    "isLocal" : false,
-    "isWorking" : true,
-    "isArray" : false,
-    "varLevel" : "77",
-    "variables" : [ ]
-  },
-  
-   {
+  }, {
     "name" : "PRINT-LINE",
     "typeName" : "VARIABLE",
     "value" : null,
     "isLocal" : false,
     "isWorking" : true,
     "isArray" : true,
-    "varLevel" : "01",
+    "fileLevel" : null,
     "variables" : [ {
       "name" : "EDT-ID",
       "typeName" : "VARIABLE",
-      "value" : "'ABCDE'",
+      "value" : "SPACES",
       "isLocal" : false,
       "isWorking" : true,
       "isArray" : false,
-      "varLevel" : "05",
+      "fileLevel" : null,
       "variables" : [ ]
-    }, {
-      "name" : "FILLER",
+       }, {
+       "name" : "FILLER",
       "typeName" : "VARIABLE",
       "value" : "' Perimeter '",
       "isLocal" : false,
       "isWorking" : true,
       "isArray" : false,
-      "varLevel" : "05",
+      "fileLevel" : null,
       "variables" : [ ]
     }, {
       "name" : "EDT-3-15-CIR",
@@ -74,7 +61,7 @@
       "isLocal" : false,
       "isWorking" : true,
       "isArray" : false,
-      "varLevel" : "05",
+      "fileLevel" : null,
       "variables" : [ ]
     }, {
       "name" : "FILLER",
@@ -83,7 +70,7 @@
       "isLocal" : false,
       "isWorking" : true,
       "isArray" : false,
-      "varLevel" : "05",
+      "fileLevel" : null,
       "variables" : [ ]
     }, {
       "name" : "EDT-3-15-RAD",
@@ -92,7 +79,7 @@
       "isLocal" : false,
       "isWorking" : true,
       "isArray" : false,
-      "varLevel" : "05",
+      "fileLevel" : null,
       "variables" : [ ]
     }, {
       "name" : "FILLER",
@@ -101,7 +88,7 @@
       "isLocal" : false,
       "isWorking" : true,
       "isArray" : false,
-      "varLevel" : "05",
+      "fileLevel" : null,
       "variables" : [ ]
     }, {
       "name" : "EDT-1-15-PI",
@@ -110,7 +97,7 @@
       "isLocal" : false,
       "isWorking" : true,
       "isArray" : false,
-      "varLevel" : "05",
+      "fileLevel" : null,
       "variables" : [ ]
     } ]
   } ],
@@ -178,14 +165,6 @@
     "name" : "C-PARA",
     "typeName" : "FUNCTION",
     "methods" : [ {
-      "name" : "DISPLAY",
-      "typeName" : "METHOD",
-      "type" : {
-        "name" : null,
-        "typeName" : "DISPLAY",
-        "value" : "\"PI IS: \" + CONST-PI"
-      }
-    }, {
       "name" : "B-PARA",
       "typeName" : "METHOD",
       "type" : {

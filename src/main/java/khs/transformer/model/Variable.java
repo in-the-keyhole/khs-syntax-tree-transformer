@@ -1,5 +1,8 @@
 package khs.transformer.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Variable {
 	
 	private String name;
@@ -9,10 +12,25 @@ public class Variable {
 	private boolean isLocal;
 	private boolean isWorking;
 	private boolean isArray;
-	private String fileLevel;
-	//private String[] variables;
+	private String  fileLevel;
+	private List<Variable> variables;
+	private String varLevel;
 	
 	
+	
+	
+	public String getVarLevel() {
+		return varLevel;
+	}
+	public void setVarLevel(String varLevel) {
+		this.varLevel = varLevel;
+	}
+	public List<Variable> getVariables() {
+		return variables;
+	}
+	public void setVariables(List<Variable> variables) {
+		this.variables = variables;
+	}
 	public String getValue() {
 		return value;
 	}
@@ -59,21 +77,68 @@ public class Variable {
 	
 	public String value() {
 		
-		return "ZERO".equals(this.getValue()) ? "0" : this.getValue();
+		return "ZERO".equalsIgnoreCase(this.getValue()) ? "0.0" : this.getValue();
 	}
 	
 	
 	public String expression() {
 		
 		String dataType = "Double";
+		String expression = null;
 		
 		if ("SPACES".equals(this.getValue())) {
-			
 			dataType = "String";
 		} 
+	
+		if (this.variables.isEmpty()) {
+		   // no levels, just define variable
+			if (this.name.equalsIgnoreCase("FILLER")) {
+				expression ="";				
+			} else {
+			   expression = "//Level "+this.getVarLevel()+"\n\tprivate "+dataType+" "+Syntax.var(this.getName()) +" = "+Syntax.val(this.value()) + ";";
+			}
+		} else {
+		 // get workstorage levels	
+		   List<String> vars = new ArrayList<String>();
+		   expression = expressionLevels(vars,this.variables);	
+		   expression += "//Level "+this.getVarLevel()+"\n\tObject[] "+Syntax.var(this.getName()) +" = new Object[]{";
+		   
+		    for (String var : vars) {		    	
+		    	expression += var+",";
+		    }
+		   
+		   
+		   expression+="};";
+		   
+	     			   
+		}
 		
 		
-		return "private "+dataType+" "+this.getName() +" = "+this.value() + ";";
+		return expression;
 	}
+
+
+    private String expressionLevels(List<String> vars,List<Variable> variables) {
+    	
+    	String expression = "";
+    	for (Variable v : variables) {
+    		
+    		if (v.getName().equalsIgnoreCase("FILLER")) {
+    			vars.add(Syntax.val(v.getValue()));
+    		} else {
+    			vars.add(Syntax.var(v.getName()));
+    		}
+    		
+    		expression += v.expression()+'\n'+'\t';
+    		
+    	}
+    	
+    	
+    	return expression;
+    	
+    }
+
+
+
 
 }

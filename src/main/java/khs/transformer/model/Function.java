@@ -11,7 +11,7 @@ public class Function {
 	private List<Method> methods;
 
 	public String getName() {
-		return name;
+		return Syntax.var(name);
 	}
 
 	public void setName(String name) {

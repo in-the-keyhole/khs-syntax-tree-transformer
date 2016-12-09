@@ -1,22 +1,22 @@
-package $program.pckge.$program.name
+package $program.pckge;
 
 public class $program.name   {
 
-    #foreach( $variable in $program.variables )
-        $variable.expression()  
-    #end
+#foreach( $variable in $program.variables )
+ 	$variable.expression()  
+#end
     
-    public void static main(String[] args) {
-         $program.name job = new $program.name ();
-        job.$program.functions[0].name ();
-    }   
+ public static void main(String[] args) {
+	 $program.name job = new $program.name ();
+     job.$program.functions[0].name ();
+  }   
     
-  #foreach( $function in $program.functions )
-    public void $function.name () {
-          #foreach( $method in $function.methods)
-     	      $method.expression()
-          #end   
-    }
+#foreach( $function in $program.functions )
+ public void $function.name () {
+ #foreach( $method in $function.methods)
+   $method.expression();
+ #end   
+  }
   #end
     
 }
