@@ -1,4 +1,4 @@
-package khs.transformer.service;
+package khs.cobol.transformer.service;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -22,8 +22,8 @@ import org.springframework.stereotype.Service;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import khs.transformer.model.Function;
-import khs.transformer.model.Program;
+import khs.cobol.transformer.model.Function;
+import khs.cobol.transformer.model.Program;
 
 @Service
 public class TransformService {
@@ -37,6 +37,7 @@ public class TransformService {
 		LOG.info("Parsing :" + jsonFile);
 		Program program = parse(readJson(jsonFile));
 		program.setPckge(pckg);
+		Program.singleInstance = program;
 		LOG.info("Transforming");
 		createTemplate(program);
 		LOG.info("Transformed");

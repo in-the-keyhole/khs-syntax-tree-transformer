@@ -1,6 +1,8 @@
-package khs.transformer.model;
+package khs.cobol.transformer.model;
 
 import java.util.List;
+
+import khs.transformer.util.Syntax;
 
 public class Function {
 	

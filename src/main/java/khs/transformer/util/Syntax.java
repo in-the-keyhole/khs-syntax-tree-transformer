@@ -1,11 +1,23 @@
-package khs.transformer.model;
+package khs.transformer.util;
 
 public class Syntax {
 
+	//Source templates
+	public static String Signature = "public %s %s(){\n";
+	public static String Body = "\t %s \n";
+	public static String Result = "\treturn %s;\n }\n";
+	
+	
+	public static String strip(char c,String s) {		
+		
+		return s.replace(c,' ');
+	}
+	
+	
 	// Validate variable syntax
 	public static String var(String value) {
 
-		String validated = value.replace('-', '_');
+		String validated = value != null ? value.replace('-', '_') : value;
 		return validated;
 	}
 	

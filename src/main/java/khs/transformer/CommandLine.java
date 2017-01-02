@@ -1,6 +1,6 @@
 package khs.transformer;
 
-import khs.transformer.service.TransformService;
+import khs.cobol.transformer.service.TransformService;
 
 public class CommandLine {
 

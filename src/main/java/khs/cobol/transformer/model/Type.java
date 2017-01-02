@@ -1,4 +1,4 @@
-package khs.transformer.model;
+package khs.cobol.transformer.model;
 
 public class Type {
 	

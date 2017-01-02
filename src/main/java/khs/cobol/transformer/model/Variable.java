@@ -1,7 +1,9 @@
-package khs.transformer.model;
+package khs.cobol.transformer.model;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import khs.transformer.util.Syntax;
 
 public class Variable {
 	
@@ -15,10 +17,18 @@ public class Variable {
 	private String  fileLevel;
 	private List<Variable> variables;
 	private String varLevel;
+	private String picture;
 	
 	
 	
 	
+	
+	public String getPicture() {
+		return picture;
+	}
+	public void setPicture(String picture) {
+		this.picture = picture;
+	}
 	public String getVarLevel() {
 		return varLevel;
 	}
@@ -85,6 +95,14 @@ public class Variable {
 		
 		String dataType = "Double";
 		String expression = null;
+		
+		if (this.picture != null && this.picture.indexOf('Z') >= 0) {
+			dataType = "Double";
+		}
+		
+		if (this.picture != null && this.picture.indexOf('X') >= 0) {
+			dataType = "String";
+		}
 		
 		if ("SPACES".equals(this.getValue())) {
 			dataType = "String";
