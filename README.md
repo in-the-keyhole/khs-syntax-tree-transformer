@@ -237,4 +237,92 @@ Following is input `demo.json` created elswhwere by a parser of Cobol:
 }
 
 ```
+
+## DB2
+
+The POC aims to translate Cobol programs or stored proceudres that use DB2, to Java code that uses an ORM. As a first 
+step in proof-of-concdpt persistence, we translate simple DB2 programs to demo Java code that uses DB2 Express.
+
+The DB2 Express runs in a Docker container. There are no pooled connections. This is just a POC step.
+
+### Docker DB2 Express Container
+
+
+Ensure you have access to Docker. [https://www.docker.com/](https://www.docker.com/)
+
+Use this Docker image for initial DB2 binding: 
+[https://hub.docker.com/r/ibmcom/db2express-c/](https://hub.docker.com/r/ibmcom/db2express-c/)
+
+1. `docker run --name db2 -it -p 50000:50000 -e DB2INST1_PASSWORD=db2inst1-pwd -e LICENSE=accept ibmcom/db2express-c:latest bash`
+2. You are logged into the the docker machine command window at complettion of the run command
+3. Issue `su db2inst1`
+4. Issue `db2sampl` (takes a while to create database "SAMPLE")
+
+```
+
+[db2inst1@6f44040637fc /]$ db2sampl
+
+  Creating database "SAMPLE"...
+  Connecting to database "SAMPLE"...
+  Creating tables and data in schema "DB2INST1"...
+  Creating tables with XML columns and XML data in schema "DB2INST1"...
+
+  'db2sampl' processing complete.
+
+```
+
+5. At completion test, the installation:
+
+```
+
+db2 start database manager
+db2 connect to sample
+db2 list tables
+db2 describe table employee
+db2 describe table org
+db2 select firstnme, lastname, workdept from employee order by lastname, firstnme
+db2 select deptnumb, deptname, manager, division, location from org order by location
+
+
+```
+
+Note that the database disappears after we stop the Docker machine. To avoid this, mount an external drive, and
+start the Docker image created by `run` as a daemon.
+
+```
+
+docker run --name db2 -d -it -p 50000:50000 -e DB2INST1_PASSWORD=db2inst1-pwd -e LICENSE=accept -v  $(pwd)/dbstore:/dbstore ibmcom/db2express-c:latest db2start
+
+
+
+```
+
+`Default DB2 database path                       (DFTDBPATH) = /home/db2inst1`
+
+Container `/dbstore` maps to host `$(pwd)/dbstore`
+
+
+Switch db volume to container `/dbstore` 
+
+
+`docker exec -it db2 bash` to log into container shell
+
+`chown db2inst1 /dbstore`
+`su db2inst1`
+`chmod u+rw,g+rw,o+rw /dbstore`
+`db2 start dbm`
+        `db2 update dbm cfg using  DFTDBPATH /dbstore`
+        `db2 get dbm cfg |less`  (Visually verify "Default database path" path item)
+`db2sampl -dbpath /dbstore`
+
+`tar cvf /dbspace/sample.tar db2inst1` (Backup installed sample db to shared volume)
+
+`tar xvf /dbspace/sample.tar` (Restore sample db to new container that has the shared volume)
+
+
+At this point the container can be stopped and restarted without losing the smaple database. It sits in your
+/dbspace directory.
+
+
+
 -----------------------------------------------------------

@@ -1,0 +1,70 @@
+{
+  "name" : "COBOLDB2",
+  "typeName" : "CLASS",
+  "variables" : [ {
+    "name" : "SQLCA",
+    "typeName" : "SQLCA",
+    "value" : "SQLCA",
+    "isLocal" : true,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "SQLCA",
+    "picture" : null,
+    "variables" : [ ]
+  }, {
+    "name" : "WS-EMPLOYEE-REC",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : true,
+    "varLevel" : "01",
+    "picture" : null,
+    "variables" : [ {
+      "name" : "WS-EMPNO",
+      "typeName" : "VARIABLE",
+      "value" : null,
+      "isLocal" : true,
+      "isWorking" : false,
+      "isArray" : false,
+      "varLevel" : "05",
+      "picture" : "999999",
+      "variables" : [ ]
+    }, {
+      "name" : "WS-LAST-NAME",
+      "typeName" : "VARIABLE",
+      "value" : null,
+      "isLocal" : true,
+      "isWorking" : false,
+      "isArray" : false,
+      "varLevel" : "05",
+      "picture" : "XXXXXXXXXXXXXXX",
+      "variables" : [ ]
+    }, {
+      "name" : "WS-FIRST-NAME",
+      "typeName" : "VARIABLE",
+      "value" : null,
+      "isLocal" : true,
+      "isWorking" : false,
+      "isArray" : false,
+      "varLevel" : "05",
+      "picture" : "XXXXXXXXXXXX",
+      "variables" : [ ]
+    } ]
+  } ],
+  "functions" : [ {
+    "name" : "MAIN",
+    "typeName" : "FUNCTION",
+    "methods" : [ {
+      "name" : "db2SELECT1",
+      "typeName" : "METHOD",
+      "type" : {
+        "name" : null,
+        "typeName" : "SELECT",
+        "varName" : "SELECT1",
+        "value" : "SELECT EMPNO LASTNAME FIRSTNME INTO :WS-EMPNO :WS-LAST-NAME :WS-FIRST-NAME FROM EMPLOYEE WHERE EMPNO = 200310 "
+      }
+    } ]
+  } ],
+  "sequence" : "2"
+}
