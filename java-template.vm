@@ -20,3 +20,32 @@ public class $program.name   {
 #end
 
 }
+
+#**
+*
+ To add DB --  notes:
+ Add JDBC bingings if there is a variable named SQLCA.
+
+ Connection dbConnection = null;
+ try {
+    dbConnection = getDBConnection();
+
+    // Call prodDiv here
+
+ } catch (SQLException e) {
+     e.printStackTrace();
+ } finally {
+     try {
+        dbConnection.close();
+    } catch (SQLException e) {
+        e.printStackTrace();
+        }
+
+ }
+
+ // Assumes Procdiv sql select into currently
+ // Gen a normal prepared statment.
+ // Use a normal JDBC select boilerplate
+ // Generate marker substituion from JSON method: sqlargs array of strings.
+
+ *#

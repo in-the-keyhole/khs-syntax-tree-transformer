@@ -28,7 +28,7 @@
       "isWorking" : false,
       "isArray" : false,
       "varLevel" : "05",
-      "picture" : "999999",
+      "picture" : "XXXXXX",
       "variables" : [ ]
     }, {
       "name" : "WS-LAST-NAME",
@@ -53,18 +53,15 @@
     } ]
   } ],
   "functions" : [ {
-    "name" : "MAIN",
+    "name" : "procDiv",
     "typeName" : "FUNCTION",
     "methods" : [ {
-      "name" : "db2SELECT1",
+      "name" : "db2Select1",
       "typeName" : "METHOD",
-      "type" : {
-        "name" : null,
-        "typeName" : "SELECT",
-        "varName" : "SELECT1",
-        "value" : "SELECT EMPNO LASTNAME FIRSTNME INTO :WS-EMPNO :WS-LAST-NAME :WS-FIRST-NAME FROM EMPLOYEE WHERE EMPNO = 200310 "
-      }
+      "type" : null,
+      "sql" : " SELECT EMPNO, LASTNAME, FIRSTNME FROM EMPLOYEE WHERE EMPNO=200310 ",
+      "sqlArgs" : [ "WS-EMPNO", "WS-LAST-NAME", "WS-FIRST-NAME" ]
     } ]
   } ],
-  "sequence" : "2"
+  "sequence" : "1"
 }
