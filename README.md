@@ -253,10 +253,16 @@ Ensure you have access to Docker. [https://www.docker.com/](https://www.docker.c
 Use this Docker image for initial DB2 binding: 
 [https://hub.docker.com/r/ibmcom/db2express-c/](https://hub.docker.com/r/ibmcom/db2express-c/)
 
-1. `docker run --name db2 -it -p 50000:50000 -e DB2INST1_PASSWORD=db2inst1-pwd -e LICENSE=accept ibmcom/db2express-c:latest bash`
-2. You are logged into the the docker machine command window at complettion of the run command
-3. Issue `su db2inst1`
-4. Issue `db2sampl` (takes a while to create database "SAMPLE")
+```
+
+docker run --name db2 -d -it -p 50000:50000 -e DB2INST1_PASSWORD=db2inst1-pwd -e LICENSE=accept -v  $(pwd)/dbstore:/dbstore ibmcom/db2express-c:latest db2start
+docker exet -it db2 bash
+
+```
+
+1. Create running Docker DB2 Express container daemon, and log into a bash session as shown above
+2. Issue `su db2inst1`
+3. Issue `db2sampl` (takes a while to create database "SAMPLE")
 
 ```
 
@@ -271,7 +277,30 @@ Use this Docker image for initial DB2 binding:
 
 ```
 
-5. At completion test, the installation:
+4. At completion smoke-test the installation:
+
+Run as Java: `khs.transformer.CheckDb2Connection`
+
+Displays on console:
+
+```
+
+/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/bin/java -Didea.launcher.port=7536 "-Didea.launcher.bin.path=/Users/mauget/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/163.10154.41/IntelliJ IDEA.app/Contents/bin" -Dfile.encoding=UTF-8 -classpath "/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jfxswt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/lib/tools.jar:/Users/mauget/IdeaProjects/khs-syntax-tree-transformer/target/classes:/Users/mauget/.m2/repository/org/springframework/cloud/spring-cloud-starter-eureka/1.1.0.M4/spring-cloud-starter-eureka-1.1.0.M4.jar:/Users/mauget/.m2/repository/org/springframework/cloud/spring-cloud-starter/1.1.0.M4/spring-cloud-starter-1.1.0.M4.jar:/Users/mauget/.m2/repository/org/springframework/cloud/spring-cloud-context/1.1.0.M4/spring-cloud-context-1.1.0.M4.jar:/Users/mauget/.m2/repository/org/springframework/security/spring-security-crypto/4.0.3.RELEASE/spring-security-crypto-4.0.3.RELEASE.jar:/Users/mauget/.m2/repository/org/springframework/cloud/spring-cloud-commons/1.1.0.M4/spring-cloud-commons-1.1.0.M4.jar:/Users/mauget/.m2/repository/org/springframework/cloud/spring-cloud-netflix-core/1.1.0.M4/spring-cloud-netflix-core-1.1.0.M4.jar:/Users/mauget/.m2/repository/org/springframework/boot/spring-boot/1.3.1.RELEASE/spring-boot-1.3.1.RELEASE.jar:/Users/mauget/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.3.1.RELEASE/spring-boot-autoconfigure-1.3.1.RELEASE.jar:/Users/mauget/.m2/repository/com/netflix/eureka/eureka-client/1.3.4/eureka-client-1.3.4.jar:/Users/mauget/.m2/repository/org/codehaus/jettison/jettison/1.3.7/jettison-1.3.7.jar:/Users/mauget/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar:/Users/mauget/.m2/repository/com/netflix/netflix-commons/netflix-eventbus/0.1.2/netflix-eventbus-0.1.2.jar:/Users/mauget/.m2/repository/com/netflix/archaius/archaius-core/0.7.1/archaius-core-0.7.1.jar:/Users/mauget/.m2/repository/commons-configuration/commons-configuration/1.8/commons-configuration-1.8.jar:/Users/mauget/.m2/repository/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar:/Users/mauget/.m2/repository/com/netflix/servo/servo-core/0.10.0/servo-core-0.10.0.jar:/Users/mauget/.m2/repository/com/netflix/servo/servo-internal/0.10.0/servo-internal-0.10.0.jar:/Users/mauget/.m2/repository/com/sun/jersey/jersey-core/1.19/jersey-core-1.19.jar:/Users/mauget/.m2/repository/com/sun/jersey/jersey-client/1.19/jersey-client-1.19.jar:/Users/mauget/.m2/repository/com/sun/jersey/contribs/jersey-apache-client4/1.19/jersey-apache-client4-1.19.jar:/Users/mauget/.m2/repository/org/apache/httpcomponents/httpclient/4.5.1/httpclient-4.5.1.jar:/Users/mauget/.m2/repository/org/apache/httpcomponents/httpcore/4.4.4/httpcore-4.4.4.jar:/Users/mauget/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/Users/mauget/.m2/repository/com/google/inject/guice/4.0/guice-4.0.jar:/Users/mauget/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/mauget/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/mauget/.m2/repository/com/netflix/governator/governator-annotations/1.10.4/governator-annotations-1.10.4.jar:/Users/mauget/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.6.4/jackson-annotations-2.6.4.jar:/Users/mauget/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.6.4/jackson-core-2.6.4.jar:/Users/mauget/.m2/repository/org/springframework/cloud/spring-cloud-starter-ribbon/1.1.0.M4/spring-cloud-starter-ribbon-1.1.0.M4.jar:/Users/mauget/.m2/repository/com/netflix/ribbon/ribbon/2.1.0/ribbon-2.1.0.jar:/Users/mauget/.m2/repository/com/netflix/ribbon/ribbon-transport/2.1.0/ribbon-transport-2.1.0.jar:/Users/mauget/.m2/repository/io/reactivex/rxnetty-contexts/0.4.9/rxnetty-contexts-0.4.9.jar:/Users/mauget/.m2/repository/io/reactivex/rxnetty-servo/0.4.9/rxnetty-servo-0.4.9.jar:/Users/mauget/.m2/repository/com/netflix/hystrix/hystrix-core/1.4.21/hystrix-core-1.4.21.jar:/Users/mauget/.m2/repository/io/reactivex/rxnetty/0.4.9/rxnetty-0.4.9.jar:/Users/mauget/.m2/repository/com/netflix/ribbon/ribbon-core/2.1.0/ribbon-core-2.1.0.jar:/Users/mauget/.m2/repository/com/netflix/ribbon/ribbon-httpclient/2.1.0/ribbon-httpclient-2.1.0.jar:/Users/mauget/.m2/repository/com/netflix/netflix-commons/netflix-commons-util/0.1.1/netflix-commons-util-0.1.1.jar:/Users/mauget/.m2/repository/com/netflix/ribbon/ribbon-loadbalancer/2.1.0/ribbon-loadbalancer-2.1.0.jar:/Users/mauget/.m2/repository/com/netflix/netflix-commons/netflix-statistics/0.1.1/netflix-statistics-0.1.1.jar:/Users/mauget/.m2/repository/io/reactivex/rxjava/1.0.14/rxjava-1.0.14.jar:/Users/mauget/.m2/repository/com/netflix/ribbon/ribbon-eureka/2.1.0/ribbon-eureka-2.1.0.jar:/Users/mauget/.m2/repository/com/netflix/eureka/eureka2-client-shaded/2.0.0-rc.2/eureka2-client-shaded-2.0.0-rc.2.jar:/Users/mauget/.m2/repository/io/netty/netty-codec-http/4.0.25.Final/netty-codec-http-4.0.25.Final.jar:/Users/mauget/.m2/repository/io/netty/netty-codec/4.0.25.Final/netty-codec-4.0.25.Final.jar:/Users/mauget/.m2/repository/io/netty/netty-handler/4.0.25.Final/netty-handler-4.0.25.Final.jar:/Users/mauget/.m2/repository/io/netty/netty-transport-native-epoll/4.0.25.Final/netty-transport-native-epoll-4.0.25.Final.jar:/Users/mauget/.m2/repository/io/netty/netty-common/4.0.25.Final/netty-common-4.0.25.Final.jar:/Users/mauget/.m2/repository/io/netty/netty-buffer/4.0.25.Final/netty-buffer-4.0.25.Final.jar:/Users/mauget/.m2/repository/io/netty/netty-transport/4.0.25.Final/netty-transport-4.0.25.Final.jar:/Users/mauget/.m2/repository/com/thoughtworks/xstream/xstream/1.4.2/xstream-1.4.2.jar:/Users/mauget/.m2/repository/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar:/Users/mauget/.m2/repository/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar:/Users/mauget/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/1.3.1.RELEASE/spring-boot-starter-data-jpa-1.3.1.RELEASE.jar:/Users/mauget/.m2/repository/org/springframework/boot/spring-boot-starter/1.3.1.RELEASE/spring-boot-starter-1.3.1.RELEASE.jar:/Users/mauget/.m2/repository/org/springframework/boot/spring-boot-starter-logging/1.3.1.RELEASE/spring-boot-starter-logging-1.3.1.RELEASE.jar:/Users/mauget/.m2/repository/ch/qos/logback/logback-classic/1.1.3/logback-classic-1.1.3.jar:/Users/mauget/.m2/repository/ch/qos/logback/logback-core/1.1.3/logback-core-1.1.3.jar:/Users/mauget/.m2/repository/org/slf4j/jul-to-slf4j/1.7.13/jul-to-slf4j-1.7.13.jar:/Users/mauget/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.13/log4j-over-slf4j-1.7.13.jar:/Users/mauget/.m2/repository/org/springframework/boot/spring-boot-starter-aop/1.3.1.RELEASE/spring-boot-starter-aop-1.3.1.RELEASE.jar:/Users/mauget/.m2/repository/org/springframework/spring-aop/4.2.4.RELEASE/spring-aop-4.2.4.RELEASE.jar:/Users/mauget/.m2/repository/org/aspectj/aspectjweaver/1.8.7/aspectjweaver-1.8.7.jar:/Users/mauget/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/1.3.1.RELEASE/spring-boot-starter-jdbc-1.3.1.RELEASE.jar:/Users/mauget/.m2/repository/org/apache/tomcat/tomcat-jdbc/8.0.30/tomcat-jdbc-8.0.30.jar:/Users/mauget/.m2/repository/org/apache/tomcat/tomcat-juli/8.0.30/tomcat-juli-8.0.30.jar:/Users/mauget/.m2/repository/org/springframework/spring-jdbc/4.2.4.RELEASE/spring-jdbc-4.2.4.RELEASE.jar:/Users/mauget/.m2/repository/org/hibernate/hibernate-entitymanager/4.3.11.Final/hibernate-entitymanager-4.3.11.Final.jar:/Users/mauget/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/Users/mauget/.m2/repository/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.jar:/Users/mauget/.m2/repository/org/hibernate/hibernate-core/4.3.11.Final/hibernate-core-4.3.11.Final.jar:/Users/mauget/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/mauget/.m2/repository/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.jar:/Users/mauget/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/Users/mauget/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar:/Users/mauget/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.5.Final/hibernate-commons-annotations-4.0.5.Final.jar:/Users/mauget/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar:/Users/mauget/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar:/Users/mauget/.m2/repository/javax/transaction/javax.transaction-api/1.2/javax.transaction-api-1.2.jar:/Users/mauget/.m2/repository/org/springframework/data/spring-data-jpa/1.9.2.RELEASE/spring-data-jpa-1.9.2.RELEASE.jar:/Users/mauget/.m2/repository/org/springframework/data/spring-data-commons/1.11.2.RELEASE/spring-data-commons-1.11.2.RELEASE.jar:/Users/mauget/.m2/repository/org/springframework/spring-orm/4.2.4.RELEASE/spring-orm-4.2.4.RELEASE.jar:/Users/mauget/.m2/repository/org/springframework/spring-context/4.2.4.RELEASE/spring-context-4.2.4.RELEASE.jar:/Users/mauget/.m2/repository/org/springframework/spring-tx/4.2.4.RELEASE/spring-tx-4.2.4.RELEASE.jar:/Users/mauget/.m2/repository/org/springframework/spring-beans/4.2.4.RELEASE/spring-beans-4.2.4.RELEASE.jar:/Users/mauget/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.13/jcl-over-slf4j-1.7.13.jar:/Users/mauget/.m2/repository/org/springframework/spring-aspects/4.2.4.RELEASE/spring-aspects-4.2.4.RELEASE.jar:/Users/mauget/.m2/repository/org/springframework/boot/spring-boot-starter-web/1.3.1.RELEASE/spring-boot-starter-web-1.3.1.RELEASE.jar:/Users/mauget/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/1.3.1.RELEASE/spring-boot-starter-tomcat-1.3.1.RELEASE.jar:/Users/mauget/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/8.0.30/tomcat-embed-core-8.0.30.jar:/Users/mauget/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/8.0.30/tomcat-embed-el-8.0.30.jar:/Users/mauget/.m2/repository/org/apache/tomcat/embed/tomcat-embed-logging-juli/8.0.30/tomcat-embed-logging-juli-8.0.30.jar:/Users/mauget/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/8.0.30/tomcat-embed-websocket-8.0.30.jar:/Users/mauget/.m2/repository/org/springframework/boot/spring-boot-starter-validation/1.3.1.RELEASE/spring-boot-starter-validation-1.3.1.RELEASE.jar:/Users/mauget/.m2/repository/org/hibernate/hibernate-validator/5.2.2.Final/hibernate-validator-5.2.2.Final.jar:/Users/mauget/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar:/Users/mauget/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.6.4/jackson-databind-2.6.4.jar:/Users/mauget/.m2/repository/org/springframework/spring-web/4.2.4.RELEASE/spring-web-4.2.4.RELEASE.jar:/Users/mauget/.m2/repository/org/springframework/spring-webmvc/4.2.4.RELEASE/spring-webmvc-4.2.4.RELEASE.jar:/Users/mauget/.m2/repository/org/springframework/spring-expression/4.2.4.RELEASE/spring-expression-4.2.4.RELEASE.jar:/Users/mauget/.m2/repository/org/springframework/spring-core/4.2.4.RELEASE/spring-core-4.2.4.RELEASE.jar:/Users/mauget/.m2/repository/org/yaml/snakeyaml/1.16/snakeyaml-1.16.jar:/Users/mauget/.m2/repository/com/h2database/h2/1.4.190/h2-1.4.190.jar:/Users/mauget/.m2/repository/org/apache/velocity/velocity/1.7/velocity-1.7.jar:/Users/mauget/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/mauget/.m2/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar:/Users/mauget/.m2/repository/io/springfox/springfox-swagger2/2.5.0/springfox-swagger2-2.5.0.jar:/Users/mauget/.m2/repository/io/swagger/swagger-annotations/1.5.9/swagger-annotations-1.5.9.jar:/Users/mauget/.m2/repository/io/swagger/swagger-models/1.5.9/swagger-models-1.5.9.jar:/Users/mauget/.m2/repository/io/springfox/springfox-spi/2.5.0/springfox-spi-2.5.0.jar:/Users/mauget/.m2/repository/io/springfox/springfox-core/2.5.0/springfox-core-2.5.0.jar:/Users/mauget/.m2/repository/io/springfox/springfox-schema/2.5.0/springfox-schema-2.5.0.jar:/Users/mauget/.m2/repository/io/springfox/springfox-swagger-common/2.5.0/springfox-swagger-common-2.5.0.jar:/Users/mauget/.m2/repository/io/springfox/springfox-spring-web/2.5.0/springfox-spring-web-2.5.0.jar:/Users/mauget/.m2/repository/com/google/guava/guava/18.0/guava-18.0.jar:/Users/mauget/.m2/repository/com/fasterxml/classmate/1.3.1/classmate-1.3.1.jar:/Users/mauget/.m2/repository/org/slf4j/slf4j-api/1.7.13/slf4j-api-1.7.13.jar:/Users/mauget/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar:/Users/mauget/.m2/repository/org/springframework/plugin/spring-plugin-metadata/1.2.0.RELEASE/spring-plugin-metadata-1.2.0.RELEASE.jar:/Users/mauget/.m2/repository/org/mapstruct/mapstruct/1.0.0.Final/mapstruct-1.0.0.Final.jar:/Users/mauget/.m2/repository/com/google/code/gson/gson/2.7/gson-2.7.jar:/Users/mauget/IdeaProjects/khs-syntax-tree-transformer/lib/db2jcc4.jar:/Users/mauget/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/163.10154.41/IntelliJ IDEA.app/Contents/lib/idea_rt.jar" com.intellij.rt.execution.application.AppMain khs.transformer.util.CheckDb2Connection
+21:53:41.895 [main] INFO  k.t.util.CheckDb2Connection - jdbc:db2://0.0.0.0:50000/sample
+D#        DEPT NAME MGR        DIV        LOCATION
+--        --------- ---        ---        --------
+38   South Atlantic 030    Eastern         Atlanta
+15      New England 050    Eastern          Boston
+42      Great Lakes 100    Midwest         Chicago
+51           Plains 140    Midwest          Dallas
+84         Mountain 290    Western          Denver
+10      Head Office 160  Corporate        New York
+66          Pacific 270    Western   San Francisco
+20     Mid Atlantic 010    Eastern      Washington
+
+```
+
+You may also try the db2 command from the bash session of the Docker container:
 
 ```
 
@@ -286,42 +315,17 @@ db2 select deptnumb, deptname, manager, division, location from org order by loc
 
 ```
 
-Note that the database disappears after we stop the Docker machine. To avoid this, mount an external drive, and
-start the Docker image created by `run` as a daemon.
+Note that the database disappears after we stop the Docker machine. To avoid this, use create the sample db
+on the shared volume, `dbstore` in the local host directory where you invoked `docker run`. This is left as
+an exercise for the reader. 
 
 ```
 
-docker run --name db2 -d -it -p 50000:50000 -e DB2INST1_PASSWORD=db2inst1-pwd -e LICENSE=accept -v  $(pwd)/dbstore:/dbstore ibmcom/db2express-c:latest db2start
 
 
 
 ```
 
-`Default DB2 database path                       (DFTDBPATH) = /home/db2inst1`
-
-Container `/dbstore` maps to host `$(pwd)/dbstore`
-
-
-Switch db volume to container `/dbstore` 
-
-
-`docker exec -it db2 bash` to log into container shell
-
-`chown db2inst1 /dbstore`
-`su db2inst1`
-`chmod u+rw,g+rw,o+rw /dbstore`
-`db2 start dbm`
-        `db2 update dbm cfg using  DFTDBPATH /dbstore`
-        `db2 get dbm cfg |less`  (Visually verify "Default database path" path item)
-`db2sampl -dbpath /dbstore`
-
-`tar cvf /dbspace/sample.tar db2inst1` (Backup installed sample db to shared volume)
-
-`tar xvf /dbspace/sample.tar` (Restore sample db to new container that has the shared volume)
-
-
-At this point the container can be stopped and restarted without losing the smaple database. It sits in your
-/dbspace directory.
 
 
 

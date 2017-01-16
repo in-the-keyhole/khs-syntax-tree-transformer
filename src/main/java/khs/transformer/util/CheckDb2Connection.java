@@ -32,38 +32,84 @@ public class CheckDb2Connection {
     }
 
     public void run() {
-        new CheckDb2Connection().selectOrg();
-    }
-
-    private void selectOrg() {
+        Connection dbConnection = null;
         try {
-            Connection dbConnection = null;
             dbConnection = getDBConnection();
 
-            PreparedStatement pstm = dbConnection.prepareStatement("SELECT * from ORG ORDER BY LOCATION");
-            ResultSet rs = pstm.executeQuery();
+            displayOrg(dbConnection);
 
-            System.out.println(String.format("%2s %16s %3s %10s %15s", "D#", "DEPT NAME", "MGR", "DIV", "LOCATION"));
-            System.out.println(String.format("%2s %16s %3s %10s %15s", "--", "---------", "---", "---", "--------"));
-            while (rs.next()) {
+            final String empNo = "200310";
+            displayEmployee(dbConnection, empNo);
 
-                Long deptnumb = rs.getLong("DEPTNUMB");
-                String deptName = rs.getString("DEPTNAME");
-                Long manager = rs.getLong("MANAGER");
-                String division = rs.getString("DIVISION");
-                String location = rs.getString("LOCATION");
-
-                String rec = String.format("%02d %16s %03d %10s %15s", deptnumb, deptName, manager, division, location);
-
-                System.out.println(rec);
-
-            }
-            rs.close();
-            pstm.close();
-            dbConnection.close();;
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                dbConnection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
         }
+    }
+
+    private void displayEmployee(Connection dbConnection, String emNo) throws SQLException {
+        System.out.println();
+
+        String sql = "SELECT EMPNO, LASTNAME, FIRSTNME FROM EMPLOYEE WHERE EMPNO=?";
+//                "INTO :WS_EMPNO, :WS_LAST_NAME, :WS_FIRST_NAME FROM EMPLOYEE " +
+
+
+        String wS_EMNO;
+        String wS_LAST_NAME;
+        String wS_FIRST_NAME;
+
+        PreparedStatement pstm = dbConnection.prepareStatement(sql);
+        pstm.setString(1, emNo);
+
+        System.out.println(String.format("%6s %12s %15s", "EMP NO", "  FIRST NAME", "      LAST NAME"));
+        System.out.println(String.format("%6s %12s %15s", "------", "------------", "---------------"));
+
+        ResultSet rs = pstm.executeQuery();
+        if (rs.next()) {
+            wS_EMNO = rs.getString("EMPNO");
+            wS_FIRST_NAME = rs.getString("FIRSTNME");
+            wS_LAST_NAME = rs.getString("LASTNAME");
+
+            System.out.println(String.format("%6s %12s %15s", wS_EMNO, wS_FIRST_NAME, wS_LAST_NAME));
+        }
+
+        rs.close();
+        pstm.close();
+
+        System.out.println();
+    }
+
+    private void displayOrg(Connection dbConnection) throws  SQLException {
+        System.out.println();
+
+        PreparedStatement pstm = dbConnection.prepareStatement("SELECT * from ORG ORDER BY LOCATION");
+        ResultSet rs = pstm.executeQuery();
+
+        System.out.println(String.format("%2s %16s %3s %10s %15s", "D#", "DEPT NAME", "MGR", "DIV", "LOCATION"));
+        System.out.println(String.format("%2s %16s %3s %10s %15s", "--", "---------", "---", "---", "--------"));
+        while (rs.next()) {
+
+            Long deptnumb = rs.getLong("DEPTNUMB");
+            String deptName = rs.getString("DEPTNAME");
+            Long manager = rs.getLong("MANAGER");
+            String division = rs.getString("DIVISION");
+            String location = rs.getString("LOCATION");
+
+            String rec = String.format("%02d %16s %03d %10s %15s", deptnumb, deptName, manager, division, location);
+
+            System.out.println(rec);
+
+        }
+        rs.close();
+        pstm.close();
+
+        System.out.println();
     }
 
     private static Connection getDBConnection() {
