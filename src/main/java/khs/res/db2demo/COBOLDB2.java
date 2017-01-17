@@ -7,15 +7,15 @@ import java.sql.*;
 public class COBOLDB2   {
 
  	//Level SQLCA
-	private Double SQLCA = SQLCA;
+	private Double SQLCA ;
  	//Level 05
-	private String WS_EMPNO = 0.0;
+	private String wS_EMPNO ;
 	//Level 05
-	private String WS_LAST_NAME = 0.0;
+	private String wS_LAST_NAME ;
 	//Level 05
-	private String WS_FIRST_NAME = 0.0;
+	private String wS_FIRST_NAME ;
 	//Level 01
-	Object[] WS_EMPLOYEE_REC = new Object[]{WS_EMPNO,WS_LAST_NAME,WS_FIRST_NAME,};
+	Object[] WS_EMPLOYEE_REC = new Object[]{wS_EMPNO,wS_LAST_NAME,wS_FIRST_NAME,};
 
     public static void main(String[] args) {
         COBOLDB2 job = new COBOLDB2 ();
@@ -23,11 +23,8 @@ public class COBOLDB2   {
     }
 
     public void procDiv () {
-        ;
+        selectInto("200310");
     }
-    
-    
-
 
     private static final Logger Log = LoggerFactory.getLogger("DB2DEMO");
 
@@ -41,7 +38,7 @@ public class COBOLDB2   {
     private static final String DB_JDBC_URL = String.format("jdbc:db2://%s:%s/%s", DB_HOST, DB_PORT, DB_NAME);
 
     // Hard-coded baby-step-pattern for template-generated DB2 select into method
-    private boolean selectInto() {
+    private boolean selectInto(String empNo) {
 
         Connection dbConnection = null;
 
@@ -52,18 +49,18 @@ public class COBOLDB2   {
             //                "INTO :WS_EMPNO, :WS_LAST_NAME, :WS_FIRST_NAME FROM EMPLOYEE " +
 
             PreparedStatement pstm = dbConnection.prepareStatement(sql);
-            pstm.setString(1, emNo);
+            pstm.setString(1, empNo);
 
             System.out.println(String.format("%6s %12s %15s", "EMP NO", "  FIRST NAME", "      LAST NAME"));
             System.out.println(String.format("%6s %12s %15s", "------", "------------", "---------------"));
 
             ResultSet rs = pstm.executeQuery();
             if (rs.next()) {
-                wS_EMNO = rs.getString("EMPNO");
+                wS_EMPNO = rs.getString("EMPNO");
                 wS_FIRST_NAME = rs.getString("FIRSTNME");
                 wS_LAST_NAME = rs.getString("LASTNAME");
 
-                System.out.println(String.format("%6s %12s %15s", wS_EMNO, wS_FIRST_NAME, wS_LAST_NAME));
+                System.out.println(String.format("%6s %12s %15s", wS_EMPNO, wS_FIRST_NAME, wS_LAST_NAME));
             }
 
             rs.close();
@@ -77,7 +74,7 @@ public class COBOLDB2   {
             try {
                 dbConnection.close();
             } catch (SQLException e) {
-                Log.error(e.getMessage())
+                Log.error(e.getMessage());
             }
 
         }
@@ -85,7 +82,7 @@ public class COBOLDB2   {
 
     private static Connection getDBConnection() {
 
-        Connection dbConnection = null;
+    Connection dbConnection = null;
 
         try {
             Class.forName(DB_DRIVER);

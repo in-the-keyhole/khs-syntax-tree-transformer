@@ -1,32 +1,9 @@
-package khs.res.db2demo;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.sql.*;
-
-public class COBOLDB2   {
-
- 	//Level SQLCA
-	private Double SQLCA = SQLCA;
- 	//Level 05
-	private String WS_EMPNO = 0.0;
-	//Level 05
-	private String WS_LAST_NAME = 0.0;
-	//Level 05
-	private String WS_FIRST_NAME = 0.0;
-	//Level 01
-	Object[] WS_EMPLOYEE_REC = new Object[]{WS_EMPNO,WS_LAST_NAME,WS_FIRST_NAME,};
-
-    public static void main(String[] args) {
-        COBOLDB2 job = new COBOLDB2 ();
-        job.procDiv ();
-    }
-
-    public void procDiv () {
-        ;
-    }
-    
-    
+#**
+    1. Embed this template with VTML #parse( "db2-template.vm" )
+    2. Parameterize it to pick up slq and sqlargs from JSON.
+    3. In a later POC step, break it up,  isolate-reuse-pool the connection
+    4. Extend to other sql forms (unless moving to another DBMS at this point)
+*#
 
 
     private static final Logger Log = LoggerFactory.getLogger("DB2DEMO");
@@ -99,6 +76,3 @@ public class COBOLDB2   {
 
         return dbConnection;
     }
-}
-
-
