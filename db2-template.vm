@@ -3,6 +3,14 @@
     2. Parameterize it to pick up slq and sqlargs from JSON.
     3. In a later POC step, break it up,  isolate-reuse-pool the connection
     4. Extend to other sql forms (unless moving to another DBMS at this point)
+
+ Notes about creating and provisioning Db2 Docker image:
+ docker run --name db2 -d -it -p 50000:50000 -e DB2INST1_PASSWORD=db2inst1-pwd -e LICENSE=accept -v  $(pwd)/dbstore:/dbstore ibmcom/db2express-c:latest db2start
+ docker exec -it db2 bash
+
+ 1. Create running Docker DB2 Express container daemon, and log into a bash session as shown above
+ 2. Issue `su db2inst1`
+ 3. Issue `db2sampl` (takes a while to create database "SAMPLE")
 *#
 
 
