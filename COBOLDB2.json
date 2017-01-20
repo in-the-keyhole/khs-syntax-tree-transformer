@@ -61,6 +61,26 @@
       "type" : null,
       "sql" : " SELECT EMPNO, LASTNAME, FIRSTNME FROM EMPLOYEE WHERE EMPNO=200310 ",
       "sqlArgs" : [ "WS-EMPNO", "WS-LAST-NAME", "WS-FIRST-NAME" ]
+    }, {
+      "name" : null,
+      "typeName" : "IF",
+      "type" : null,
+      "expr" : "sqlcode==0",
+      "body" : [ {
+        "name" : "DISPLAY",
+        "typeName" : "DISPLAY",
+        "value" : ""
+      } ],
+      "stmElse" : {
+        "name" : null,
+        "typeName" : "ELSE",
+        "type" : null,
+        "body" : [ {
+          "name" : "DISPLAY",
+          "typeName" : "DISPLAY",
+          "value" : ""
+        } ]
+      }
     } ]
   } ],
   "sequence" : "1"
