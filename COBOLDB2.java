@@ -18,12 +18,13 @@ public class COBOLDB2   {
 	Object[] WS_EMPLOYEE_REC = new Object[]{WS_EMPNO,WS_LAST_NAME,WS_FIRST_NAME,};
 
     public static void main(String[] args) {
-        COBOLDB2 job = new COBOLDB2 ();
-        job.procDiv ();
+        COBOLDB2 job = new $program.name();
+        job.$program.functions[0].name();
     }
 
     public void procDiv () {
-        ;
+        selectInto();
+        if (sqlcode==0) {
     }
     
     
@@ -40,12 +41,15 @@ public class COBOLDB2   {
 
     private static final String DB_JDBC_URL = String.format("jdbc:db2://%s:%s/%s", DB_HOST, DB_PORT, DB_NAME);
 
+    private int sqlcode = -1;
+
     // Hard-coded baby-step-pattern for template-generated DB2 select into method
     private boolean selectInto() {
 
         Connection dbConnection = null;
 
         try {
+            sqlcode = -1;
             dbConnection = getDBConnection();
 
             String sql = "SELECT EMPNO, LASTNAME, FIRSTNME FROM EMPLOYEE WHERE EMPNO=?";
@@ -68,6 +72,7 @@ public class COBOLDB2   {
 
             rs.close();
             pstm.close();
+            sqlcode = 0;
             return true;
 
         } catch (SQLException e) {

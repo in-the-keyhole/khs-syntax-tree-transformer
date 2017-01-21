@@ -56,13 +56,13 @@
     "name" : "procDiv",
     "typeName" : "FUNCTION",
     "methods" : [ {
-      "name" : "db2Select1",
+      "name" : "DbMethod",
       "typeName" : "METHOD",
       "type" : null,
       "sql" : " SELECT EMPNO, LASTNAME, FIRSTNME FROM EMPLOYEE WHERE EMPNO=200310 ",
       "sqlArgs" : [ "WS-EMPNO", "WS-LAST-NAME", "WS-FIRST-NAME" ]
     }, {
-      "name" : null,
+      "name" : "if",
       "typeName" : "IF",
       "type" : null,
       "expr" : "sqlcode==0",
@@ -72,7 +72,7 @@
         "value" : ""
       } ],
       "stmElse" : {
-        "name" : null,
+        "name" : "else",
         "typeName" : "ELSE",
         "type" : null,
         "body" : [ {

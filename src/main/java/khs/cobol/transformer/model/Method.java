@@ -8,10 +8,37 @@ public class Method {
 	public static String ADD = "ADD";
 	public static String MULTI = "MULTI";
 	public static String CALL = "CALL";
-	public static String DISPLAY = "DISPLAY";
+    public static String DISPLAY = "DISPLAY";
+    public static String IF = "IF";
+    public static String ELSE = "ELSE";
+    public static String DBMETHOD = "DbMethod";
 
 	private String name;
 	private String typeName;
+
+	private String expr;
+    public String getExpr() { return expr;  }
+    public void setExpr(String expr) { this.expr = expr;  }
+
+
+    private Method[] body;
+    public Method[] getBody() { return body; }
+    public void setBody(Method[] body) { this.body = body; }
+
+    // ---- db2 stuff ----
+	private String sql;
+    private String[] sqlArgs;
+
+    public String[] getSqlArgs() { return sqlArgs; }
+
+    public void setSqlArgs(String[] sqlArgs) { this.sqlArgs = sqlArgs;  }
+
+    public String getSql() {  return sql;  }
+
+    public void setSql(String sql) { this.sql = sql;  }
+
+    // ------------------
+
 
 	private Type type;
 
@@ -42,6 +69,16 @@ public class Method {
 	public String expression() {
 
 		String expression = "";
+
+		if (DBMETHOD.equalsIgnoreCase(this.getName())) {
+			expression = "selectInto();";
+		}
+        else if(IF.equalsIgnoreCase(this.getName())){
+            expression = String.format("if (%s) {", getExpr());
+        }
+        else if("procdiv".equalsIgnoreCase(this.getName())){
+            System.out.println("procdiv");
+        }
 
 		if (this.getTypeName() == null) {
 			return expression;

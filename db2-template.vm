@@ -25,12 +25,15 @@
 
     private static final String DB_JDBC_URL = String.format("jdbc:db2://%s:%s/%s", DB_HOST, DB_PORT, DB_NAME);
 
+    private int sqlcode = -1;
+
     // Hard-coded baby-step-pattern for template-generated DB2 select into method
     private boolean selectInto() {
 
         Connection dbConnection = null;
 
         try {
+            sqlcode = -1;
             dbConnection = getDBConnection();
 
             String sql = "SELECT EMPNO, LASTNAME, FIRSTNME FROM EMPLOYEE WHERE EMPNO=?";
@@ -53,6 +56,7 @@
 
             rs.close();
             pstm.close();
+            sqlcode = 0;
             return true;
 
         } catch (SQLException e) {

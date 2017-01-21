@@ -46,8 +46,7 @@ public class TransformService {
 
 	public Program parse(String json) {
 
-		StringReader stringReader = new StringReader(json);
-		BufferedReader reader = new BufferedReader(stringReader);
+		BufferedReader reader = new BufferedReader(new StringReader(json));
 
 		Type listType = new TypeToken<ArrayList<Function>>() {
 		}.getType();
@@ -65,19 +64,19 @@ public class TransformService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		String json = "";
+		StringBuilder json = new StringBuilder();
 		int i;
 		try {
 			while ((i = reader.read()) >= 0) {
 
-				json += (char) i;
+				json.append((char) i);
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
-		return json;
+		return json.toString();
 
 	}
 
@@ -115,7 +114,7 @@ public class TransformService {
 	public void writeFile(String filePath,String contents) {
 
 		 FileWriter writer = null;
-		 
+
 		 String dir = System.getProperty("user.dir");
 		 try {
 		    writer = new FileWriter(dir+"/"+filePath+".java");
@@ -124,10 +123,10 @@ public class TransformService {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} 
-		
-		
-		
+		}
+
+
+
 	}
 
 }

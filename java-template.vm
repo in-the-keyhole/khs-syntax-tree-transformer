@@ -11,18 +11,18 @@ public class $program.name   {
 #end
 
     public static void main(String[] args) {
-        $program.name job = new $program.name ();
-        job.$program.functions[0].name ();
+        $program.name job = new $program.name();
+        job.$program.functions[0].name();
     }
 
 #foreach( $function in $program.functions )
     public void $function.name () {
 #foreach( $method in $function.methods)
-        $method.expression();
+        $method.expression()
 #end
     }
 #end
-    #** Comment this out to stop playing with DB2 *#
+    #** Comment this out to stop including DB2 support methods *#
     #parse( "db2-template.vm" )
 }
 
