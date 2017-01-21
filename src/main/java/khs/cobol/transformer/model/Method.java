@@ -74,7 +74,12 @@ public class Method {
 			expression = "selectInto();";
 		}
         else if(IF.equalsIgnoreCase(this.getName())){
-            expression = String.format("if (%s) {", getExpr());
+		    StringBuilder sb = new StringBuilder( String.format("if ( %s ) {", getExpr()) );
+            // TODO eval body , else, and else-boady here, appending each to sb.
+            for (Method m : this.getBody() ){
+                sb.append("\n\t").append( m.toString() ).append(";");
+            }
+            expression = sb.toString();
         }
         else if("procdiv".equalsIgnoreCase(this.getName())){
             System.out.println("procdiv");

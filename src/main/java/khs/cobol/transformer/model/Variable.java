@@ -6,10 +6,10 @@ import java.util.List;
 import khs.transformer.util.Syntax;
 
 public class Variable {
-	
+
 	private String name;
 	private String typeName;
-	
+
 	private String value;
 	private boolean isLocal;
 	private boolean isWorking;
@@ -18,11 +18,11 @@ public class Variable {
 	private List<Variable> variables;
 	private String varLevel;
 	private String picture;
-	
-	
-	
-	
-	
+
+
+
+
+
 	public String getPicture() {
 		return picture;
 	}
@@ -84,76 +84,81 @@ public class Variable {
 	public void setTypeName(String typeName) {
 		this.typeName = typeName;
 	}
-	
+
 	public String value() {
-		
+
 		return "ZERO".equalsIgnoreCase(this.getValue()) ? "0.0" : this.getValue();
 	}
-	
-	
+
+
 	public String expression() {
-		
-		String dataType = "Double";
+
+		String dataType = "String";
 		String expression = null;
-		
+
 		if (this.picture != null && this.picture.indexOf('Z') >= 0) {
 			dataType = "Double";
-		}
-		
+		} else
+
 		if (this.picture != null && this.picture.indexOf('X') >= 0) {
 			dataType = "String";
 		}
-		
+
 		if ("SPACES".equals(this.getValue())) {
 			dataType = "String";
-		} 
-	
+		}
+
+		if (getVarLevel().equalsIgnoreCase("sqlca")) {
+		    dataType = "Object";
+        }
+
 		if (this.variables.isEmpty()) {
 		   // no levels, just define variable
 			if (this.name.equalsIgnoreCase("FILLER")) {
-				expression ="";				
+				expression ="";
 			} else {
-			   expression = "//Level "+this.getVarLevel()+"\n\tprivate "+dataType+" "+Syntax.var(this.getName()) +" = "+Syntax.val(this.value()) + ";";
+                String level = getVarLevel().equalsIgnoreCase("sqlca") ? "" : " Level";
+				expression = String.format("//%s %s\n\tprivate %s %s;\n", level,  getVarLevel().toUpperCase(), dataType, Syntax.var(getName()));
 			}
 		} else {
-		 // get workstorage levels	
+		 // get workstorage levels
 		   List<String> vars = new ArrayList<String>();
-		   expression = expressionLevels(vars,this.variables);	
+		   expression = expressionLevels(vars,this.variables);
 		   expression += "//Level "+this.getVarLevel()+"\n\tObject[] "+Syntax.var(this.getName()) +" = new Object[]{";
-		   
-		    for (String var : vars) {		    	
+
+		    for (String var : vars) {
 		    	expression += var+",";
 		    }
-		   
-		   
+
+
 		   expression+="};";
-		   
-	     			   
+
+
 		}
-		
-		
+
+
 		return expression;
 	}
 
 
     private String expressionLevels(List<String> vars,List<Variable> variables) {
-    	
+
     	String expression = "";
     	for (Variable v : variables) {
-    		
+
     		if (v.getName().equalsIgnoreCase("FILLER")) {
     			vars.add(Syntax.val(v.getValue()));
     		} else {
     			vars.add(Syntax.var(v.getName()));
     		}
-    		
+
     		expression += v.expression()+'\n'+'\t';
-    		
+
     	}
-    	
-    	
+
+
     	return expression;
-    	
+
     }
 
 

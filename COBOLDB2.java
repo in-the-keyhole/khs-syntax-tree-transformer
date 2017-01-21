@@ -6,16 +6,20 @@ import java.sql.*;
 
 public class COBOLDB2   {
 
- 	//Level SQLCA
-	private Double SQLCA = SQLCA;
- 	//Level 05
-	private String WS_EMPNO = 0.0;
-	//Level 05
-	private String WS_LAST_NAME = 0.0;
-	//Level 05
-	private String WS_FIRST_NAME = 0.0;
+ 	// SQLCA
+	private Object sqlca;
+
+ 	// Level 05
+	private String ws_empno;
+
+	// Level 05
+	private String ws_last_name;
+
+	// Level 05
+	private String ws_first_name;
+
 	//Level 01
-	Object[] WS_EMPLOYEE_REC = new Object[]{WS_EMPNO,WS_LAST_NAME,WS_FIRST_NAME,};
+	Object[] ws_employee_rec = new Object[]{ws_empno,ws_last_name,ws_first_name,};
 
     public static void main(String[] args) {
         COBOLDB2 job = new $program.name();
@@ -24,7 +28,7 @@ public class COBOLDB2   {
 
     public void procDiv () {
         selectInto();
-        if (sqlcode==0) {
+        
     }
     
     

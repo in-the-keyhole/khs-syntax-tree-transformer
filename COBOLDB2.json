@@ -2,17 +2,17 @@
   "name" : "COBOLDB2",
   "typeName" : "CLASS",
   "variables" : [ {
-    "name" : "SQLCA",
-    "typeName" : "SQLCA",
-    "value" : "SQLCA",
+    "name" : "sqlca",
+    "typeName" : "sqlca",
+    "value" : "sqlca",
     "isLocal" : true,
     "isWorking" : true,
     "isArray" : false,
-    "varLevel" : "SQLCA",
+    "varLevel" : "sqlca",
     "picture" : null,
     "variables" : [ ]
   }, {
-    "name" : "WS-EMPLOYEE-REC",
+    "name" : "ws-employee-rec",
     "typeName" : "VARIABLE",
     "value" : null,
     "isLocal" : true,
@@ -21,7 +21,7 @@
     "varLevel" : "01",
     "picture" : null,
     "variables" : [ {
-      "name" : "WS-EMPNO",
+      "name" : "ws-empno",
       "typeName" : "VARIABLE",
       "value" : null,
       "isLocal" : true,
@@ -31,7 +31,7 @@
       "picture" : "XXXXXX",
       "variables" : [ ]
     }, {
-      "name" : "WS-LAST-NAME",
+      "name" : "ws-last-name",
       "typeName" : "VARIABLE",
       "value" : null,
       "isLocal" : true,
@@ -41,7 +41,7 @@
       "picture" : "XXXXXXXXXXXXXXX",
       "variables" : [ ]
     }, {
-      "name" : "WS-FIRST-NAME",
+      "name" : "ws-first-name",
       "typeName" : "VARIABLE",
       "value" : null,
       "isLocal" : true,
@@ -60,9 +60,9 @@
       "typeName" : "METHOD",
       "type" : null,
       "sql" : " SELECT EMPNO, LASTNAME, FIRSTNME FROM EMPLOYEE WHERE EMPNO=200310 ",
-      "sqlArgs" : [ "WS-EMPNO", "WS-LAST-NAME", "WS-FIRST-NAME" ]
+      "sqlArgs" : [ "ws-empno", "ws-last-name", "ws-first-name" ]
     }, {
-      "name" : "if",
+      "name" : null,
       "typeName" : "IF",
       "type" : null,
       "expr" : "sqlcode==0",
