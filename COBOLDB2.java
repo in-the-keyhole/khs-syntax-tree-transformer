@@ -1,8 +1,8 @@
 package khs.res.db2demo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.sql.*;
+
 
 public class COBOLDB2   {
 
@@ -23,12 +23,16 @@ public class COBOLDB2   {
 
     public static void main(String[] args) {
         COBOLDB2 job = new $program.name();
-        job.$program.functions[0].name();
+        job.procDiv();
     }
 
     public void procDiv () {
         selectInto();
-        
+        if ( sqlcode==0 ) {
+			System.out.println(ws_employee_record);
+		} else {
+			khs.cobol.transformer.model.Method@4d41cee
+		}
     }
     
     

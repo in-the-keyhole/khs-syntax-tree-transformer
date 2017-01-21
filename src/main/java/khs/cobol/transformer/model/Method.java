@@ -11,7 +11,8 @@ public class Method {
     public static String DISPLAY = "DISPLAY";
     public static String IF = "IF";
     public static String ELSE = "ELSE";
-    public static String DBMETHOD = "DbMethod";
+    public static String DBMETHOD = "DB_METHOD";
+    public static String PROC_DIV = "procdiv";
 
 	private String name;
 	private String typeName;
@@ -24,6 +25,14 @@ public class Method {
     private Method[] body;
     public Method[] getBody() { return body; }
     public void setBody(Method[] body) { this.body = body; }
+
+    private Method stmElse;
+    public Method getStmElse() { return stmElse; }
+    public void setStmElse(Method stmElse) { this.stmElse = stmElse;}
+
+    private String value;
+    public String getValue() { return value;  }
+    public void setValue(String value) { this.value = value; }
 
     // ---- db2 stuff ----
 	private String sql;
@@ -70,34 +79,49 @@ public class Method {
 
 		String expression = "";
 
-		if (DBMETHOD.equalsIgnoreCase(this.getName())) {
-			expression = "selectInto();";
-		}
-        else if(IF.equalsIgnoreCase(this.getName())){
-		    StringBuilder sb = new StringBuilder( String.format("if ( %s ) {", getExpr()) );
-            // TODO eval body , else, and else-boady here, appending each to sb.
-            for (Method m : this.getBody() ){
-                sb.append("\n\t").append( m.toString() ).append(";");
+        if (DBMETHOD.equalsIgnoreCase(getName())) {
+            expression = "selectInto();";
+
+        } else if (IF.equalsIgnoreCase(getName())) {
+            StringBuilder sb = new StringBuilder(String.format("if ( %s ) {", getExpr()));
+
+            // Eval body here, appending each body method expression to sb.
+            for (Method m : this.getBody()) {
+                // Recurse on method, m
+                sb.append("\n\t\t\t").append( m.expression() ).append(";");
             }
+            sb.append("\n\t\t}");
+
+            // Recurse to optional paired else ( allows arbitrary if-else nesting)
+            if (null != getStmElse()) {
+                sb.append(getStmElse().expression());
+            }
+
             expression = sb.toString();
-        }
-        else if("procdiv".equalsIgnoreCase(this.getName())){
-            System.out.println("procdiv");
-        }
 
-		if (this.getTypeName() == null) {
-			return expression;
-		}
+        } else if (ELSE.equalsIgnoreCase(getName())) {
+            StringBuilder sb = new StringBuilder(String.format(" else {" ));
 
-		if (this.getTypeName().equalsIgnoreCase(MOVE)) {
+            // Eval body else-body here, appending each body method expression to sb.
+            for (Method m : this.getBody()) {
+                sb.append("\n\t\t\t").append(m.toString());
+            }
+            sb.append("\n\t\t}");
+            expression = sb.toString();
 
+        } else if (PROC_DIV.equalsIgnoreCase(getName())) {
+            expression = PROC_DIV;
+
+        }  else if ("DISPLAY".equalsIgnoreCase(getName())) {
+            // TODO if value is object array, enumerate/print its elements
+            expression = String.format("System.out.println(%s)", getValue());
+
+        } else 	if (MOVE.equalsIgnoreCase( getTypeName())) {
 			expression = Syntax.var(this.getType().getVarName()) + " = " + Syntax.val(this.getType().getValue());
+
 		}
-
-
 
 		return expression;
-
 	}
 
 	public String constants(String value) {
@@ -111,5 +135,6 @@ public class Method {
 		return result;
 
 	}
+
 
 }

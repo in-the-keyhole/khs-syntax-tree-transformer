@@ -56,29 +56,31 @@
     "name" : "procDiv",
     "typeName" : "FUNCTION",
     "methods" : [ {
-      "name" : "DbMethod",
-      "typeName" : "METHOD",
+      "name" : "DB_METHOD",
+      "typeName" : "DB_METHOD",
       "type" : null,
       "sql" : " SELECT EMPNO, LASTNAME, FIRSTNME FROM EMPLOYEE WHERE EMPNO=200310 ",
       "sqlArgs" : [ "ws-empno", "ws-last-name", "ws-first-name" ]
     }, {
-      "name" : null,
+      "name" : "IF",
       "typeName" : "IF",
       "type" : null,
       "expr" : "sqlcode==0",
       "body" : [ {
         "name" : "DISPLAY",
         "typeName" : "DISPLAY",
-        "value" : ""
+        "type" : null,
+        "value" : "ws_employee_record"
       } ],
       "stmElse" : {
-        "name" : "else",
+        "name" : "ELSE",
         "typeName" : "ELSE",
         "type" : null,
         "body" : [ {
           "name" : "DISPLAY",
           "typeName" : "DISPLAY",
-          "value" : ""
+          "type" : null,
+          "value" : "'Error'"
         } ]
       }
     } ]
