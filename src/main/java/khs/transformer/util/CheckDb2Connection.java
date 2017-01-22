@@ -53,7 +53,7 @@ public class CheckDb2Connection {
         }
     }
 
-    private void displayEmployee(Connection dbConnection, String emNo) throws SQLException {
+    private void displayEmployee(Connection dbConnection, String empNo) throws SQLException {
         System.out.println();
 
         String sql = "SELECT EMPNO, LASTNAME, FIRSTNME FROM EMPLOYEE WHERE EMPNO=?";
@@ -65,7 +65,7 @@ public class CheckDb2Connection {
         String wS_FIRST_NAME;
 
         PreparedStatement pstm = dbConnection.prepareStatement(sql);
-        pstm.setString(1, emNo);
+        pstm.setString(1, empNo);
 
         System.out.println(String.format("%6s %12s %15s", "EMP NO", "  FIRST NAME", "      LAST NAME"));
         System.out.println(String.format("%6s %12s %15s", "------", "------------", "---------------"));
