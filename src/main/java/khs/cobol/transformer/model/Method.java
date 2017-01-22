@@ -80,7 +80,12 @@ public class Method {
 		String expression = "";
 
         if (DBMETHOD.equalsIgnoreCase(getName())) {
-            expression = "selectInto();";
+            StringBuilder sb = new StringBuilder(String.format("Object[] rec = %s;\n", "ws_employee_record"));
+            sb.append(String.format("\t\tString sql = \"%s\";\n", getSql()));
+            sb.append(String.format("\t\tObject[] sqlArgs = %s;\n", "new Object[]{ws_empno, ws_last_name, ws_first_name};\n"));
+            sb.append(String.format("\t\tint sqlcode = Database.getInstance().selectInto( rec, sql, sqlArgs );\n"));
+
+            expression = sb.toString();
 
         } else if (IF.equalsIgnoreCase(getName())) {
             StringBuilder sb = new StringBuilder(String.format("if ( %s ) {", getExpr()));
@@ -115,7 +120,7 @@ public class Method {
 
         }  else if ("DISPLAY".equalsIgnoreCase(getName())) {
             // TODO if value is object array, enumerate/print its elements
-            expression = String.format("System.out.println(%s)", getValue());
+            expression = String.format("Display.display(%s)", getValue());
 
         } else 	if (MOVE.equalsIgnoreCase( getTypeName())) {
 			expression = Syntax.var(this.getType().getVarName()) + " = " + Syntax.val(this.getType().getValue());
