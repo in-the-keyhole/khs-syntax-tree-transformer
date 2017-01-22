@@ -81,9 +81,9 @@ public class Method {
 
         if (DBMETHOD.equalsIgnoreCase(getName())) {
             StringBuilder sb = new StringBuilder(String.format("Object[] rec = %s;\n", "ws_employee_record"));
-            sb.append(String.format("\t\tString sql = \"%s\";\n", getSql()));
-            sb.append(String.format("\t\tObject[] sqlArgs = %s;\n", "new Object[]{ws_empno, ws_last_name, ws_first_name};\n"));
-            sb.append(String.format("\t\tint sqlcode = Database.getInstance().selectInto( rec, sql, sqlArgs );\n"));
+            sb.append(String.format("    String sql = \"%s\";\n", getSql()));
+            sb.append(String.format("    Object[] sqlArgs = %s;\n", "new Object[]{ws_empno, ws_last_name, ws_first_name};\n"));
+            sb.append(String.format("\n    int sqlcode = Database.getInstance().selectInto( rec, sql, sqlArgs );\n"));
 
             expression = sb.toString();
 
@@ -119,7 +119,7 @@ public class Method {
             expression = PROC_DIV;
 
         }  else if ("DISPLAY".equalsIgnoreCase(getName())) {
-            // TODO if value is object array, enumerate/print its elements
+            // if value is object array, enumerate/prints its elements, else just prints a passed simple string.
             expression = String.format("Display.display(%s)", getValue());
 
         } else 	if (MOVE.equalsIgnoreCase( getTypeName())) {
