@@ -12,7 +12,7 @@ public class $program.name   {
 #end
 
     public static void main(String[] args) {
-        $program.name job = new $program.name();
+        $program.name job = new $program.name$parenPair;
         job.$program.functions[0].name$parenPair;
     }
 

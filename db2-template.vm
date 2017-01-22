@@ -27,8 +27,9 @@
 
     private int sqlcode = -1;
 
-    // Hard-coded baby-step-pattern for template-generated DB2 select into method
-    private boolean selectInto() {
+    // Baby-step-pattern for template-generated DB2 select into method
+    // TODO change signature to:  Object[] resultRec, String ql, String[] sqlArgs,
+    private boolean selectInto( String empNo ) {
 
         Connection dbConnection = null;
 
@@ -40,18 +41,18 @@
             //                "INTO :WS_EMPNO, :WS_LAST_NAME, :WS_FIRST_NAME FROM EMPLOYEE " +
 
             PreparedStatement pstm = dbConnection.prepareStatement(sql);
-            pstm.setString(1, emNo);
+            pstm.setString(1, empNo);
 
             System.out.println(String.format("%6s %12s %15s", "EMP NO", "  FIRST NAME", "      LAST NAME"));
             System.out.println(String.format("%6s %12s %15s", "------", "------------", "---------------"));
 
             ResultSet rs = pstm.executeQuery();
             if (rs.next()) {
-                wS_EMNO = rs.getString("EMPNO");
-                wS_FIRST_NAME = rs.getString("FIRSTNME");
-                wS_LAST_NAME = rs.getString("LASTNAME");
+                ws_empno = rs.getString("EMPNO");
+                ws_first_name = rs.getString("FIRSTNME");
+                ws_last_name = rs.getString("LASTNAME");
 
-                System.out.println(String.format("%6s %12s %15s", wS_EMNO, wS_FIRST_NAME, wS_LAST_NAME));
+                System.out.println(String.format("%6s %12s %15s", ws_empno, ws_first_name, ws_last_name));
             }
 
             rs.close();
@@ -66,7 +67,7 @@
             try {
                 dbConnection.close();
             } catch (SQLException e) {
-                Log.error(e.getMessage())
+                Log.error(e.getMessage());
             }
 
         }

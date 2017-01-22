@@ -87,13 +87,14 @@ public class Method {
 
             // Eval body here, appending each body method expression to sb.
             for (Method m : this.getBody()) {
-                // Recurse on method, m
-                sb.append("\n\t\t\t").append( m.expression() ).append(";");
+                // append string result of recurse on method, m
+                sb.append("\n\t\t\t").append( m.expression() ).append(';');
             }
             sb.append("\n\t\t}");
 
-            // Recurse to optional paired else ( allows arbitrary if-else nesting)
+
             if (null != getStmElse()) {
+                // append string result of recurse to optional paired else ( allows arbitrary if-else nesting)
                 sb.append(getStmElse().expression());
             }
 
@@ -104,7 +105,7 @@ public class Method {
 
             // Eval body else-body here, appending each body method expression to sb.
             for (Method m : this.getBody()) {
-                sb.append("\n\t\t\t").append(m.toString());
+                sb.append("\n\t\t\t").append(m.expression()).append(';');
             }
             sb.append("\n\t\t}");
             expression = sb.toString();

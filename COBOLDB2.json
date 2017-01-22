@@ -12,7 +12,7 @@
     "picture" : null,
     "variables" : [ ]
   }, {
-    "name" : "ws-employee-rec",
+    "name" : "ws-employee-record",
     "typeName" : "VARIABLE",
     "value" : null,
     "isLocal" : true,
@@ -60,12 +60,12 @@
       "typeName" : "DB_METHOD",
       "type" : null,
       "sql" : " SELECT EMPNO, LASTNAME, FIRSTNME FROM EMPLOYEE WHERE EMPNO=200310 ",
-      "sqlArgs" : [ "ws-empno", "ws-last-name", "ws-first-name" ]
+      "sqlArgs" : [ "ws_empno", "ws_last_name", "ws_first_name" ]
     }, {
       "name" : "IF",
       "typeName" : "IF",
       "type" : null,
-      "expr" : "sqlcode==0",
+      "expr" : "sqlcode == 0",
       "body" : [ {
         "name" : "DISPLAY",
         "typeName" : "DISPLAY",
@@ -80,7 +80,7 @@
           "name" : "DISPLAY",
           "typeName" : "DISPLAY",
           "type" : null,
-          "value" : "'Error'"
+          "value" : "\"Error\""
         } ]
       }
     } ]
