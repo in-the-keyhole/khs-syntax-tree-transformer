@@ -80,10 +80,19 @@ public class Method {
 		String expression = "";
 
         if (DBMETHOD.equalsIgnoreCase(getName())) {
-            StringBuilder sb = new StringBuilder(String.format("Object[] rec = %s;\n", "ws_employee_record"));
-            sb.append(String.format("    String sql = \"%s\";\n", getSql()));
-            sb.append(String.format("    Object[] sqlArgs = %s;\n", "new Object[]{ws_empno, ws_last_name, ws_first_name};\n"));
-            sb.append(String.format("\n    int sqlcode = Database.getInstance().selectInto( rec, sql, sqlArgs );\n"));
+            StringBuilder sb = new StringBuilder(String.format("String sql = \"%s\";\n", getSql()));
+            sb.append("\t\tString[] sqlArgs = new String[]{ ");
+
+            // Build sqlArgs
+            String sep = "";
+            for( String item : getSqlArgs()){
+                sb.append(sep);
+                sb.append(String.format("\"%s\"", item));
+                sep = ", ";
+            }
+            sb.append(" };\n");
+            // Call Database helper
+            sb.append("\n\t\tsqlcode = Database.getInstance().selectInto( sql, sqlArgs, this );\n");
 
             expression = sb.toString();
 
@@ -120,7 +129,7 @@ public class Method {
 
         }  else if ("DISPLAY".equalsIgnoreCase(getName())) {
             // if value is object array, enumerate/prints its elements, else just prints a passed simple string.
-            expression = String.format("Display.display(%s)", getValue());
+            expression = String.format("Display.display(%s, this)", getValue());
 
         } else 	if (MOVE.equalsIgnoreCase( getTypeName())) {
 			expression = Syntax.var(this.getType().getVarName()) + " = " + Syntax.val(this.getType().getValue());

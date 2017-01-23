@@ -3,6 +3,7 @@ package khs.cobol.transformer.runtime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.lang.reflect.Field;
 import java.sql.*;
 
 /**
@@ -37,12 +38,13 @@ public class Database {
     }
 
     // Baby-step  DB2 select-into
-    public int selectInto( Object[] rec, String sql, Object[] slqArgs ) {
+    public int selectInto( String sql, String[] sqlArgs, Object parent) {
 
         Connection dbConnection = null;
 
         try {
             sqlcode = RC_ERROR;
+            Object[] rec = new Object[sqlArgs.length];
             dbConnection = getDBConnection();
 
             PreparedStatement pstm = dbConnection.prepareStatement(sql);
@@ -53,6 +55,15 @@ public class Database {
                 for (Object item : rec ) {
                     rec[i++] = rs.getObject(i);
                 }
+
+                // Reflect record values to "into" items.
+                Class<?> c = parent.getClass();
+                i = 0;
+                for( String fieldName : sqlArgs){
+                    Field field = c.getDeclaredField(fieldName);
+                    field.set(parent, rec[i++]);
+                }
+
             }
 
             rs.close();
@@ -61,6 +72,12 @@ public class Database {
             return sqlcode;
 
         } catch (SQLException e) {
+            e.printStackTrace();
+            return RC_ERROR;
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+            return RC_ERROR;
+        } catch (NoSuchFieldException e) {
             e.printStackTrace();
             return RC_ERROR;
         } finally {
