@@ -85,6 +85,7 @@ public class Database {
                 dbConnection.close();
             } catch (SQLException e) {
                 Log.error(e.getMessage());
+                return RC_ERROR;
             }
 
         }
