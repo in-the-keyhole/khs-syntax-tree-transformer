@@ -171,6 +171,9 @@
                         <argument>khs.res.db2demo</argument>
                     </arguments>
                 </configuration>
+               <!-- <configuration>
+                    <mainClass>khs.res.db2demo.COBOLDB2</mainClass>
+                </configuration>-->
             </plugin>
         </plugins>
     </build>
