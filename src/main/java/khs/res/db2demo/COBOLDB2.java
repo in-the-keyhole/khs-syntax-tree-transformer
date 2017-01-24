@@ -14,20 +14,20 @@ import khs.cobol.transformer.runtime.Database;
 public class COBOLDB2   {
     private static Logger Log = LoggerFactory.getLogger("COBOLDB2");
 
-    // SQLCA
-    public int sqlcode;
+ 	// SQLCA
+	public int sqlcode;
 
-    // Level 05
-    public String ws_empno;
+ 	// Level 05
+	public String ws_empno;
 
-    // Level 05
-    public String ws_last_name;
+	// Level 05
+	public String ws_last_name;
 
-    // Level 05
-    public String ws_first_name;
+	// Level 05
+	public String ws_first_name;
 
-    // Level 01
-    public String[] ws_employee_record = new String[]{ "ws_empno", "ws_last_name", "ws_first_name" };
+	// Level 01
+	public String[] ws_employee_record = new String[]{ "ws_empno", "ws_last_name", "ws_first_name" };
 
     public static void main(String[] args) {
         try {
@@ -40,14 +40,14 @@ public class COBOLDB2   {
 
     public void procDiv () throws Exception {
         String sql = " SELECT EMPNO, LASTNAME, FIRSTNME FROM EMPLOYEE WHERE EMPNO=200310 ";
-        String[] sqlArgs = new String[]{ "ws_empno", "ws_last_name", "ws_first_name" };
+		String[] sqlArgs = new String[]{ "ws_empno", "ws_last_name", "ws_first_name" };
 
-        sqlcode = Database.getInstance().selectInto( sql, sqlArgs, this );
+		sqlcode = Database.getInstance().selectInto( sql, sqlArgs, this );
 
         if ( sqlcode == 0 ) {
-            Display.display(ws_employee_record, this);
-        } else {
-            Display.display("Error", this);
-        }
+			Display.display(ws_employee_record, this);
+		} else {
+			Display.display("Error", this);
+		}
     }
 }
