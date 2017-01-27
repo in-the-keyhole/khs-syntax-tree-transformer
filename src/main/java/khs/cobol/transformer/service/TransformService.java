@@ -55,30 +55,32 @@ public class TransformService {
 
 	}
 
-	private String readJson(String file) {
+    private String readJson(String fileName) {
 
-		FileReader reader = null;
-		try {
-			reader = new FileReader(file);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		StringBuilder json = new StringBuilder();
-		int i;
-		try {
-			while ((i = reader.read()) >= 0) {
+        StringBuilder jsonBuffer = new StringBuilder();
+        BufferedReader reader = null;
 
-				json.append((char) i);
-			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+        try {
+            reader = new BufferedReader( new FileReader(fileName) );
 
-		return json.toString();
+            String readBuffer;
+            while ((readBuffer = reader.readLine()) != null)   {
+                jsonBuffer.append( readBuffer );
+            }
 
-	}
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                reader.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return jsonBuffer.toString();
+    }
 
 	public void createTemplate(Program program) {
 
