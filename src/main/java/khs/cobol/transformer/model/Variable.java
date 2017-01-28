@@ -120,7 +120,7 @@ public class Variable {
         }
 
 		if (this.variables.isEmpty()) {
-		   // no levels, just define variable
+		   	// no levels, just define variable
 			if (this.name.equalsIgnoreCase("FILLER")) {
 				expression ="";
 			} else {
@@ -131,11 +131,14 @@ public class Variable {
 		    // get workstorage levels
 		   List<String> vars = new ArrayList<String>();
 		   expression = expressionLevels(vars,this.variables);
-		   expression += String.format("// Level %s\n\tpublic String[] %s = new String[]{ ",  getVarLevel(), Syntax.var(getName()) );
+
+//            expression += String.format("// Level %s\n\tpublic String[] %s = new String[]{ ",  getVarLevel(), Syntax.var(getName()) );
+            expression += String.format("// Level %s\n\tpublic InItem[] %s = new InItem[]{ ",  getVarLevel(), Syntax.var(getName()) );
 
 		   String sep = "";
 			for (String var : vars) {
-				expression += String.format("%s\"%s\"", sep, var);
+//                expression += String.format("%s\"%s\"", sep, var);
+                expression += String.format("%s() -> %s", sep, var);
 				sep = ", ";
 			}
 

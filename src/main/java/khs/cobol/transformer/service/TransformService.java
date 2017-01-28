@@ -35,11 +35,15 @@ public class TransformService {
 	public void transform(String jsonFile, String pckg) {
 
 		LOG.info("Parsing :" + jsonFile);
+
 		Program program = parse(readJson(jsonFile));
 		program.setPckge(pckg);
 		Program.singleInstance = program;
+
 		LOG.info("Transforming");
+
 		createTemplate(program);
+
 		LOG.info("Transformed");
 
 	}
@@ -123,7 +127,6 @@ public class TransformService {
 			writer.write(contents);
 			writer.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

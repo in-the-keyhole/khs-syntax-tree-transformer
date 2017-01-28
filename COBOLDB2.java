@@ -4,11 +4,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import khs.cobol.transformer.runtime.Display;
 import khs.cobol.transformer.runtime.Database;
+import khs.cobol.transformer.runtime.InItem;
+import khs.cobol.transformer.runtime.OutItem;
 
 /**
- * Java source, file COBOLDB2.java generated from Cobol source, COBOLDB2.cbl.
+ * Java source, file COBOLDB2.java generated from Cobol source, COBOLDB2.cbl
  *
- * @version 0.0.1
+ * @version 0.0.2
  * @author Keyhole Software LLC
  */
 public class COBOLDB2   {
@@ -27,7 +29,7 @@ public class COBOLDB2   {
 	public String ws_first_name;
 
 	// Level 01
-	public String[] ws_employee_record = new String[]{ "ws_empno", "ws_last_name", "ws_first_name" };
+	public InItem[] ws_employee_record = new InItem[]{ () -> ws_empno, () -> ws_last_name, () -> ws_first_name };
 
     public static void main(String[] args) {
         try {
@@ -39,15 +41,15 @@ public class COBOLDB2   {
     }
 
     public void procDiv () throws Exception {
-        String sql = " SELECT EMPNO, LASTNAME, FIRSTNME FROM EMPLOYEE WHERE EMPNO=200310 ";
+        String sql = "SELECT EMPNO, LASTNAME, FIRSTNME FROM EMPLOYEE WHERE EMPNO=200310";
 		String[] sqlArgs = new String[]{ "ws_empno", "ws_last_name", "ws_first_name" };
 
 		sqlcode = Database.getInstance().selectInto( sql, sqlArgs, this );
 
         if ( sqlcode == 0 ) {
-			Display.display(ws_employee_record, this);
+			Display.display( ws_employee_record );
 		} else {
-			Display.display("Error", this);
+			Display.display( "Error" );
 		}
     }
 }

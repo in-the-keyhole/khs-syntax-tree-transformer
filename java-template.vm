@@ -1,5 +1,5 @@
 #set( $parenPair = "()" )
-#set( $cblExt = ".cbl")
+#set( $cobolExt = ".cbl")
 #set( $javaExt = ".java")
 #set( $dot = ".")
 package $program.pckge;
@@ -8,11 +8,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import khs.cobol.transformer.runtime.Display;
 import khs.cobol.transformer.runtime.Database;
+import khs.cobol.transformer.runtime.InItem;
+import khs.cobol.transformer.runtime.OutItem;
 
 /**
- * Java source, file $program.name$javaExt generated from Cobol source, $program.name$cblExt$dot
+ * Java source, file $program.name$javaExt generated from Cobol source, $program.name$cobolExt
  *
- * @version 0.0.1
+ * @version 0.0.2
  * @author Keyhole Software LLC
  */
 public class $program.name   {

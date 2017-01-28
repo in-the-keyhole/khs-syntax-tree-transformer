@@ -42,7 +42,7 @@ public class Method {
 
     public void setSqlArgs(String[] sqlArgs) { this.sqlArgs = sqlArgs;  }
 
-    public String getSql() {  return sql;  }
+    public String getSql() {  return null == sql ? "" : sql.trim();  }
 
     public void setSql(String sql) { this.sql = sql;  }
 
@@ -129,7 +129,7 @@ public class Method {
 
         }  else if ("DISPLAY".equalsIgnoreCase(getName())) {
             // if value is object array, enumerate/prints its elements, else just prints a passed simple string.
-            expression = String.format("Display.display(%s, this)", getValue());
+            expression = String.format("Display.display( %s )", getValue());
 
         } else 	if (MOVE.equalsIgnoreCase( getTypeName())) {
 			expression = Syntax.var(this.getType().getVarName()) + " = " + Syntax.val(this.getType().getValue());

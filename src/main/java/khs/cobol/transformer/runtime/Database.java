@@ -41,9 +41,9 @@ public class Database {
     public int selectInto( String sql, String[] sqlArgs, Object parent) {
 
         Connection dbConnection = null;
+        sqlcode = RC_ERROR;
 
         try {
-            sqlcode = RC_ERROR;
             Object[] rec = new Object[sqlArgs.length];
             dbConnection = getDBConnection();
 
@@ -69,26 +69,22 @@ public class Database {
             rs.close();
             pstm.close();
             sqlcode = RC_OK;
-            return sqlcode;
 
         } catch (SQLException e) {
             e.printStackTrace();
-            return RC_ERROR;
         } catch (IllegalAccessException e) {
             e.printStackTrace();
-            return RC_ERROR;
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
-            return RC_ERROR;
         } finally {
             try {
                 dbConnection.close();
             } catch (SQLException e) {
                 Log.error(e.getMessage());
-                return RC_ERROR;
             }
 
         }
+        return sqlcode;
     }
 
     private static Connection getDBConnection() {
