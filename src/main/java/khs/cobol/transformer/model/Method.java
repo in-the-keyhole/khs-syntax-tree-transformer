@@ -1,5 +1,6 @@
 package khs.cobol.transformer.model;
 
+import khs.cobol.transformer.runtime.OutItem;
 import khs.transformer.util.Syntax;
 
 public class Method {
@@ -81,18 +82,20 @@ public class Method {
 
         if (DBMETHOD.equalsIgnoreCase(getName())) {
             StringBuilder sb = new StringBuilder(String.format("String sql = \"%s\";\n", getSql()));
-            sb.append("\t\tString[] sqlArgs = new String[]{ ");
 
-            // Build sqlArgs
+            // Build "into" output record from sqlArgs
             String sep = "";
+            sb.append("\n\t\tOutItem[] outFields = new OutItem[]{");
+            sep = "\n\t\t\t";
             for( String item : getSqlArgs()){
                 sb.append(sep);
-                sb.append(String.format("\"%s\"", item));
-                sep = ", ";
+                sb.append(String.format("s -> %s = (String)s", item ));
+                sep = ",\n\t\t\t";
             }
-            sb.append(" };\n");
+            sb.append("\n\t\t};\n");
+
             // Call Database helper
-            sb.append("\n\t\tsqlcode = Database.getInstance().selectInto( sql, sqlArgs, this );\n");
+            sb.append("\n\t\tsqlcode = Database.getInstance().selectInto( sql, outFields );\n");
 
             expression = sb.toString();
 

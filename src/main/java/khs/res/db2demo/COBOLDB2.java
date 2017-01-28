@@ -42,9 +42,14 @@ public class COBOLDB2   {
 
     public void procDiv () throws Exception {
         String sql = "SELECT EMPNO, LASTNAME, FIRSTNME FROM EMPLOYEE WHERE EMPNO=200310";
-		String[] sqlArgs = new String[]{ "ws_empno", "ws_last_name", "ws_first_name" };
 
-		sqlcode = Database.getInstance().selectInto( sql, sqlArgs, this );
+		OutItem[] outFields = new OutItem[]{
+			s -> ws_empno = (String)s,
+			s -> ws_last_name = (String)s,
+			s -> ws_first_name = (String)s
+		};
+
+		sqlcode = Database.getInstance().selectInto( sql, outFields );
 
         if ( sqlcode == 0 ) {
 			Display.display( ws_employee_record );
