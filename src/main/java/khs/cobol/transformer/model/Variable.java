@@ -125,7 +125,7 @@ public class Variable {
 				expression ="";
 			} else {
                 String level = getVarLevel().equalsIgnoreCase("sqlca") ? "" : " Level";
-				expression = String.format("//%s %s\n\tpublic %s %s;\n", level,  getVarLevel().toUpperCase(), dataType, Syntax.var(getName()));
+				expression = String.format("//%s %s\n\tprivate %s %s;\n", level,  getVarLevel().toUpperCase(), dataType, Syntax.var(getName()));
 			}
 		} else {
 		    // get workstorage levels
@@ -133,7 +133,7 @@ public class Variable {
 		   expression = expressionLevels(vars,this.variables);
 
 //            expression += String.format("// Level %s\n\tpublic String[] %s = new String[]{ ",  getVarLevel(), Syntax.var(getName()) );
-            expression += String.format("// Level %s\n\tpublic InItem[] %s = new InItem[]{ ",  getVarLevel(), Syntax.var(getName()) );
+            expression += String.format("// Level %s\n\tprivate InItem[] %s = new InItem[]{ ",  getVarLevel(), Syntax.var(getName()) );
 
 		   String sep = "";
 			for (String var : vars) {

@@ -17,19 +17,19 @@ public class COBOLDB2   {
     private static Logger Log = LoggerFactory.getLogger("COBOLDB2");
 
  	// SQLCA
-	public int sqlcode;
+	private int sqlcode;
 
  	// Level 05
-	public String ws_empno;
+	private String ws_empno;
 
 	// Level 05
-	public String ws_last_name;
+	private String ws_last_name;
 
 	// Level 05
-	public String ws_first_name;
+	private String ws_first_name;
 
 	// Level 01
-	public InItem[] ws_employee_record = new InItem[]{ () -> ws_empno, () -> ws_last_name, () -> ws_first_name };
+	private InItem[] ws_employee_record = new InItem[]{ () -> ws_empno, () -> ws_last_name, () -> ws_first_name };
 
     public static void main(String[] args) {
         try {
@@ -41,15 +41,15 @@ public class COBOLDB2   {
     }
 
     public void procDiv () throws Exception {
-        String sql = "SELECT EMPNO, LASTNAME, FIRSTNME FROM EMPLOYEE WHERE EMPNO=200310";
+        final String sql = "SELECT EMPNO, LASTNAME, FIRSTNME FROM EMPLOYEE WHERE EMPNO=200310";
 
-		OutItem[] outFields = new OutItem[]{
+		final OutItem[] into = new OutItem[]{
 			s -> ws_empno = (String)s,
 			s -> ws_last_name = (String)s,
 			s -> ws_first_name = (String)s
 		};
 
-		sqlcode = Database.getInstance().selectInto( sql, outFields );
+		sqlcode = Database.getInstance().selectInto( sql, into );
 
         if ( sqlcode == 0 ) {
 			Display.display( ws_employee_record );

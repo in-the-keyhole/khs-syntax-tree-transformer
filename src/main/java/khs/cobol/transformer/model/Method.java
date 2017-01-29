@@ -81,11 +81,11 @@ public class Method {
 		String expression = "";
 
         if (DBMETHOD.equalsIgnoreCase(getName())) {
-            StringBuilder sb = new StringBuilder(String.format("String sql = \"%s\";\n", getSql()));
+            StringBuilder sb = new StringBuilder(String.format("final String sql = \"%s\";\n", getSql()));
 
             // Build "into" output record from sqlArgs
             String sep = "";
-            sb.append("\n\t\tOutItem[] outFields = new OutItem[]{");
+            sb.append("\n\t\tfinal OutItem[] into = new OutItem[]{");
             sep = "\n\t\t\t";
             for( String item : getSqlArgs()){
                 sb.append(sep);
@@ -95,7 +95,7 @@ public class Method {
             sb.append("\n\t\t};\n");
 
             // Call Database helper
-            sb.append("\n\t\tsqlcode = Database.getInstance().selectInto( sql, outFields );\n");
+            sb.append("\n\t\tsqlcode = Database.getInstance().selectInto( sql, into );\n");
 
             expression = sb.toString();
 
