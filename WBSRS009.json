@@ -1,0 +1,6655 @@
+{
+  "name" : "WBSRS009",
+  "typeName" : "CLASS",
+  "variables" : [ {
+    "name" : "filler",
+    "typeName" : "VARIABLE",
+    "value" : "'WBSRS009 WS BEGIN ==>'",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : true,
+    "varLevel" : "01",
+    "picture" : "X(21)",
+    "variables" : [ ]
+  }, {
+    "name" : "ws-pgm-id",
+    "typeName" : "VARIABLE",
+    "value" : "'WBSRS009'",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : true,
+    "varLevel" : "01",
+    "picture" : "X(08)",
+    "variables" : [ ]
+  }, {
+    "name" : "db2error",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : true,
+    "varLevel" : "01",
+    "picture" : null,
+    "variables" : [ {
+      "name" : "db2error-buffersize",
+      "typeName" : "VARIABLE",
+      "value" : null,
+      "isLocal" : false,
+      "isWorking" : true,
+      "isArray" : false,
+      "varLevel" : "05",
+      "picture" : null,
+      "variables" : [ ]
+    }, {
+      "name" : "db2error-buffer",
+      "typeName" : "VARIABLE",
+      "value" : null,
+      "isLocal" : false,
+      "isWorking" : true,
+      "isArray" : false,
+      "varLevel" : "05",
+      "picture" : "X(720)",
+      "variables" : [ ]
+    } ]
+  }, {
+    "name" : "db2error-linewidth",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : null,
+    "variables" : [ ]
+  }, {
+    "name" : "sqlstate-class-success",
+    "typeName" : "VARIABLE",
+    "value" : "\"00\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(2)",
+    "variables" : [ ]
+  }, {
+    "name" : "sqlstate-class-warning",
+    "typeName" : "VARIABLE",
+    "value" : "\"01\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(2)",
+    "variables" : [ ]
+  }, {
+    "name" : "sqlstate-class-no-data",
+    "typeName" : "VARIABLE",
+    "value" : "\"02\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(2)",
+    "variables" : [ ]
+  }, {
+    "name" : "sqlstate-class-connect-except",
+    "typeName" : "VARIABLE",
+    "value" : "\"08\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(2)",
+    "variables" : [ ]
+  }, {
+    "name" : "sqlstate-class-cardinality",
+    "typeName" : "VARIABLE",
+    "value" : "\"21\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(2)",
+    "variables" : [ ]
+  }, {
+    "name" : "sqlstate-class-data-except",
+    "typeName" : "VARIABLE",
+    "value" : "\"22\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(2)",
+    "variables" : [ ]
+  }, {
+    "name" : "sqlstate-class-constraint",
+    "typeName" : "VARIABLE",
+    "value" : "\"23\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(2)",
+    "variables" : [ ]
+  }, {
+    "name" : "sqlstate-class-inv-curs-state",
+    "typeName" : "VARIABLE",
+    "value" : "\"24\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(2)",
+    "variables" : [ ]
+  }, {
+    "name" : "sqlstate-class-inv-stmt-id",
+    "typeName" : "VARIABLE",
+    "value" : "\"26\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(2)",
+    "variables" : [ ]
+  }, {
+    "name" : "sqlstate-class-syntax",
+    "typeName" : "VARIABLE",
+    "value" : "\"37\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(2)",
+    "variables" : [ ]
+  }, {
+    "name" : "sqlstate-class-serialization",
+    "typeName" : "VARIABLE",
+    "value" : "\"40\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(2)",
+    "variables" : [ ]
+  }, {
+    "name" : "sqlstate-class-authorzation",
+    "typeName" : "VARIABLE",
+    "value" : "\"42\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(2)",
+    "variables" : [ ]
+  }, {
+    "name" : "sqlstate-class-inv-app-state",
+    "typeName" : "VARIABLE",
+    "value" : "\"51\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(2)",
+    "variables" : [ ]
+  }, {
+    "name" : "sqlstate-class-dup-undef-name",
+    "typeName" : "VARIABLE",
+    "value" : "\"52\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(2)",
+    "variables" : [ ]
+  }, {
+    "name" : "sqlstate-class-inv-operand",
+    "typeName" : "VARIABLE",
+    "value" : "\"53\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(2)",
+    "variables" : [ ]
+  }, {
+    "name" : "sqlstate-class-limit",
+    "typeName" : "VARIABLE",
+    "value" : "\"54\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(2)",
+    "variables" : [ ]
+  }, {
+    "name" : "sqlstate-class-prereq-state",
+    "typeName" : "VARIABLE",
+    "value" : "\"55\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(2)",
+    "variables" : [ ]
+  }, {
+    "name" : "sqlstate-class-misc-restrict",
+    "typeName" : "VARIABLE",
+    "value" : "\"56\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(2)",
+    "variables" : [ ]
+  }, {
+    "name" : "sqlstate-class-resource",
+    "typeName" : "VARIABLE",
+    "value" : "\"57\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(2)",
+    "variables" : [ ]
+  }, {
+    "name" : "sqlstate-class-system-error",
+    "typeName" : "VARIABLE",
+    "value" : "\"58\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(2)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-exec-ok",
+    "typeName" : "VARIABLE",
+    "value" : "\"00000\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-disconnect-err",
+    "typeName" : "VARIABLE",
+    "value" : "\"01002\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-null-val-eliminated",
+    "typeName" : "VARIABLE",
+    "value" : "\"01003\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-val-trunc",
+    "typeName" : "VARIABLE",
+    "value" : "\"01004\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-insuff-item-descript",
+    "typeName" : "VARIABLE",
+    "value" : "\"01005\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-not-all-privs-granted",
+    "typeName" : "VARIABLE",
+    "value" : "\"01007\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-str-trunc",
+    "typeName" : "VARIABLE",
+    "value" : "\"01501\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-nulls-elim",
+    "typeName" : "VARIABLE",
+    "value" : "\"01502\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-cols-toomany",
+    "typeName" : "VARIABLE",
+    "value" : "\"01503\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-stmt-nowhere",
+    "typeName" : "VARIABLE",
+    "value" : "\"01504\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-stmt-notexec",
+    "typeName" : "VARIABLE",
+    "value" : "\"01505\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-date-adj",
+    "typeName" : "VARIABLE",
+    "value" : "\"01506\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-cursor-not-blocked",
+    "typeName" : "VARIABLE",
+    "value" : "\"01509\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-host-null-col-range",
+    "typeName" : "VARIABLE",
+    "value" : "\"01515\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-with-grant-ignored",
+    "typeName" : "VARIABLE",
+    "value" : "\"01516\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-char-sub",
+    "typeName" : "VARIABLE",
+    "value" : "\"01517\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-host-null-num-range",
+    "typeName" : "VARIABLE",
+    "value" : "\"01519\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-var-nownull",
+    "typeName" : "VARIABLE",
+    "value" : "\"01520\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-table-undef",
+    "typeName" : "VARIABLE",
+    "value" : "\"01522\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-nulls2-elim",
+    "typeName" : "VARIABLE",
+    "value" : "\"01524\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-iso-escal",
+    "typeName" : "VARIABLE",
+    "value" : "\"01526\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-reg-notexist",
+    "typeName" : "VARIABLE",
+    "value" : "\"01527\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-where-ignore",
+    "typeName" : "VARIABLE",
+    "value" : "\"01528\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-name-undef",
+    "typeName" : "VARIABLE",
+    "value" : "\"01532\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-use-sbcs-chars-only",
+    "typeName" : "VARIABLE",
+    "value" : "\"01539\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-op-nopriv",
+    "typeName" : "VARIABLE",
+    "value" : "\"01542\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-ref-ignore",
+    "typeName" : "VARIABLE",
+    "value" : "\"01543\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-name-interp",
+    "typeName" : "VARIABLE",
+    "value" : "\"01545\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-obj-nopriv",
+    "typeName" : "VARIABLE",
+    "value" : "\"01548\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-pack-priv",
+    "typeName" : "VARIABLE",
+    "value" : "\"01549\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-index-exist",
+    "typeName" : "VARIABLE",
+    "value" : "\"01550\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-grant-ignored",
+    "typeName" : "VARIABLE",
+    "value" : "\"01560\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-newlogpath-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"01562\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-curr-logpath-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"01563\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-host-null-div-zero",
+    "typeName" : "VARIABLE",
+    "value" : "\"01564\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-auto-check-pend-state",
+    "typeName" : "VARIABLE",
+    "value" : "\"01586\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-keyword-redundant",
+    "typeName" : "VARIABLE",
+    "value" : "\"01589\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-val-may-be-trunc",
+    "typeName" : "VARIABLE",
+    "value" : "\"01592\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-val-could-be-trunc",
+    "typeName" : "VARIABLE",
+    "value" : "\"01593\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-insuff-descriptors",
+    "typeName" : "VARIABLE",
+    "value" : "\"01594\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-old-view-replaced",
+    "typeName" : "VARIABLE",
+    "value" : "\"01595\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-no-compfunc-for-lstr",
+    "typeName" : "VARIABLE",
+    "value" : "\"01596\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-evmon-state-not-set",
+    "typeName" : "VARIABLE",
+    "value" : "\"01598\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-rebind-opts-ignored",
+    "typeName" : "VARIABLE",
+    "value" : "\"01599\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-conn-disabled",
+    "typeName" : "VARIABLE",
+    "value" : "\"01601\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-sub-optimal-query",
+    "typeName" : "VARIABLE",
+    "value" : "\"01602\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-constraint-vio-moved",
+    "typeName" : "VARIABLE",
+    "value" : "\"01603\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-explain-mode-restrict",
+    "typeName" : "VARIABLE",
+    "value" : "\"01604\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-possible-infinit-loop",
+    "typeName" : "VARIABLE",
+    "value" : "\"01605\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-dir-empty",
+    "typeName" : "VARIABLE",
+    "value" : "\"01606\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-timediff-exceeded",
+    "typeName" : "VARIABLE",
+    "value" : "\"01607\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-clause-val-replaced",
+    "typeName" : "VARIABLE",
+    "value" : "\"01608\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-more-result-sets",
+    "typeName" : "VARIABLE",
+    "value" : "\"01610\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-next-result-set",
+    "typeName" : "VARIABLE",
+    "value" : "\"01611\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-redist-required",
+    "typeName" : "VARIABLE",
+    "value" : "\"01618\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-unionall-tables-same",
+    "typeName" : "VARIABLE",
+    "value" : "\"01620\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-lob-changed",
+    "typeName" : "VARIABLE",
+    "value" : "\"01621\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-system-error",
+    "typeName" : "VARIABLE",
+    "value" : "\"01622\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-degree-ignored",
+    "typeName" : "VARIABLE",
+    "value" : "\"01623\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-one-active-buffpool",
+    "typeName" : "VARIABLE",
+    "value" : "\"01626\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-resource-unavail",
+    "typeName" : "VARIABLE",
+    "value" : "\"01630\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-invalid-cursor-pos",
+    "typeName" : "VARIABLE",
+    "value" : "\"01S06\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-warn-udf-returns-state",
+    "typeName" : "VARIABLE",
+    "value" : "\"01Hxx\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-nodata-exception",
+    "typeName" : "VARIABLE",
+    "value" : "\"02000\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-nodata-uhole",
+    "typeName" : "VARIABLE",
+    "value" : "\"02501\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-nodata-dhole",
+    "typeName" : "VARIABLE",
+    "value" : "\"02502\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-num-host-vars",
+    "typeName" : "VARIABLE",
+    "value" : "\"07001\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-parm-or-cb",
+    "typeName" : "VARIABLE",
+    "value" : "\"07002\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-execute-stmt",
+    "typeName" : "VARIABLE",
+    "value" : "\"07003\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-using-clause-required",
+    "typeName" : "VARIABLE",
+    "value" : "\"07004\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-prep-stmt-cursor",
+    "typeName" : "VARIABLE",
+    "value" : "\"07005\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-hostvar-not-usable",
+    "typeName" : "VARIABLE",
+    "value" : "\"07006\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-conn-failed",
+    "typeName" : "VARIABLE",
+    "value" : "\"08001\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-conn-already-exist",
+    "typeName" : "VARIABLE",
+    "value" : "\"08002\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-conn-does-not-exit",
+    "typeName" : "VARIABLE",
+    "value" : "\"08003\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-conn-rejected-by-server",
+    "typeName" : "VARIABLE",
+    "value" : "\"08004\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-conn-resolution-unknown",
+    "typeName" : "VARIABLE",
+    "value" : "\"08007\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-conn-failed-no-tm",
+    "typeName" : "VARIABLE",
+    "value" : "\"08502\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-trigger-error",
+    "typeName" : "VARIABLE",
+    "value" : "\"09000\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-proc-not-connectable",
+    "typeName" : "VARIABLE",
+    "value" : "\"0A001\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-lob-novalue-token-var",
+    "typeName" : "VARIABLE",
+    "value" : "\"0F001\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-card-value-toomany",
+    "typeName" : "VARIABLE",
+    "value" : "\"21000\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-card-ins-multirow",
+    "typeName" : "VARIABLE",
+    "value" : "\"21501\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-card-upd-multirow",
+    "typeName" : "VARIABLE",
+    "value" : "\"21502\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-card-del-multirow",
+    "typeName" : "VARIABLE",
+    "value" : "\"21504\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-char-rtrunc",
+    "typeName" : "VARIABLE",
+    "value" : "\"22001\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-indicator-null",
+    "typeName" : "VARIABLE",
+    "value" : "\"22002\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-num-range",
+    "typeName" : "VARIABLE",
+    "value" : "\"22003\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-fetch-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"22006\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-format-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"22007\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-datetime-ov",
+    "typeName" : "VARIABLE",
+    "value" : "\"22008\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-str-range",
+    "typeName" : "VARIABLE",
+    "value" : "\"22011\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-div-zero",
+    "typeName" : "VARIABLE",
+    "value" : "\"22012\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-inv-cast-char",
+    "typeName" : "VARIABLE",
+    "value" : "\"22018\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-like-inv-char",
+    "typeName" : "VARIABLE",
+    "value" : "\"22019\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-null-missing",
+    "typeName" : "VARIABLE",
+    "value" : "\"22024\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-like-inv-esc",
+    "typeName" : "VARIABLE",
+    "value" : "\"22025\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-length-range",
+    "typeName" : "VARIABLE",
+    "value" : "\"22501\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-str-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"22503\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-data-badform",
+    "typeName" : "VARIABLE",
+    "value" : "\"22504\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-datetime-reg-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"22506\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-type-cantuse",
+    "typeName" : "VARIABLE",
+    "value" : "\"22507\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-type-incompat",
+    "typeName" : "VARIABLE",
+    "value" : "\"22509\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-hostvar-neg-indvar",
+    "typeName" : "VARIABLE",
+    "value" : "\"22512\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-index-dup",
+    "typeName" : "VARIABLE",
+    "value" : "\"22515\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-str-cantuse-xlate",
+    "typeName" : "VARIABLE",
+    "value" : "\"22517\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-str-cantasgn-xlate",
+    "typeName" : "VARIABLE",
+    "value" : "\"22518\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-key-notequal",
+    "typeName" : "VARIABLE",
+    "value" : "\"22520\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-ccsidval-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"22522\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-conversion-trunc",
+    "typeName" : "VARIABLE",
+    "value" : "\"22524\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-constr-chg-key-notallow",
+    "typeName" : "VARIABLE",
+    "value" : "\"23001\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-constr-row-notsatisfy-view",
+    "typeName" : "VARIABLE",
+    "value" : "\"23501\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-constr-null-notallow",
+    "typeName" : "VARIABLE",
+    "value" : "\"23502\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-constr-value-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"23503\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-constr-op-restrict",
+    "typeName" : "VARIABLE",
+    "value" : "\"23504\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-constr-index-unique",
+    "typeName" : "VARIABLE",
+    "value" : "\"23505\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-constr-violation-rlst",
+    "typeName" : "VARIABLE",
+    "value" : "\"23510\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-constr-par-row-del-noallow",
+    "typeName" : "VARIABLE",
+    "value" : "\"23511\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-constr-row-invalid",
+    "typeName" : "VARIABLE",
+    "value" : "\"23512\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-constr-row-nonconform",
+    "typeName" : "VARIABLE",
+    "value" : "\"23513\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-constr-violations",
+    "typeName" : "VARIABLE",
+    "value" : "\"23514\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-constr-dup-key-values",
+    "typeName" : "VARIABLE",
+    "value" : "\"23515\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-constr-foreign-key-noallow",
+    "typeName" : "VARIABLE",
+    "value" : "\"23520\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-constr-update-cat-stats",
+    "typeName" : "VARIABLE",
+    "value" : "\"23521\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-cursor-notopen",
+    "typeName" : "VARIABLE",
+    "value" : "\"24501\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-cursor-open-already",
+    "typeName" : "VARIABLE",
+    "value" : "\"24502\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-cursor-notpos",
+    "typeName" : "VARIABLE",
+    "value" : "\"24504\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-cursor-open-no-commit",
+    "typeName" : "VARIABLE",
+    "value" : "\"24505\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-cursor-pd-open",
+    "typeName" : "VARIABLE",
+    "value" : "\"24506\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-cursor-deleted",
+    "typeName" : "VARIABLE",
+    "value" : "\"24507\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-cursor-dhole",
+    "typeName" : "VARIABLE",
+    "value" : "\"24510\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-cursor-uhole",
+    "typeName" : "VARIABLE",
+    "value" : "\"24511\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-cursor-agree",
+    "typeName" : "VARIABLE",
+    "value" : "\"24512\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-cursor-moved",
+    "typeName" : "VARIABLE",
+    "value" : "\"24513\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-cursor-previous-error",
+    "typeName" : "VARIABLE",
+    "value" : "\"24514\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-execution-environment",
+    "typeName" : "VARIABLE",
+    "value" : "\"25000\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-only-as-first-statement",
+    "typeName" : "VARIABLE",
+    "value" : "\"25501\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ident-notexist",
+    "typeName" : "VARIABLE",
+    "value" : "\"26501\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ident-noassoc",
+    "typeName" : "VARIABLE",
+    "value" : "\"26503\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ident-select",
+    "typeName" : "VARIABLE",
+    "value" : "\"26504\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ident-notspec",
+    "typeName" : "VARIABLE",
+    "value" : "\"26506\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ident-notsrsel",
+    "typeName" : "VARIABLE",
+    "value" : "\"26507\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ident-notselect",
+    "typeName" : "VARIABLE",
+    "value" : "\"26508\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ident-dup",
+    "typeName" : "VARIABLE",
+    "value" : "\"26509\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ident-hascursor",
+    "typeName" : "VARIABLE",
+    "value" : "\"26510\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-authorization-spec",
+    "typeName" : "VARIABLE",
+    "value" : "\"28000\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-operation-for-envir",
+    "typeName" : "VARIABLE",
+    "value" : "\"2D521\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-dynamic-commit-invalid",
+    "typeName" : "VARIABLE",
+    "value" : "\"2D528\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-dynamic-rollback-invalid",
+    "typeName" : "VARIABLE",
+    "value" : "\"2D529\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-conn-name",
+    "typeName" : "VARIABLE",
+    "value" : "\"2E000\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-cursor-name",
+    "typeName" : "VARIABLE",
+    "value" : "\"34000\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-token-missing",
+    "typeName" : "VARIABLE",
+    "value" : "\"37501\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-name-invchar",
+    "typeName" : "VARIABLE",
+    "value" : "\"37502\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-str-unterm",
+    "typeName" : "VARIABLE",
+    "value" : "\"37503\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-const-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"37504\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-numargs-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"37505\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-hconst-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"37506\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-op-inv-col",
+    "typeName" : "VARIABLE",
+    "value" : "\"37507\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-op-marker",
+    "typeName" : "VARIABLE",
+    "value" : "\"37509\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-marker-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"37510\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-col-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"37511\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-stmt-bad",
+    "typeName" : "VARIABLE",
+    "value" : "\"37512\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-clause-exclusive",
+    "typeName" : "VARIABLE",
+    "value" : "\"37513\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-keyword-dup",
+    "typeName" : "VARIABLE",
+    "value" : "\"37514\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-opt-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"37516\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-stmt-empty",
+    "typeName" : "VARIABLE",
+    "value" : "\"37517\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-hostvar-notallow",
+    "typeName" : "VARIABLE",
+    "value" : "\"37518\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-readonly-notallow",
+    "typeName" : "VARIABLE",
+    "value" : "\"37520\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-udf-returns-error-state",
+    "typeName" : "VARIABLE",
+    "value" : "\"38xxx\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-udf-call-error",
+    "typeName" : "VARIABLE",
+    "value" : "\"38501\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-udf-excute-sql-notallow",
+    "typeName" : "VARIABLE",
+    "value" : "\"38502\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-udf-abnormal-end",
+    "typeName" : "VARIABLE",
+    "value" : "\"38503\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-udf-interrupted",
+    "typeName" : "VARIABLE",
+    "value" : "\"38504\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-udf-returns-inv-state",
+    "typeName" : "VARIABLE",
+    "value" : "\"39001\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-udf-returns-result-toolong",
+    "typeName" : "VARIABLE",
+    "value" : "\"39501\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-out-sqlda-changed",
+    "typeName" : "VARIABLE",
+    "value" : "\"39502\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-serial-rollback",
+    "typeName" : "VARIABLE",
+    "value" : "\"40000\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rollbk-automatic",
+    "typeName" : "VARIABLE",
+    "value" : "\"40001\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-stmt-completion-unknown",
+    "typeName" : "VARIABLE",
+    "value" : "\"40003\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rollbk-dist-env",
+    "typeName" : "VARIABLE",
+    "value" : "\"40502\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rollbk-conn-lost",
+    "typeName" : "VARIABLE",
+    "value" : "\"40504\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rollbk-table",
+    "typeName" : "VARIABLE",
+    "value" : "\"40506\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-access-auth-notpriv-obj",
+    "typeName" : "VARIABLE",
+    "value" : "\"42501\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-access-auth-notpriv-op",
+    "typeName" : "VARIABLE",
+    "value" : "\"42502\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-access-auth-not-authorized",
+    "typeName" : "VARIABLE",
+    "value" : "\"42503\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-access-priv-cantrevoke",
+    "typeName" : "VARIABLE",
+    "value" : "\"42504\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-access-auth-fail-conn",
+    "typeName" : "VARIABLE",
+    "value" : "\"42505\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-access-auth-fail-owner",
+    "typeName" : "VARIABLE",
+    "value" : "\"42506\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-access-auth-fail-server",
+    "typeName" : "VARIABLE",
+    "value" : "\"42507\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-access-priv-cantpublic",
+    "typeName" : "VARIABLE",
+    "value" : "\"42508\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-keyword-incompat",
+    "typeName" : "VARIABLE",
+    "value" : "\"42601\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-invalid",
+    "typeName" : "VARIABLE",
+    "value" : "\"42601\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-invalid-char-in-name",
+    "typeName" : "VARIABLE",
+    "value" : "\"42602\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-unterminated-string-const",
+    "typeName" : "VARIABLE",
+    "value" : "\"42603\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-invalid-num-or-str-const",
+    "typeName" : "VARIABLE",
+    "value" : "\"42604\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-invalid-num-args",
+    "typeName" : "VARIABLE",
+    "value" : "\"42605\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-invalid-hex-const",
+    "typeName" : "VARIABLE",
+    "value" : "\"42606\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-invalid-col-func-operand",
+    "typeName" : "VARIABLE",
+    "value" : "\"42607\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-use-of-null-or-dflt",
+    "typeName" : "VARIABLE",
+    "value" : "\"42608\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-all-operands-parm-markers",
+    "typeName" : "VARIABLE",
+    "value" : "\"42609\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-parameter-markers-invalid",
+    "typeName" : "VARIABLE",
+    "value" : "\"42610\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-len-scale-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"42611\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-stmt-not-in-context",
+    "typeName" : "VARIABLE",
+    "value" : "\"42612\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-keyword-conflict",
+    "typeName" : "VARIABLE",
+    "value" : "\"42613\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-dup-keyword-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"42614\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-alternative",
+    "typeName" : "VARIABLE",
+    "value" : "\"42615\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-stmt-str-blank-or-empty",
+    "typeName" : "VARIABLE",
+    "value" : "\"42617\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-host-var-not-allowed",
+    "typeName" : "VARIABLE",
+    "value" : "\"42618\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-check-constraint-invalid",
+    "typeName" : "VARIABLE",
+    "value" : "\"42621\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-or-label-is-too-long",
+    "typeName" : "VARIABLE",
+    "value" : "\"42622\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-case-res-not-expression",
+    "typeName" : "VARIABLE",
+    "value" : "\"42625\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-dup-col-in-ins-or-upd",
+    "typeName" : "VARIABLE",
+    "value" : "\"42701\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-column-name-ambiguous",
+    "typeName" : "VARIABLE",
+    "value" : "\"42702\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-undefined-column-name",
+    "typeName" : "VARIABLE",
+    "value" : "\"42703\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-object-undef",
+    "typeName" : "VARIABLE",
+    "value" : "\"42704\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-server-undefined",
+    "typeName" : "VARIABLE",
+    "value" : "\"42705\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-unnamed-cols-in-result-tbl",
+    "typeName" : "VARIABLE",
+    "value" : "\"42706\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-not-in-result-table",
+    "typeName" : "VARIABLE",
+    "value" : "\"42707\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-dup-col-in-key",
+    "typeName" : "VARIABLE",
+    "value" : "\"42709\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-dup-obj-name",
+    "typeName" : "VARIABLE",
+    "value" : "\"42710\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-dup-col-name",
+    "typeName" : "VARIABLE",
+    "value" : "\"42711\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-dup-in-from-clause",
+    "typeName" : "VARIABLE",
+    "value" : "\"42712\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-node-not-found-in-dir",
+    "typeName" : "VARIABLE",
+    "value" : "\"42720\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-dup-signature",
+    "typeName" : "VARIABLE",
+    "value" : "\"42723\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-access-unable",
+    "typeName" : "VARIABLE",
+    "value" : "\"42724\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-ambiguous",
+    "typeName" : "VARIABLE",
+    "value" : "\"42725\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-dup-derived-table-name",
+    "typeName" : "VARIABLE",
+    "value" : "\"42726\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-need-default-prim-tblspace",
+    "typeName" : "VARIABLE",
+    "value" : "\"42727\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-access-duplicate-node",
+    "typeName" : "VARIABLE",
+    "value" : "\"42728\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-access-undefined-node",
+    "typeName" : "VARIABLE",
+    "value" : "\"42729\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-contnr-name-usedby-another",
+    "typeName" : "VARIABLE",
+    "value" : "\"42730\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-contnr-name-used",
+    "typeName" : "VARIABLE",
+    "value" : "\"42731\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-dup-schema-name-in-path",
+    "typeName" : "VARIABLE",
+    "value" : "\"42732\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-nodegroup-not-defined",
+    "typeName" : "VARIABLE",
+    "value" : "\"42735\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-num-inserts-invalid",
+    "typeName" : "VARIABLE",
+    "value" : "\"42802\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-column-ref-invalid",
+    "typeName" : "VARIABLE",
+    "value" : "\"42803\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-case-res-not-compatible",
+    "typeName" : "VARIABLE",
+    "value" : "\"42804\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-order-by-int-not-in-result",
+    "typeName" : "VARIABLE",
+    "value" : "\"42805\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-data-types-incompat",
+    "typeName" : "VARIABLE",
+    "value" : "\"42806\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-operation-notpermit-on-obj",
+    "typeName" : "VARIABLE",
+    "value" : "\"42807\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-column-not-updateable",
+    "typeName" : "VARIABLE",
+    "value" : "\"42808\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-statement-not-applicable",
+    "typeName" : "VARIABLE",
+    "value" : "\"42809\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-foreign-key-has-view",
+    "typeName" : "VARIABLE",
+    "value" : "\"42810\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-num-cols-not-match-select",
+    "typeName" : "VARIABLE",
+    "value" : "\"42811\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-view-notallow-with-check",
+    "typeName" : "VARIABLE",
+    "value" : "\"42813\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-lang-type-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"42815\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-use-datatime-or-dur",
+    "typeName" : "VARIABLE",
+    "value" : "\"42816\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-operands-not-compatible",
+    "typeName" : "VARIABLE",
+    "value" : "\"42818\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-number-is-required",
+    "typeName" : "VARIABLE",
+    "value" : "\"42819\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-num-const-out-of-range",
+    "typeName" : "VARIABLE",
+    "value" : "\"42820\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-value-incompat-with-column",
+    "typeName" : "VARIABLE",
+    "value" : "\"42821\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-bad-group-order-by-expr",
+    "typeName" : "VARIABLE",
+    "value" : "\"42822\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-mult-cols-in-select-subq",
+    "typeName" : "VARIABLE",
+    "value" : "\"42823\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-like-operand-invalid",
+    "typeName" : "VARIABLE",
+    "value" : "\"42824\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-union-operands-col-incomp",
+    "typeName" : "VARIABLE",
+    "value" : "\"42825\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-num-columns-do-not-match",
+    "typeName" : "VARIABLE",
+    "value" : "\"42826\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-table-differs-from-cursor",
+    "typeName" : "VARIABLE",
+    "value" : "\"42827\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-table-cannot-be-modified",
+    "typeName" : "VARIABLE",
+    "value" : "\"42828\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-cannot-modify-result-tbl",
+    "typeName" : "VARIABLE",
+    "value" : "\"42829\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-foreignkey-not-like-parent",
+    "typeName" : "VARIABLE",
+    "value" : "\"42830\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-no-nulls-allowed-in-key",
+    "typeName" : "VARIABLE",
+    "value" : "\"42831\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-auth-oper-sysobj-notallow",
+    "typeName" : "VARIABLE",
+    "value" : "\"42832\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-null-value-notallow",
+    "typeName" : "VARIABLE",
+    "value" : "\"42834\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-udf-invalid-handle-placed",
+    "typeName" : "VARIABLE",
+    "value" : "\"42835\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-recurs-name-derive-tbl-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"42836\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-col-attribute-incompat",
+    "typeName" : "VARIABLE",
+    "value" : "\"42837\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-use-of-tablespace",
+    "typeName" : "VARIABLE",
+    "value" : "\"42838\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-must-use-same-tablespace",
+    "typeName" : "VARIABLE",
+    "value" : "\"42839\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-as-cast-use-error",
+    "typeName" : "VARIABLE",
+    "value" : "\"42840\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-parm-marker-inv-name",
+    "typeName" : "VARIABLE",
+    "value" : "\"42841\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-type-opt-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"42842\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-bool-in-select-list",
+    "typeName" : "VARIABLE",
+    "value" : "\"42844\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-variant-function",
+    "typeName" : "VARIABLE",
+    "value" : "\"42845\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-cast",
+    "typeName" : "VARIABLE",
+    "value" : "\"42846\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-privs-inv-or-inconsist",
+    "typeName" : "VARIABLE",
+    "value" : "\"42852\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-type-notmatch",
+    "typeName" : "VARIABLE",
+    "value" : "\"42866\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-schema-name",
+    "typeName" : "VARIABLE",
+    "value" : "\"42875\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-cannot-qualify-column",
+    "typeName" : "VARIABLE",
+    "value" : "\"42877\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-xtern-name-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"42878\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-func-src-notmatch",
+    "typeName" : "VARIABLE",
+    "value" : "\"42879\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-cast-error",
+    "typeName" : "VARIABLE",
+    "value" : "\"42880\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-schema-diff",
+    "typeName" : "VARIABLE",
+    "value" : "\"42882\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-func-signature-undef",
+    "typeName" : "VARIABLE",
+    "value" : "\"42883\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-func-argument-undef",
+    "typeName" : "VARIABLE",
+    "value" : "\"42884\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-parm-num-notmatch",
+    "typeName" : "VARIABLE",
+    "value" : "\"42885\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-table-has-no-primkey",
+    "typeName" : "VARIABLE",
+    "value" : "\"42888\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-primary-key-already-exist",
+    "typeName" : "VARIABLE",
+    "value" : "\"42889\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-not-unique-constraint-cols",
+    "typeName" : "VARIABLE",
+    "value" : "\"42890\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-dup-unique-constraint",
+    "typeName" : "VARIABLE",
+    "value" : "\"42891\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-obj-depends-on-this",
+    "typeName" : "VARIABLE",
+    "value" : "\"42893\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-default-value-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"42894\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-hostvar-type-incomp",
+    "typeName" : "VARIABLE",
+    "value" : "\"42895\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-correlation-ref",
+    "typeName" : "VARIABLE",
+    "value" : "\"42898\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-correlation-ref-not-allow",
+    "typeName" : "VARIABLE",
+    "value" : "\"42899\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-error-in-udf",
+    "typeName" : "VARIABLE",
+    "value" : "\"428A0\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-noaccess-hostfile-var-file",
+    "typeName" : "VARIABLE",
+    "value" : "\"428A1\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-access-part-null",
+    "typeName" : "VARIABLE",
+    "value" : "\"428A2\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-evmon-bad-path-specified",
+    "typeName" : "VARIABLE",
+    "value" : "\"428A3\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-evmon-bad-option-specified",
+    "typeName" : "VARIABLE",
+    "value" : "\"428A4\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-exception-table",
+    "typeName" : "VARIABLE",
+    "value" : "\"428A5\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-excep-tbl-same-as-chk-tbl",
+    "typeName" : "VARIABLE",
+    "value" : "\"428A6\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-num-check-tbls-mismatch",
+    "typeName" : "VARIABLE",
+    "value" : "\"428A7\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-parent-tbl-in-chck-pend-st",
+    "typeName" : "VARIABLE",
+    "value" : "\"428A8\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-access-invalid-range",
+    "typeName" : "VARIABLE",
+    "value" : "\"428A9\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-illegal-elmnt-nstng",
+    "typeName" : "VARIABLE",
+    "value" : "\"428B0\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-incorrect-num-on-nodes",
+    "typeName" : "VARIABLE",
+    "value" : "\"428B1\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-contnr-path-nm-not-valid",
+    "typeName" : "VARIABLE",
+    "value" : "\"428B2\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-sqlstate-from-app",
+    "typeName" : "VARIABLE",
+    "value" : "\"428B3\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-drop-only-node",
+    "typeName" : "VARIABLE",
+    "value" : "\"428C0\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-num-elements-no-match",
+    "typeName" : "VARIABLE",
+    "value" : "\"428C4\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-datatype-mapping-not-found",
+    "typeName" : "VARIABLE",
+    "value" : "\"428C5\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-col-func-needs-col-name",
+    "typeName" : "VARIABLE",
+    "value" : "\"42901\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-object-also-in-from-clause",
+    "typeName" : "VARIABLE",
+    "value" : "\"42902\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-where-or-set-has-inv-ref",
+    "typeName" : "VARIABLE",
+    "value" : "\"42903\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-string-is-too-long",
+    "typeName" : "VARIABLE",
+    "value" : "\"42907\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-column-list-missing",
+    "typeName" : "VARIABLE",
+    "value" : "\"42908\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-invalid-decimal-divide",
+    "typeName" : "VARIABLE",
+    "value" : "\"42911\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-column-not-in-upd-clause",
+    "typeName" : "VARIABLE",
+    "value" : "\"42912\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-update-or-delete-invalid",
+    "typeName" : "VARIABLE",
+    "value" : "\"42913\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-table-in-subquery-affected",
+    "typeName" : "VARIABLE",
+    "value" : "\"42914\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-referential-constraint",
+    "typeName" : "VARIABLE",
+    "value" : "\"42915\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rep-chain-alias-invalid",
+    "typeName" : "VARIABLE",
+    "value" : "\"42916\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-cannot-explicitly-drop-obj",
+    "typeName" : "VARIABLE",
+    "value" : "\"42917\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-reserved",
+    "typeName" : "VARIABLE",
+    "value" : "\"42918\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-cannot-add-containers",
+    "typeName" : "VARIABLE",
+    "value" : "\"42921\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rec-name-der-tlb-spec-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"42925\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-prog-assumptions-incorrect",
+    "typeName" : "VARIABLE",
+    "value" : "\"42932\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-auth-create-sysobj-noallow",
+    "typeName" : "VARIABLE",
+    "value" : "\"42939\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-use-long-column",
+    "typeName" : "VARIABLE",
+    "value" : "\"42962\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-no-sw-license",
+    "typeName" : "VARIABLE",
+    "value" : "\"42968\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-package-not-created",
+    "typeName" : "VARIABLE",
+    "value" : "\"42969\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-join-condition",
+    "typeName" : "VARIABLE",
+    "value" : "\"42972\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-conn-reset",
+    "typeName" : "VARIABLE",
+    "value" : "\"42986\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-stmt-inv-for-storproc-trig",
+    "typeName" : "VARIABLE",
+    "value" : "\"42987\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syntax-system-use-only",
+    "typeName" : "VARIABLE",
+    "value" : "\"42991\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-lob-col-too-big-to-log",
+    "typeName" : "VARIABLE",
+    "value" : "\"42993\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-raw-device-not-supp",
+    "typeName" : "VARIABLE",
+    "value" : "\"42994\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-unique-not-allowed",
+    "typeName" : "VARIABLE",
+    "value" : "\"42997\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-fk-ref",
+    "typeName" : "VARIABLE",
+    "value" : "\"429A0\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-nodegroup",
+    "typeName" : "VARIABLE",
+    "value" : "\"429A1\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-datajoiner-no-process",
+    "typeName" : "VARIABLE",
+    "value" : "\"429A9\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-notloginit",
+    "typeName" : "VARIABLE",
+    "value" : "\"429AA\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-view-def-not-satisfied",
+    "typeName" : "VARIABLE",
+    "value" : "\"44000\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-call-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"51001\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-package-notfound",
+    "typeName" : "VARIABLE",
+    "value" : "\"51002\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-tokens-notmatch",
+    "typeName" : "VARIABLE",
+    "value" : "\"51003\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-addr-inv-da",
+    "typeName" : "VARIABLE",
+    "value" : "\"51004\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-func-disabled",
+    "typeName" : "VARIABLE",
+    "value" : "\"51005\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-stmt-notexec",
+    "typeName" : "VARIABLE",
+    "value" : "\"51007\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-release-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"51008\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-proc-notconnectable",
+    "typeName" : "VARIABLE",
+    "value" : "\"51011\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-section-binderr",
+    "typeName" : "VARIABLE",
+    "value" : "\"51015\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-user-notloggedon",
+    "typeName" : "VARIABLE",
+    "value" : "\"51017\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-app-unconnected",
+    "typeName" : "VARIABLE",
+    "value" : "\"51018\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-crtpack-busy",
+    "typeName" : "VARIABLE",
+    "value" : "\"51019\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-pack-none",
+    "typeName" : "VARIABLE",
+    "value" : "\"51020\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rollback-required",
+    "typeName" : "VARIABLE",
+    "value" : "\"51021\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-conn-with-auth-already",
+    "typeName" : "VARIABLE",
+    "value" : "\"51022\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-db-inuse-anoth-inst",
+    "typeName" : "VARIABLE",
+    "value" : "\"51023\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inoperaitve-view",
+    "typeName" : "VARIABLE",
+    "value" : "\"51024\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-conn-settings-in-use",
+    "typeName" : "VARIABLE",
+    "value" : "\"51025\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-evmon-path-inuse",
+    "typeName" : "VARIABLE",
+    "value" : "\"51026\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-immediate-checked-opt-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"51027\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-package-inoperative",
+    "typeName" : "VARIABLE",
+    "value" : "\"51028\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-col-dup-stmt",
+    "typeName" : "VARIABLE",
+    "value" : "\"52001\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-colref-dup-name",
+    "typeName" : "VARIABLE",
+    "value" : "\"52002\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-col-undef",
+    "typeName" : "VARIABLE",
+    "value" : "\"52003\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-obj-undef",
+    "typeName" : "VARIABLE",
+    "value" : "\"52004\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-server-undef",
+    "typeName" : "VARIABLE",
+    "value" : "\"52005\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-col-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"52006\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-col-notresult",
+    "typeName" : "VARIABLE",
+    "value" : "\"52007\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-cursor-undef",
+    "typeName" : "VARIABLE",
+    "value" : "\"52008\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-col-dup-keyclause",
+    "typeName" : "VARIABLE",
+    "value" : "\"52009\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-obj-dup",
+    "typeName" : "VARIABLE",
+    "value" : "\"52010\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-col-dup-objdef",
+    "typeName" : "VARIABLE",
+    "value" : "\"52011\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-table-dup",
+    "typeName" : "VARIABLE",
+    "value" : "\"52012\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-cursor-dup",
+    "typeName" : "VARIABLE",
+    "value" : "\"52013\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-cursor-notqual",
+    "typeName" : "VARIABLE",
+    "value" : "\"52015\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-colref-dup-set",
+    "typeName" : "VARIABLE",
+    "value" : "\"52016\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-as-noname",
+    "typeName" : "VARIABLE",
+    "value" : "\"52017\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-cursor-undecl",
+    "typeName" : "VARIABLE",
+    "value" : "\"52019\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-node-notfound",
+    "typeName" : "VARIABLE",
+    "value" : "\"52020\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-name-reg-unknown",
+    "typeName" : "VARIABLE",
+    "value" : "\"52021\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-numval-notsame",
+    "typeName" : "VARIABLE",
+    "value" : "\"53002\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-column-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"53003\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-clause-notcolumn",
+    "typeName" : "VARIABLE",
+    "value" : "\"53005\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-op-notpermit",
+    "typeName" : "VARIABLE",
+    "value" : "\"53007\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-col-notupdatable",
+    "typeName" : "VARIABLE",
+    "value" : "\"53008\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-obj-wrongtype",
+    "typeName" : "VARIABLE",
+    "value" : "\"53009\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-clause-isview",
+    "typeName" : "VARIABLE",
+    "value" : "\"53010\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-numcol-notsame",
+    "typeName" : "VARIABLE",
+    "value" : "\"53011\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-option-bad",
+    "typeName" : "VARIABLE",
+    "value" : "\"53013\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-data-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"53015\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-datetime-inv-expr",
+    "typeName" : "VARIABLE",
+    "value" : "\"53016\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-numvar-notsame",
+    "typeName" : "VARIABLE",
+    "value" : "\"53017\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-operands-notcompat",
+    "typeName" : "VARIABLE",
+    "value" : "\"53018\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-op-notnumb",
+    "typeName" : "VARIABLE",
+    "value" : "\"53019\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-cons-toolong",
+    "typeName" : "VARIABLE",
+    "value" : "\"53020\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-val-notcompat-col",
+    "typeName" : "VARIABLE",
+    "value" : "\"53021\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-clause-toomany",
+    "typeName" : "VARIABLE",
+    "value" : "\"53023\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-likeop-bad",
+    "typeName" : "VARIABLE",
+    "value" : "\"53024\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-unionop-incompat-col",
+    "typeName" : "VARIABLE",
+    "value" : "\"53025\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-unionop-badnum-col",
+    "typeName" : "VARIABLE",
+    "value" : "\"53026\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-table-notsame-cursor",
+    "typeName" : "VARIABLE",
+    "value" : "\"53027\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-table-cantmodify",
+    "typeName" : "VARIABLE",
+    "value" : "\"53028\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-update-inv-rotable",
+    "typeName" : "VARIABLE",
+    "value" : "\"53029\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-fkey-notconform",
+    "typeName" : "VARIABLE",
+    "value" : "\"53030\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-null-notallow",
+    "typeName" : "VARIABLE",
+    "value" : "\"53031\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-op-notallow-sysobj",
+    "typeName" : "VARIABLE",
+    "value" : "\"53032\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-fkey-notallow-null",
+    "typeName" : "VARIABLE",
+    "value" : "\"53034\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-col-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"53042\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-priv-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"53052\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-opt-both",
+    "typeName" : "VARIABLE",
+    "value" : "\"53053\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-auth-bad",
+    "typeName" : "VARIABLE",
+    "value" : "\"53056\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-stmt-cantuse",
+    "typeName" : "VARIABLE",
+    "value" : "\"53059\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-db-cantuse",
+    "typeName" : "VARIABLE",
+    "value" : "\"53061\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-stmt-cantexec",
+    "typeName" : "VARIABLE",
+    "value" : "\"53062\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-hostvar-undef",
+    "typeName" : "VARIABLE",
+    "value" : "\"53063\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-info-notmatch",
+    "typeName" : "VARIABLE",
+    "value" : "\"53064\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-options-conflict",
+    "typeName" : "VARIABLE",
+    "value" : "\"53067\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-descriptors-toofew",
+    "typeName" : "VARIABLE",
+    "value" : "\"53070\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-numstructs-notmatch",
+    "typeName" : "VARIABLE",
+    "value" : "\"53071\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-clause-incompat",
+    "typeName" : "VARIABLE",
+    "value" : "\"53072\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-ospec-numrows-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"53073\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-stmt-toolong",
+    "typeName" : "VARIABLE",
+    "value" : "\"54001\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-sconst-toolong",
+    "typeName" : "VARIABLE",
+    "value" : "\"54002\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-name-toolong",
+    "typeName" : "VARIABLE",
+    "value" : "\"54003\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-names-toomany",
+    "typeName" : "VARIABLE",
+    "value" : "\"54004\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-concat-toolong",
+    "typeName" : "VARIABLE",
+    "value" : "\"54006\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-as-toobig",
+    "typeName" : "VARIABLE",
+    "value" : "\"54007\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-key-toolong",
+    "typeName" : "VARIABLE",
+    "value" : "\"54008\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-table-toolong",
+    "typeName" : "VARIABLE",
+    "value" : "\"54010\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-cols-toomany",
+    "typeName" : "VARIABLE",
+    "value" : "\"54011\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-descriptors-toomany",
+    "typeName" : "VARIABLE",
+    "value" : "\"54019\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-arguments-toomany",
+    "typeName" : "VARIABLE",
+    "value" : "\"54023\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-concur-lob-handles",
+    "typeName" : "VARIABLE",
+    "value" : "\"54028\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-open-dir-scans",
+    "typeName" : "VARIABLE",
+    "value" : "\"54029\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-evmon-toomany",
+    "typeName" : "VARIABLE",
+    "value" : "\"54030\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-evtfiles-toomany",
+    "typeName" : "VARIABLE",
+    "value" : "\"54031\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-max-table-size",
+    "typeName" : "VARIABLE",
+    "value" : "\"54032\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-pmap-toomany",
+    "typeName" : "VARIABLE",
+    "value" : "\"54033\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-contnr-names-len",
+    "typeName" : "VARIABLE",
+    "value" : "\"54034\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-tblspace-size",
+    "typeName" : "VARIABLE",
+    "value" : "\"54035\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-contnr-path-len",
+    "typeName" : "VARIABLE",
+    "value" : "\"54036\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-contain-map-complx",
+    "typeName" : "VARIABLE",
+    "value" : "\"54037\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-cascaded-triggers",
+    "typeName" : "VARIABLE",
+    "value" : "\"54038\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-container-size",
+    "typeName" : "VARIABLE",
+    "value" : "\"54039\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-limit-transition-tbl",
+    "typeName" : "VARIABLE",
+    "value" : "\"54040\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-db-notmigr",
+    "typeName" : "VARIABLE",
+    "value" : "\"55001\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-expl-tbl-not-defined",
+    "typeName" : "VARIABLE",
+    "value" : "\"55002\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-obj-inuse",
+    "typeName" : "VARIABLE",
+    "value" : "\"55006\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-obj-notalter",
+    "typeName" : "VARIABLE",
+    "value" : "\"55007\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-table-nokey",
+    "typeName" : "VARIABLE",
+    "value" : "\"55008\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-file-readonly",
+    "typeName" : "VARIABLE",
+    "value" : "\"55009\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-obj-hasdeps",
+    "typeName" : "VARIABLE",
+    "value" : "\"55010\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-table-haskey",
+    "typeName" : "VARIABLE",
+    "value" : "\"55013\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-table-invalid",
+    "typeName" : "VARIABLE",
+    "value" : "\"55019\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-refresh-running",
+    "typeName" : "VARIABLE",
+    "value" : "\"55022\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-chk-constraint-too-long",
+    "typeName" : "VARIABLE",
+    "value" : "\"55024\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-db-needrestart",
+    "typeName" : "VARIABLE",
+    "value" : "\"55025\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-trigger-def-too-long",
+    "typeName" : "VARIABLE",
+    "value" : "\"55026\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-os2-reserved",
+    "typeName" : "VARIABLE",
+    "value" : "\"55031\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-conn-inv-dbm-stopped",
+    "typeName" : "VARIABLE",
+    "value" : "\"55032\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-must-commit-for-evmon",
+    "typeName" : "VARIABLE",
+    "value" : "\"55033\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-evmon-active-cant-drop",
+    "typeName" : "VARIABLE",
+    "value" : "\"55034\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-drop-part-key",
+    "typeName" : "VARIABLE",
+    "value" : "\"55037\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-state-rebalancing",
+    "typeName" : "VARIABLE",
+    "value" : "\"55038\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-inv-state-change",
+    "typeName" : "VARIABLE",
+    "value" : "\"55039\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rebalance-in-progress",
+    "typeName" : "VARIABLE",
+    "value" : "\"55041\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-noname",
+    "typeName" : "VARIABLE",
+    "value" : "\"56001\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-from-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"56002\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-where-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"56003\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-distinct-toomany",
+    "typeName" : "VARIABLE",
+    "value" : "\"56005\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-str-toolong",
+    "typeName" : "VARIABLE",
+    "value" : "\"56007\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-list-missing",
+    "typeName" : "VARIABLE",
+    "value" : "\"56008\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-divide-neg",
+    "typeName" : "VARIABLE",
+    "value" : "\"56011\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-col-noupdate",
+    "typeName" : "VARIABLE",
+    "value" : "\"56012\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-upddel-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"56013\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-del-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"56014\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-constr-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"56015\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-object-nodrop",
+    "typeName" : "VARIABLE",
+    "value" : "\"56017\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-inv-comm-roll",
+    "typeName" : "VARIABLE",
+    "value" : "\"56021\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-ref-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"56023\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-alias-nottable",
+    "typeName" : "VARIABLE",
+    "value" : "\"56024\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-op-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"56026\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-mixed-dbcs-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"56031\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-prep-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"56032\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-obj-notcrt",
+    "typeName" : "VARIABLE",
+    "value" : "\"56039\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-package-notcommit",
+    "typeName" : "VARIABLE",
+    "value" : "\"56043\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-name-notid",
+    "typeName" : "VARIABLE",
+    "value" : "\"56052\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-data-notsupp",
+    "typeName" : "VARIABLE",
+    "value" : "\"56059\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-stmt-notexec",
+    "typeName" : "VARIABLE",
+    "value" : "\"56060\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-name-notmatch",
+    "typeName" : "VARIABLE",
+    "value" : "\"56061\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-iso-notuser",
+    "typeName" : "VARIABLE",
+    "value" : "\"56068\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-join-badcols",
+    "typeName" : "VARIABLE",
+    "value" : "\"56072\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-name-required",
+    "typeName" : "VARIABLE",
+    "value" : "\"56073\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-name-notqual",
+    "typeName" : "VARIABLE",
+    "value" : "\"56074\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-lob-nosupp-in-drda",
+    "typeName" : "VARIABLE",
+    "value" : "\"56084\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-n-a-compound-sql-err",
+    "typeName" : "VARIABLE",
+    "value" : "\"56091\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-name-both-user-group",
+    "typeName" : "VARIABLE",
+    "value" : "\"56092\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-no-blob-in-dwnlvl-cl",
+    "typeName" : "VARIABLE",
+    "value" : "\"56093\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-not-aligned",
+    "typeName" : "VARIABLE",
+    "value" : "\"56097\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-prep-rebind-inv",
+    "typeName" : "VARIABLE",
+    "value" : "\"56098\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-real-not-supported",
+    "typeName" : "VARIABLE",
+    "value" : "\"56099\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-misc-lob-action-failed",
+    "typeName" : "VARIABLE",
+    "value" : "\"560A0\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-pending",
+    "typeName" : "VARIABLE",
+    "value" : "\"57007\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-vsdb-tunavail",
+    "typeName" : "VARIABLE",
+    "value" : "\"57009\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-vsdb-unavail",
+    "typeName" : "VARIABLE",
+    "value" : "\"57011\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-nondb-unavail-cont",
+    "typeName" : "VARIABLE",
+    "value" : "\"57012\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-nondb-unavail-stop",
+    "typeName" : "VARIABLE",
+    "value" : "\"57013\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-cancel",
+    "typeName" : "VARIABLE",
+    "value" : "\"57014\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-table-inactive",
+    "typeName" : "VARIABLE",
+    "value" : "\"57016\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-cxlate-notdef",
+    "typeName" : "VARIABLE",
+    "value" : "\"57017\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-drive-notexist",
+    "typeName" : "VARIABLE",
+    "value" : "\"57019\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-drive-locked",
+    "typeName" : "VARIABLE",
+    "value" : "\"57020\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-drive-open",
+    "typeName" : "VARIABLE",
+    "value" : "\"57021\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-maxapps",
+    "typeName" : "VARIABLE",
+    "value" : "\"57030\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-maxdb",
+    "typeName" : "VARIABLE",
+    "value" : "\"57032\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-db-started",
+    "typeName" : "VARIABLE",
+    "value" : "\"57033\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-db-acquired",
+    "typeName" : "VARIABLE",
+    "value" : "\"57034\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-dbfile-notown",
+    "typeName" : "VARIABLE",
+    "value" : "\"57035\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-log-notown",
+    "typeName" : "VARIABLE",
+    "value" : "\"57036\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-standalone",
+    "typeName" : "VARIABLE",
+    "value" : "\"57041\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-quiesce-backup",
+    "typeName" : "VARIABLE",
+    "value" : "\"57046\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-dir-not-access",
+    "typeName" : "VARIABLE",
+    "value" : "\"57047\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-contnr-acc-err",
+    "typeName" : "VARIABLE",
+    "value" : "\"57048\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-sys-limit",
+    "typeName" : "VARIABLE",
+    "value" : "\"57049\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-path",
+    "typeName" : "VARIABLE",
+    "value" : "\"57050\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-unavail-node",
+    "typeName" : "VARIABLE",
+    "value" : "\"57052\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-disk-stuffit",
+    "typeName" : "VARIABLE",
+    "value" : "\"57901\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-disk-bad",
+    "typeName" : "VARIABLE",
+    "value" : "\"57902\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-rsrc-disk-full",
+    "typeName" : "VARIABLE",
+    "value" : "\"57903\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syserr-inv-sect",
+    "typeName" : "VARIABLE",
+    "value" : "\"58003\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syserr-err-cont",
+    "typeName" : "VARIABLE",
+    "value" : "\"58004\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syserr-err-stop",
+    "typeName" : "VARIABLE",
+    "value" : "\"58005\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syserr-dist-cont",
+    "typeName" : "VARIABLE",
+    "value" : "\"58008\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syserr-dist-dealloc",
+    "typeName" : "VARIABLE",
+    "value" : "\"58009\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syserr-dist-stop",
+    "typeName" : "VARIABLE",
+    "value" : "\"58010\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syserr-bind-active",
+    "typeName" : "VARIABLE",
+    "value" : "\"58011\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syserr-bind-inactive",
+    "typeName" : "VARIABLE",
+    "value" : "\"58012\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syserr-cmd-notsupp",
+    "typeName" : "VARIABLE",
+    "value" : "\"58014\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syserr-obj-notsupp",
+    "typeName" : "VARIABLE",
+    "value" : "\"58015\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syserr-param-notsupp",
+    "typeName" : "VARIABLE",
+    "value" : "\"58016\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syserr-value-notsupp",
+    "typeName" : "VARIABLE",
+    "value" : "\"58017\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syserr-msg-notsupp",
+    "typeName" : "VARIABLE",
+    "value" : "\"58018\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syserr-commerr",
+    "typeName" : "VARIABLE",
+    "value" : "\"58019\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syserr-notdef",
+    "typeName" : "VARIABLE",
+    "value" : "\"58020\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syserr-prog-canceled",
+    "typeName" : "VARIABLE",
+    "value" : "\"58023\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syserr-hostvars",
+    "typeName" : "VARIABLE",
+    "value" : "\"58026\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syserr-ioerr",
+    "typeName" : "VARIABLE",
+    "value" : "\"58030\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syserr-dbfile",
+    "typeName" : "VARIABLE",
+    "value" : "\"58031\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syserr-str-fenced-fun-fail",
+    "typeName" : "VARIABLE",
+    "value" : "\"58032\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syserr-find-tbsp-pg-fail",
+    "typeName" : "VARIABLE",
+    "value" : "\"58034\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syserr-free-tbsp-pg-fail",
+    "typeName" : "VARIABLE",
+    "value" : "\"58035\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "sql-syserr-tblspc-id-noexist",
+    "typeName" : "VARIABLE",
+    "value" : "\"58036\"",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "77",
+    "picture" : "X(5)",
+    "variables" : [ ]
+  }, {
+    "name" : "csxxs020",
+    "typeName" : "VARIABLE",
+    "value" : "'CSXXS020'",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : true,
+    "varLevel" : "01",
+    "picture" : "X(08)",
+    "variables" : [ ]
+  }, {
+    "name" : "csxxc920-max-accumerrors-len",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : true,
+    "varLevel" : "01",
+    "picture" : "S9(04)",
+    "variables" : [ ]
+  }, {
+    "name" : "csxxc920-errornum",
+    "typeName" : "VARIABLE",
+    "value" : "0",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : true,
+    "varLevel" : "01",
+    "picture" : "9(06)",
+    "variables" : [ ]
+  }, {
+    "name" : "csxxc920-environment",
+    "typeName" : "VARIABLE",
+    "value" : "SPACES",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : true,
+    "varLevel" : "01",
+    "picture" : "X(100)",
+    "variables" : [ ]
+  }, {
+    "name" : "csxxc920-association",
+    "typeName" : "VARIABLE",
+    "value" : "SPACES",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : true,
+    "varLevel" : "01",
+    "picture" : "X(32)",
+    "variables" : [ ]
+  }, {
+    "name" : "csxxc920-subval1",
+    "typeName" : "VARIABLE",
+    "value" : "SPACES",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : true,
+    "varLevel" : "01",
+    "picture" : "X(40)",
+    "variables" : [ ]
+  }, {
+    "name" : "csxxc920-subval2",
+    "typeName" : "VARIABLE",
+    "value" : "SPACES",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : true,
+    "varLevel" : "01",
+    "picture" : "X(1000)",
+    "variables" : [ ]
+  }, {
+    "name" : "csxxc920-subval3",
+    "typeName" : "VARIABLE",
+    "value" : "SPACES",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : true,
+    "varLevel" : "01",
+    "picture" : "X(40)",
+    "variables" : [ ]
+  }, {
+    "name" : "ws-pi-function",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : true,
+    "varLevel" : "01",
+    "picture" : "X(4)",
+    "variables" : [ ]
+  }, {
+    "name" : "ws-pi-param",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : true,
+    "varLevel" : "01",
+    "picture" : null,
+    "variables" : [ ]
+  }, {
+    "name" : "ws-pi-size",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "03",
+    "picture" : "X(4)",
+    "variables" : [ ]
+  }, {
+    "name" : "ws-pi-flags",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "03",
+    "picture" : "X(4)",
+    "variables" : [ ]
+  }, {
+    "name" : "ws-pi-handle",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "03",
+    "picture" : null,
+    "variables" : [ ]
+  }, {
+    "name" : "ws-pi-prog-id",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "03",
+    "picture" : null,
+    "variables" : [ ]
+  }, {
+    "name" : "ws-pi-gpi-attrs",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "03",
+    "picture" : "X(4)",
+    "variables" : [ ]
+  }, {
+    "name" : "ws-pi-name-buf",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : true,
+    "varLevel" : "01",
+    "picture" : "X(60)",
+    "variables" : [ ]
+  }, {
+    "name" : "ws-pi-name-len",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : true,
+    "varLevel" : "01",
+    "picture" : "X(4)",
+    "variables" : [ ]
+  }, {
+    "name" : "filler",
+    "typeName" : "VARIABLE",
+    "value" : "'WBSRS009 WS END ==>'",
+    "isLocal" : false,
+    "isWorking" : true,
+    "isArray" : true,
+    "varLevel" : "01",
+    "picture" : "X(19)",
+    "variables" : [ ]
+  }, {
+    "name" : "wbsrc09b-parms",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : true,
+    "varLevel" : "01",
+    "picture" : null,
+    "variables" : [ {
+      "name" : "wbsrc09b-input",
+      "typeName" : "VARIABLE",
+      "value" : null,
+      "isLocal" : true,
+      "isWorking" : false,
+      "isArray" : false,
+      "varLevel" : "05",
+      "picture" : null,
+      "variables" : [ ]
+    } ]
+  }, {
+    "name" : "filler",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "10",
+    "picture" : "X(200)",
+    "variables" : [ {
+      "name" : "wbsrc09b-output",
+      "typeName" : "VARIABLE",
+      "value" : null,
+      "isLocal" : true,
+      "isWorking" : false,
+      "isArray" : false,
+      "varLevel" : "05",
+      "picture" : null,
+      "variables" : [ ]
+    } ]
+  }, {
+    "name" : "wbsrc09b-carr-ownr-cd",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "10",
+    "picture" : "X(02)",
+    "variables" : [ ]
+  }, {
+    "name" : "wbsrc09b-carr-mrk",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "10",
+    "picture" : "X(04)",
+    "variables" : [ ]
+  }, {
+    "name" : "wbsrc09b-co-name",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "10",
+    "picture" : "X(35)",
+    "variables" : [ ]
+  }, {
+    "name" : "wbsrc09b-mcs-impl-lvl",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "10",
+    "picture" : "X(01)",
+    "variables" : [ ]
+  }, {
+    "name" : "wbsrc09b-next-ch-run-tmstmp",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "10",
+    "picture" : "X(26)",
+    "variables" : [ ]
+  }, {
+    "name" : "wbsrc09b-last-ch-run-tmstmp",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "10",
+    "picture" : "X(26)",
+    "variables" : [ ]
+  }, {
+    "name" : "wbsrc09b-create-tmstmp",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "10",
+    "picture" : "X(26)",
+    "variables" : [ ]
+  }, {
+    "name" : "wbsrc09b-create-pgm-name",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "10",
+    "picture" : "X(08)",
+    "variables" : [ ]
+  }, {
+    "name" : "wbsrc09b-create-userid",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "10",
+    "picture" : "X(08)",
+    "variables" : [ ]
+  }, {
+    "name" : "wbsrc09b-last-updt-tmstmp",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "10",
+    "picture" : "X(26)",
+    "variables" : [ ]
+  }, {
+    "name" : "wbsrc09b-last-updt-pgm-name",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "10",
+    "picture" : "X(08)",
+    "variables" : [ ]
+  }, {
+    "name" : "wbsrc09b-last-updt-userid",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "10",
+    "picture" : "X(08)",
+    "variables" : [ ]
+  }, {
+    "name" : "wbsrc09b-cstm-scac",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "10",
+    "picture" : "X(04)",
+    "variables" : [ ]
+  }, {
+    "name" : "wbsrc09b-wayb-manl-vrf-flag",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "10",
+    "picture" : "X(01)",
+    "variables" : [ ]
+  }, {
+    "name" : "wbsrc09b-us-scrty-alrt-lvl",
+    "typeName" : "VARIABLE",
+    "value" : "COMP-5",
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "10",
+    "picture" : "S9(04)",
+    "variables" : [ ]
+  }, {
+    "name" : "wbsrc09b-wb-tmplt-exec-flg",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "10",
+    "picture" : "X(01)",
+    "variables" : [ ]
+  }, {
+    "name" : "wbsrc09b-extrnl-rev-sys-ind",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "10",
+    "picture" : "X(01)",
+    "variables" : [ ]
+  }, {
+    "name" : "wbsrc09b-eff-dt",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "10",
+    "picture" : "X(10)",
+    "variables" : [ ]
+  }, {
+    "name" : "wbsrc09b-exp-dt",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "10",
+    "picture" : "X(10)",
+    "variables" : [ ]
+  }, {
+    "name" : "wbsrc09b-prev-carr-mrk",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "10",
+    "picture" : "X(04)",
+    "variables" : [ ]
+  }, {
+    "name" : "wbsrc09b-prev-r260-carr-id",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "10",
+    "picture" : "X(03)",
+    "variables" : [ ]
+  }, {
+    "name" : "wbsrc09b-exp-area",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "10",
+    "picture" : "X(1000)",
+    "variables" : [ ]
+  }, {
+    "name" : "csxxc020-stack-size",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : true,
+    "varLevel" : "01",
+    "picture" : "S9(04)",
+    "variables" : [ ]
+  }, {
+    "name" : "csxxc020-error-severity",
+    "typeName" : "VARIABLE",
+    "value" : "COMP-5",
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : true,
+    "varLevel" : "01",
+    "picture" : "S9(04)",
+    "variables" : [ ]
+  }, {
+    "name" : "csxxc020-error-text",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : true,
+    "varLevel" : "01",
+    "picture" : null,
+    "variables" : [ ]
+  }, {
+    "name" : "csxxc020-error-text-len",
+    "typeName" : "VARIABLE",
+    "value" : "COMP-5",
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "49",
+    "picture" : "S9(04)",
+    "variables" : [ ]
+  }, {
+    "name" : "csxxc020-error-text-msg",
+    "typeName" : "VARIABLE",
+    "value" : null,
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : false,
+    "varLevel" : "49",
+    "picture" : "X(32000)",
+    "variables" : [ ]
+  }, {
+    "name" : "csxxc020-err-handler-rtncd",
+    "typeName" : "VARIABLE",
+    "value" : "COMP-5",
+    "isLocal" : true,
+    "isWorking" : false,
+    "isArray" : true,
+    "varLevel" : "01",
+    "picture" : "S9(04)",
+    "variables" : [ ]
+  } ],
+  "functions" : [ {
+    "name" : "procDiv",
+    "typeName" : "FUNCTION",
+    "methods" : [ ]
+  }, {
+    "name" : "0000-COMMON-INIT",
+    "typeName" : "FUNCTION",
+    "methods" : [ {
+      "name" : "0TOWS-PI-FUNCTION",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "20TOWS-PI-SIZE",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "2TOWS-PI-FLAGS",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "LENGTHOFWS-PI-NAME-BUFTOWS-PI-NAME-LEN",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "IF",
+      "typeName" : "IF",
+      "type" : null,
+      "expr" : "ws-pi-name-buf(10:1) == \"s\"",
+      "body" : [ ],
+      "stmElse" : null
+    }, {
+      "name" : "IF",
+      "typeName" : "IF",
+      "type" : null,
+      "expr" : "csxxc020-error-severity<0",
+      "body" : [ {
+        "name" : "DISPLAY",
+        "typeName" : "DISPLAY",
+        "type" : null,
+        "value" : "ws_pi_name_buf"
+      }, {
+        "name" : "DISPLAY",
+        "typeName" : "DISPLAY",
+        "type" : null,
+        "value" : "\" initialized\""
+      } ],
+      "stmElse" : {
+        "name" : "ELSE",
+        "typeName" : "ELSE",
+        "type" : null,
+        "body" : [ {
+          "name" : "DISPLAY",
+          "typeName" : "DISPLAY",
+          "type" : null,
+          "value" : "ws_pi_name_buf"
+        }, {
+          "name" : "DISPLAY",
+          "typeName" : "DISPLAY",
+          "type" : null,
+          "value" : "\"**not**initialized\""
+        } ]
+      }
+    }, {
+      "name" : "+0TOCSXXC020-STACK-SIZE",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "32000TOCSXXC920-MAX-ACCUMERRORS-LEN",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "IF",
+      "typeName" : "IF",
+      "type" : null,
+      "expr" : "csxxc020-stack-size == 0",
+      "body" : [ ],
+      "stmElse" : null
+    }, {
+      "name" : "ZEROESTOCSXXC020-ERROR-SEVERITYCSXXC020-ERR-HANDLER-RTNCD",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "1TOCSXXC020-ERROR-TEXT-LEN",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "SPACESTOCSXXC020-ERROR-TEXT-MSG(1:CSXXC920-MAX-ACCUMERRORS-LEN)",
+      "typeName" : "METHOD",
+      "type" : null
+    } ]
+  }, {
+    "name" : "0000-PROCESS",
+    "typeName" : "FUNCTION",
+    "methods" : [ {
+      "name" : "PERFORM",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "1000-INITIALIZE",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "PERFORM",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "2000-PROCESS",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "PERFORM",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "9999-RETURN-TO-CALLER",
+      "typeName" : "METHOD",
+      "type" : null
+    } ]
+  }, {
+    "name" : "1000-INITIALIZE",
+    "typeName" : "FUNCTION",
+    "methods" : [ {
+      "name" : "WS-PGM-IDTOCSXXC920-ENVIRONMENT",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "PERFORM",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "9999-DB2-CONNECT",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "SPACESTOWBSRC09B-CARR-OWNR-CDWBSRC09B-CARR-MRKWBSRC09B-CO-NAMEWBSRC09B-MCS-IMPL-LVLWBSRC09B-NEXT-CH-RUN-TMSTMPWBSRC09B-LAST-CH-RUN-TMSTMPWBSRC09B-CREATE-TMSTMPWBSRC09B-CREATE-PGM-NAMEWBSRC09B-CREATE-USERIDWBSRC09B-LAST-UPDT-TMSTMPWBSRC09B-LAST-UPDT-PGM-NAMEWBSRC09B-LAST-UPDT-USERIDWBSRC09B-CSTM-SCACWBSRC09B-WAYB-MANL-VRF-FLAGWBSRC09B-WB-TMPLT-EXEC-FLGWBSRC09B-EXTRNL-REV-SYS-INDWBSRC09B-EFF-DTWBSRC09B-EXP-DTWBSRC09B-PREV-CARR-MRKWBSRC09B-PREV-R260-CARR-IDWBSRC09B-EXP-AREA",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "ZEROESTOWBSRC09B-US-SCRTY-ALRT-LVL",
+      "typeName" : "METHOD",
+      "type" : null
+    } ]
+  }, {
+    "name" : "2000-PROCESS",
+    "typeName" : "FUNCTION",
+    "methods" : [ {
+      "name" : "CARR-OWNR-CDOFCO-SYS-PRFLTOWBSRC09B-CARR-OWNR-CD",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "CARR-MRKOFCO-SYS-PRFLTOWBSRC09B-CARR-MRK",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "CO-NAMEOFCO-SYS-PRFLTOWBSRC09B-CO-NAME",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "MCS-IMPL-LVLOFCO-SYS-PRFLTOWBSRC09B-MCS-IMPL-LVL",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "NEXT-CH-RUN-TMSTMPOFCO-SYS-PRFLTOWBSRC09B-NEXT-CH-RUN-TMSTMP",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "LAST-CH-RUN-TMSTMPOFCO-SYS-PRFLTOWBSRC09B-LAST-CH-RUN-TMSTMP",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "CREATE-TMSTMPOFCO-SYS-PRFLTOWBSRC09B-CREATE-TMSTMP",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "CREATE-PGM-NAMEOFCO-SYS-PRFLTOWBSRC09B-CREATE-PGM-NAME",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "CREATE-USERIDOFCO-SYS-PRFLTOWBSRC09B-CREATE-USERID",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "LAST-UPDT-TMSTMPOFCO-SYS-PRFLTOWBSRC09B-LAST-UPDT-TMSTMP",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "LAST-UPDT-PGM-NAMEOFCO-SYS-PRFLTOWBSRC09B-LAST-UPDT-PGM-NAME",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "LAST-UPDT-USERIDOFCO-SYS-PRFLTOWBSRC09B-LAST-UPDT-USERID",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "CSTM-SCACOFCO-SYS-PRFLTOWBSRC09B-CSTM-SCAC",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "WAYB-MANL-VRF-FLGOFCO-SYS-PRFLTOWBSRC09B-WAYB-MANL-VRF-FLAG",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "US-SCRTY-ALRT-LVLOFCO-SYS-PRFLTOWBSRC09B-US-SCRTY-ALRT-LVL",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "WB-TMPLT-EXEC-FLGOFCO-SYS-PRFLTOWBSRC09B-WB-TMPLT-EXEC-FLG",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "EXTRNL-REV-SYS-INDOFCO-SYS-PRFLTOWBSRC09B-EXTRNL-REV-SYS-IND",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "EFF-DTOFCO-SYS-PRFLTOWBSRC09B-EFF-DT",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "EXP-DTOFCO-SYS-PRFLTOWBSRC09B-EXP-DT",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "PREV-CARR-MRKOFCO-SYS-PRFLTOWBSRC09B-PREV-CARR-MRK",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "PREV-R260-CARR-IDOFCO-SYS-PRFLTOWBSRC09B-PREV-R260-CARR-ID",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "'2000-PROCESS'TOCSXXC920-SUBVAL3",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "PERFORM",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "9999-DB2-UNEXPECTED-ERROR",
+      "typeName" : "METHOD",
+      "type" : null
+    } ]
+  }, {
+    "name" : "9999-DB2-UNEXPECTED-ERROR",
+    "typeName" : "FUNCTION",
+    "methods" : [ {
+      "name" : "900001TOCSXXC920-ERRORNUM",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "PERFORM",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "9999-GETSQLSTATETEXT",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "SQLSTATETOCSXXC920-SUBVAL1",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "DB2ERROR-BUFFERTOCSXXC920-SUBVAL2",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "PERFORM",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "9999-UNEXPECTED-ERROR",
+      "typeName" : "METHOD",
+      "type" : null
+    } ]
+  }, {
+    "name" : "9999-UNEXPECTED-ERROR",
+    "typeName" : "FUNCTION",
+    "methods" : [ {
+      "name" : "PERFORM",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "9999-MCS-ERROR-HANDLER",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "PERFORM",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "9999-RETURN-TO-CALLER",
+      "typeName" : "METHOD",
+      "type" : null
+    } ]
+  }, {
+    "name" : "9999-TERMINATE-FOR-ERROR",
+    "typeName" : "FUNCTION",
+    "methods" : [ {
+      "name" : "PERFORM",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "9999-RETURN-TO-CALLER",
+      "typeName" : "METHOD",
+      "type" : null
+    } ]
+  }, {
+    "name" : "9999-RETURN-TO-CALLER",
+    "typeName" : "FUNCTION",
+    "methods" : [ {
+      "name" : "PERFORM",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "9999-DB2-DISCONNECT",
+      "typeName" : "METHOD",
+      "type" : null
+    } ]
+  }, {
+    "name" : "9999-MCS-ERROR-HANDLER",
+    "typeName" : "FUNCTION",
+    "methods" : [ {
+      "name" : "PERFORM",
+      "typeName" : "METHOD",
+      "type" : null
+    }, {
+      "name" : "9999-TERMINATE-FOR-ERROR",
+      "typeName" : "METHOD",
+      "type" : null
+    } ]
+  }, {
+    "name" : "9999-GetSQLStateText",
+    "typeName" : "FUNCTION",
+    "methods" : [ ]
+  }, {
+    "name" : "9999-DB2-DISCONNECT",
+    "typeName" : "FUNCTION",
+    "methods" : [ ]
+  } ],
+  "sequence" : "1"
+}
