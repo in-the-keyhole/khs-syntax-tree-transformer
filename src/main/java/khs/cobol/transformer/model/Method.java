@@ -8,6 +8,7 @@ public class Method {
     private static final Logger Log = LoggerFactory.getLogger(Method.class);
 
     public static String MOVE = "MOVE";
+    public static String SET = "SET";
     public static String ADD = "ADD";
     public static String MULTI = "MULTI";
     public static String CALL = "CALL";
@@ -169,10 +170,16 @@ public class Method {
             expression = String.format("Display.display( %s )", getValue());
 
         } else if (MOVE.equalsIgnoreCase(getTypeName())) {
-            expression = String.format("%s = %s;", Syntax.var(getName()), Syntax.val(getValue()));
+            expression = "// MOVE ... TO ...\n\t\t";
+            expression += String.format("%s = %s;", Syntax.var(getName()), Syntax.val(getValue()));
+
+        } else if (SET.equalsIgnoreCase(getTypeName())) {
+            expression = "// SET ...\n\t\t";
+            expression += String.format("%s = %s;", Syntax.var(getName()), Syntax.val(getValue()));
 
         } else if (CALL.equalsIgnoreCase(getTypeName())) {
-            expression = String.format("%s();", Syntax.method(getName()));
+            expression = "// PERFORM ...\n\t\t";
+            expression += String.format("%s();", Syntax.method(getName()));
         }
 
         return expression;

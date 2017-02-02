@@ -1914,10 +1914,14 @@ public class WBSRS009   {
     }
 
     public void m_v_0000_common_init () throws Exception {
-        v_ws_pi_function = 0.0;
-        v_ws_pi_size = 20;
-        v_ws_pi_flags = 2;
-        v_ws_pi_name_len = LENGTHOFWS-PI-NAME-BUF;
+        // MOVE ... TO ...
+		v_ws_pi_function = 0.0;
+        // MOVE ... TO ...
+		v_ws_pi_size = 20;
+        // MOVE ... TO ...
+		v_ws_pi_flags = 2;
+        // MOVE ... TO ...
+		v_ws_pi_name_len = LENGTHOFWS-PI-NAME-BUF;
         if ( ws-pi-name-buf(10:1) == "s" ) {
 		}
         if ( csxxc020-error-severity<0 ) {
@@ -1927,77 +1931,126 @@ public class WBSRS009   {
 			Display.display( ws_pi_name_buf );
 			Display.display( "**not**initialized" );
 		}
-        v_csxxc020_stack_size = +0;
-        v_csxxc920_max_accumerrors_len = 32000;
+        // MOVE ... TO ...
+		v_csxxc020_stack_size = +0;
+        // MOVE ... TO ...
+		v_csxxc920_max_accumerrors_len = 32000;
         if ( csxxc020-stack-size == 0 ) {
 		}
-        v_csxxc020_error_severity = ZEROES;
-        v_csxxc020_error_text_len = 1;
-        v_csxxc020_error_text_msg(1:csxxc920_max_accumerrors_len) = SPACES;
+        // MOVE ... TO ...
+		v_csxxc020_error_severity = ZEROES;
+        // MOVE ... TO ...
+		v_csxxc020_error_text_len = 1;
+        // MOVE ... TO ...
+		v_csxxc020_error_text_msg(1:csxxc920_max_accumerrors_len) = SPACES;
     }
 
     public void m_v_0000_process () throws Exception {
-        m_v_1000_initialize();
-        m_v_2000_process();
-        m_v_9999_return_to_caller();
+        // PERFORM ...
+		m_v_1000_initialize();
+        // PERFORM ...
+		m_v_2000_process();
+        // PERFORM ...
+		m_v_9999_return_to_caller();
     }
 
     public void m_v_1000_initialize () throws Exception {
-        v_csxxc920_environment = WS-PGM-ID;
-        m_v_9999_db2_connect();
-        v_wbsrc09b_carr_ownr_cd = SPACES;
-        v_wbsrc09b_us_scrty_alrt_lvl = ZEROES;
+        // MOVE ... TO ...
+		v_csxxc920_environment = WS-PGM-ID;
+        // PERFORM ...
+		m_v_9999_db2_connect();
+        // MOVE ... TO ...
+		v_wbsrc09b_carr_ownr_cd = SPACES;
+        // MOVE ... TO ...
+		v_wbsrc09b_us_scrty_alrt_lvl = ZEROES;
     }
 
     public void m_v_2000_process () throws Exception {
-        v_wbsrc09b_carr_ownr_cd = CARR-OWNR-CDOFCO-SYS-PRFL;
-        v_wbsrc09b_carr_mrk = CARR-MRKOFCO-SYS-PRFL;
-        v_wbsrc09b_co_name = CO-NAMEOFCO-SYS-PRFL;
-        v_wbsrc09b_mcs_impl_lvl = MCS-IMPL-LVLOFCO-SYS-PRFL;
-        v_wbsrc09b_next_ch_run_tmstmp = NEXT-CH-RUN-TMSTMPOFCO-SYS-PRFL;
-        v_wbsrc09b_last_ch_run_tmstmp = LAST-CH-RUN-TMSTMPOFCO-SYS-PRFL;
-        v_wbsrc09b_create_tmstmp = CREATE-TMSTMPOFCO-SYS-PRFL;
-        v_wbsrc09b_create_pgm_name = CREATE-PGM-NAMEOFCO-SYS-PRFL;
-        v_wbsrc09b_create_userid = CREATE-USERIDOFCO-SYS-PRFL;
-        v_wbsrc09b_last_updt_tmstmp = LAST-UPDT-TMSTMPOFCO-SYS-PRFL;
-        v_wbsrc09b_last_updt_pgm_name = LAST-UPDT-PGM-NAMEOFCO-SYS-PRFL;
-        v_wbsrc09b_last_updt_userid = LAST-UPDT-USERIDOFCO-SYS-PRFL;
-        v_wbsrc09b_cstm_scac = CSTM-SCACOFCO-SYS-PRFL;
-        v_wbsrc09b_wayb_manl_vrf_flag = WAYB-MANL-VRF-FLGOFCO-SYS-PRFL;
-        v_wbsrc09b_us_scrty_alrt_lvl = US-SCRTY-ALRT-LVLOFCO-SYS-PRFL;
-        v_wbsrc09b_wb_tmplt_exec_flg = WB-TMPLT-EXEC-FLGOFCO-SYS-PRFL;
-        v_wbsrc09b_extrnl_rev_sys_ind = EXTRNL-REV-SYS-INDOFCO-SYS-PRFL;
-        v_wbsrc09b_eff_dt = EFF-DTOFCO-SYS-PRFL;
-        v_wbsrc09b_exp_dt = EXP-DTOFCO-SYS-PRFL;
-        v_wbsrc09b_prev_carr_mrk = PREV-CARR-MRKOFCO-SYS-PRFL;
-        v_wbsrc09b_prev_r260_carr_id = PREV-R260-CARR-IDOFCO-SYS-PRFL;
-        v_csxxc920_subval3 = "2000-PROCESS";
-        m_v_9999_db2_unexpected_error();
+        // MOVE ... TO ...
+		v_wbsrc09b_carr_ownr_cd = CARR-OWNR-CDOFCO-SYS-PRFL;
+        // MOVE ... TO ...
+		v_wbsrc09b_carr_mrk = CARR-MRKOFCO-SYS-PRFL;
+        // MOVE ... TO ...
+		v_wbsrc09b_co_name = CO-NAMEOFCO-SYS-PRFL;
+        // MOVE ... TO ...
+		v_wbsrc09b_mcs_impl_lvl = MCS-IMPL-LVLOFCO-SYS-PRFL;
+        // MOVE ... TO ...
+		v_wbsrc09b_next_ch_run_tmstmp = NEXT-CH-RUN-TMSTMPOFCO-SYS-PRFL;
+        // MOVE ... TO ...
+		v_wbsrc09b_last_ch_run_tmstmp = LAST-CH-RUN-TMSTMPOFCO-SYS-PRFL;
+        // MOVE ... TO ...
+		v_wbsrc09b_create_tmstmp = CREATE-TMSTMPOFCO-SYS-PRFL;
+        // MOVE ... TO ...
+		v_wbsrc09b_create_pgm_name = CREATE-PGM-NAMEOFCO-SYS-PRFL;
+        // MOVE ... TO ...
+		v_wbsrc09b_create_userid = CREATE-USERIDOFCO-SYS-PRFL;
+        // MOVE ... TO ...
+		v_wbsrc09b_last_updt_tmstmp = LAST-UPDT-TMSTMPOFCO-SYS-PRFL;
+        // MOVE ... TO ...
+		v_wbsrc09b_last_updt_pgm_name = LAST-UPDT-PGM-NAMEOFCO-SYS-PRFL;
+        // MOVE ... TO ...
+		v_wbsrc09b_last_updt_userid = LAST-UPDT-USERIDOFCO-SYS-PRFL;
+        // MOVE ... TO ...
+		v_wbsrc09b_cstm_scac = CSTM-SCACOFCO-SYS-PRFL;
+        // MOVE ... TO ...
+		v_wbsrc09b_wayb_manl_vrf_flag = WAYB-MANL-VRF-FLGOFCO-SYS-PRFL;
+        // MOVE ... TO ...
+		v_wbsrc09b_us_scrty_alrt_lvl = US-SCRTY-ALRT-LVLOFCO-SYS-PRFL;
+        // MOVE ... TO ...
+		v_wbsrc09b_wb_tmplt_exec_flg = WB-TMPLT-EXEC-FLGOFCO-SYS-PRFL;
+        // MOVE ... TO ...
+		v_wbsrc09b_extrnl_rev_sys_ind = EXTRNL-REV-SYS-INDOFCO-SYS-PRFL;
+        // MOVE ... TO ...
+		v_wbsrc09b_eff_dt = EFF-DTOFCO-SYS-PRFL;
+        // MOVE ... TO ...
+		v_wbsrc09b_exp_dt = EXP-DTOFCO-SYS-PRFL;
+        // MOVE ... TO ...
+		v_wbsrc09b_prev_carr_mrk = PREV-CARR-MRKOFCO-SYS-PRFL;
+        // MOVE ... TO ...
+		v_wbsrc09b_prev_r260_carr_id = PREV-R260-CARR-IDOFCO-SYS-PRFL;
+        // MOVE ... TO ...
+		v_csxxc920_subval3 = "2000-PROCESS";
+        // PERFORM ...
+		m_v_9999_db2_unexpected_error();
     }
 
     public void m_v_9999_db2_unexpected_error () throws Exception {
-        v_csxxc920_errornum = 900001;
-        m_v_9999_getsqlstatetext();
-        v_csxxc920_subval1 = SQLSTATE;
-        v_csxxc920_subval2 = DB2ERROR-BUFFER;
-        m_v_9999_unexpected_error();
+        // SET ...
+		v_csxxc020_rc_system_severe = TRUE;
+        // MOVE ... TO ...
+		v_csxxc920_errornum = 900001;
+        // PERFORM ...
+		m_v_9999_getsqlstatetext();
+        // MOVE ... TO ...
+		v_csxxc920_subval1 = SQLSTATE;
+        // MOVE ... TO ...
+		v_csxxc920_subval2 = DB2ERROR-BUFFER;
+        // PERFORM ...
+		m_v_9999_unexpected_error();
     }
 
     public void m_v_9999_unexpected_error () throws Exception {
-        m_v_9999_mcs_error_handler();
-        m_v_9999_return_to_caller();
+        // PERFORM ...
+		m_v_9999_mcs_error_handler();
+        // PERFORM ...
+		m_v_9999_return_to_caller();
     }
 
     public void m_v_9999_terminate_for_error () throws Exception {
-        m_v_9999_return_to_caller();
+        // SET ...
+		v_csxxc020_rc_system_severe = TRUE;
+        // PERFORM ...
+		m_v_9999_return_to_caller();
     }
 
     public void m_v_9999_return_to_caller () throws Exception {
-        m_v_9999_db2_disconnect();
+        // PERFORM ...
+		m_v_9999_db2_disconnect();
     }
 
     public void m_v_9999_mcs_error_handler () throws Exception {
-        m_v_9999_terminate_for_error();
+        // PERFORM ...
+		m_v_9999_terminate_for_error();
     }
 
     public void m_v_9999_getsqlstatetext () throws Exception {

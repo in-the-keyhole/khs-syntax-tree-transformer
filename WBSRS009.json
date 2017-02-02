@@ -6606,6 +6606,12 @@
     "name" : "9999-DB2-UNEXPECTED-ERROR",
     "typeName" : "FUNCTION",
     "methods" : [ {
+      "name" : "CSXXC020-RC-SYSTEM-SEVERE",
+      "typeName" : "SET",
+      "type" : null,
+      "varName" : null,
+      "value" : "TRUE"
+    }, {
       "name" : "CSXXC920-ERRORNUM",
       "typeName" : "MOVE",
       "type" : null,
@@ -6648,6 +6654,12 @@
     "name" : "9999-TERMINATE-FOR-ERROR",
     "typeName" : "FUNCTION",
     "methods" : [ {
+      "name" : "CSXXC020-RC-SYSTEM-SEVERE",
+      "typeName" : "SET",
+      "type" : null,
+      "varName" : null,
+      "value" : "TRUE"
+    }, {
       "name" : "9999-return-to-caller",
       "typeName" : "CALL",
       "type" : null
