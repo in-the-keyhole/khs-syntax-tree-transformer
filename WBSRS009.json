@@ -6408,6 +6408,12 @@
       "varName" : null,
       "value" : "ZEROES"
     }, {
+      "name" : "CSXXC020-ERR-HANDLER-RTNCD",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "ZEROES"
+    }, {
       "name" : "CSXXC020-ERROR-TEXT-LEN",
       "typeName" : "MOVE",
       "type" : null,
@@ -6451,6 +6457,126 @@
       "type" : null
     }, {
       "name" : "WBSRC09B-CARR-OWNR-CD",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "SPACES"
+    }, {
+      "name" : "WBSRC09B-CARR-MRK",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "SPACES"
+    }, {
+      "name" : "WBSRC09B-CO-NAME",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "SPACES"
+    }, {
+      "name" : "WBSRC09B-MCS-IMPL-LVL",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "SPACES"
+    }, {
+      "name" : "WBSRC09B-NEXT-CH-RUN-TMSTMP",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "SPACES"
+    }, {
+      "name" : "WBSRC09B-LAST-CH-RUN-TMSTMP",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "SPACES"
+    }, {
+      "name" : "WBSRC09B-CREATE-TMSTMP",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "SPACES"
+    }, {
+      "name" : "WBSRC09B-CREATE-PGM-NAME",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "SPACES"
+    }, {
+      "name" : "WBSRC09B-CREATE-USERID",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "SPACES"
+    }, {
+      "name" : "WBSRC09B-LAST-UPDT-TMSTMP",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "SPACES"
+    }, {
+      "name" : "WBSRC09B-LAST-UPDT-PGM-NAME",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "SPACES"
+    }, {
+      "name" : "WBSRC09B-LAST-UPDT-USERID",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "SPACES"
+    }, {
+      "name" : "WBSRC09B-CSTM-SCAC",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "SPACES"
+    }, {
+      "name" : "WBSRC09B-WAYB-MANL-VRF-FLAG",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "SPACES"
+    }, {
+      "name" : "WBSRC09B-WB-TMPLT-EXEC-FLG",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "SPACES"
+    }, {
+      "name" : "WBSRC09B-EXTRNL-REV-SYS-IND",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "SPACES"
+    }, {
+      "name" : "WBSRC09B-EFF-DT",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "SPACES"
+    }, {
+      "name" : "WBSRC09B-EXP-DT",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "SPACES"
+    }, {
+      "name" : "WBSRC09B-PREV-CARR-MRK",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "SPACES"
+    }, {
+      "name" : "WBSRC09B-PREV-R260-CARR-ID",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "SPACES"
+    }, {
+      "name" : "WBSRC09B-EXP-AREA",
       "typeName" : "MOVE",
       "type" : null,
       "varName" : null,

@@ -170,7 +170,7 @@ public class Method {
             expression = String.format("Display.display( %s )", getValue());
 
         } else if (MOVE.equalsIgnoreCase(getTypeName())) {
-            expression = "// MOVE ... TO ...\n\t\t";
+            expression = "// MOVE ...\n\t\t";
             expression += String.format("%s = %s;", Syntax.var(getName()), Syntax.val(getValue()));
 
         } else if (SET.equalsIgnoreCase(getTypeName())) {
