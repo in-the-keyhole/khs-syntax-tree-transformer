@@ -6406,28 +6406,16 @@
     "name" : "0000-PROCESS",
     "typeName" : "FUNCTION",
     "methods" : [ {
-      "name" : "PERFORM",
-      "typeName" : "METHOD",
-      "type" : null
-    }, {
       "name" : "1000-INITIALIZE",
-      "typeName" : "METHOD",
-      "type" : null
-    }, {
-      "name" : "PERFORM",
-      "typeName" : "METHOD",
+      "typeName" : "CALL",
       "type" : null
     }, {
       "name" : "2000-PROCESS",
-      "typeName" : "METHOD",
-      "type" : null
-    }, {
-      "name" : "PERFORM",
-      "typeName" : "METHOD",
+      "typeName" : "CALL",
       "type" : null
     }, {
       "name" : "9999-RETURN-TO-CALLER",
-      "typeName" : "METHOD",
+      "typeName" : "CALL",
       "type" : null
     } ]
   }, {
@@ -6438,12 +6426,8 @@
       "typeName" : "METHOD",
       "type" : null
     }, {
-      "name" : "PERFORM",
-      "typeName" : "METHOD",
-      "type" : null
-    }, {
       "name" : "9999-DB2-CONNECT",
-      "typeName" : "METHOD",
+      "typeName" : "CALL",
       "type" : null
     }, {
       "name" : "SPACESTOWBSRC09B-CARR-OWNR-CDWBSRC09B-CARR-MRKWBSRC09B-CO-NAMEWBSRC09B-MCS-IMPL-LVLWBSRC09B-NEXT-CH-RUN-TMSTMPWBSRC09B-LAST-CH-RUN-TMSTMPWBSRC09B-CREATE-TMSTMPWBSRC09B-CREATE-PGM-NAMEWBSRC09B-CREATE-USERIDWBSRC09B-LAST-UPDT-TMSTMPWBSRC09B-LAST-UPDT-PGM-NAMEWBSRC09B-LAST-UPDT-USERIDWBSRC09B-CSTM-SCACWBSRC09B-WAYB-MANL-VRF-FLAGWBSRC09B-WB-TMPLT-EXEC-FLGWBSRC09B-EXTRNL-REV-SYS-INDWBSRC09B-EFF-DTWBSRC09B-EXP-DTWBSRC09B-PREV-CARR-MRKWBSRC09B-PREV-R260-CARR-IDWBSRC09B-EXP-AREA",
@@ -6546,12 +6530,8 @@
       "typeName" : "METHOD",
       "type" : null
     }, {
-      "name" : "PERFORM",
-      "typeName" : "METHOD",
-      "type" : null
-    }, {
       "name" : "9999-DB2-UNEXPECTED-ERROR",
-      "typeName" : "METHOD",
+      "typeName" : "CALL",
       "type" : null
     } ]
   }, {
@@ -6562,12 +6542,8 @@
       "typeName" : "METHOD",
       "type" : null
     }, {
-      "name" : "PERFORM",
-      "typeName" : "METHOD",
-      "type" : null
-    }, {
       "name" : "9999-GETSQLSTATETEXT",
-      "typeName" : "METHOD",
+      "typeName" : "CALL",
       "type" : null
     }, {
       "name" : "SQLSTATETOCSXXC920-SUBVAL1",
@@ -6578,68 +6554,44 @@
       "typeName" : "METHOD",
       "type" : null
     }, {
-      "name" : "PERFORM",
-      "typeName" : "METHOD",
-      "type" : null
-    }, {
       "name" : "9999-UNEXPECTED-ERROR",
-      "typeName" : "METHOD",
+      "typeName" : "CALL",
       "type" : null
     } ]
   }, {
     "name" : "9999-UNEXPECTED-ERROR",
     "typeName" : "FUNCTION",
     "methods" : [ {
-      "name" : "PERFORM",
-      "typeName" : "METHOD",
-      "type" : null
-    }, {
       "name" : "9999-MCS-ERROR-HANDLER",
-      "typeName" : "METHOD",
-      "type" : null
-    }, {
-      "name" : "PERFORM",
-      "typeName" : "METHOD",
+      "typeName" : "CALL",
       "type" : null
     }, {
       "name" : "9999-RETURN-TO-CALLER",
-      "typeName" : "METHOD",
+      "typeName" : "CALL",
       "type" : null
     } ]
   }, {
     "name" : "9999-TERMINATE-FOR-ERROR",
     "typeName" : "FUNCTION",
     "methods" : [ {
-      "name" : "PERFORM",
-      "typeName" : "METHOD",
-      "type" : null
-    }, {
       "name" : "9999-RETURN-TO-CALLER",
-      "typeName" : "METHOD",
+      "typeName" : "CALL",
       "type" : null
     } ]
   }, {
     "name" : "9999-RETURN-TO-CALLER",
     "typeName" : "FUNCTION",
     "methods" : [ {
-      "name" : "PERFORM",
-      "typeName" : "METHOD",
-      "type" : null
-    }, {
       "name" : "9999-DB2-DISCONNECT",
-      "typeName" : "METHOD",
+      "typeName" : "CALL",
       "type" : null
     } ]
   }, {
     "name" : "9999-MCS-ERROR-HANDLER",
     "typeName" : "FUNCTION",
     "methods" : [ {
-      "name" : "PERFORM",
-      "typeName" : "METHOD",
-      "type" : null
-    }, {
       "name" : "9999-TERMINATE-FOR-ERROR",
-      "typeName" : "METHOD",
+      "typeName" : "CALL",
       "type" : null
     } ]
   }, {

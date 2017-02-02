@@ -1906,15 +1906,15 @@ public class WBSRS009   {
     public static void main(String[] args) {
         try {
             WBSRS009 instance = new WBSRS009();
-            instance.procDiv();
+            instance.m_procdiv();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void procDiv () throws Exception {
+    public void m_procdiv () throws Exception {
     }
-    public void 0000_COMMON_INIT () throws Exception {
+    public void m_0000_common_init () throws Exception {
         
         
         
@@ -1936,76 +1936,64 @@ public class WBSRS009   {
         
         
     }
-    public void 0000_PROCESS () throws Exception {
+    public void m_0000_process () throws Exception {
+         m_1000_initialize();
+         m_2000_process();
+         m_9999_return_to_caller();
+    }
+    public void m_1000_initialize () throws Exception {
         
-        
-        
-        
+         m_9999_db2_connect();
         
         
     }
-    public void 1000_INITIALIZE () throws Exception {
+    public void m_2000_process () throws Exception {
         
         
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         m_9999_db2_unexpected_error();
     }
-    public void 2000_PROCESS () throws Exception {
+    public void m_9999_db2_unexpected_error () throws Exception {
+        
+         m_9999_getsqlstatetext();
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+         m_9999_unexpected_error();
     }
-    public void 9999_DB2_UNEXPECTED_ERROR () throws Exception {
-        
-        
-        
-        
-        
-        
-        
+    public void m_9999_unexpected_error () throws Exception {
+         m_9999_mcs_error_handler();
+         m_9999_return_to_caller();
     }
-    public void 9999_UNEXPECTED_ERROR () throws Exception {
-        
-        
-        
-        
+    public void m_9999_terminate_for_error () throws Exception {
+         m_9999_return_to_caller();
     }
-    public void 9999_TERMINATE_FOR_ERROR () throws Exception {
-        
-        
+    public void m_9999_return_to_caller () throws Exception {
+         m_9999_db2_disconnect();
     }
-    public void 9999_RETURN_TO_CALLER () throws Exception {
-        
-        
+    public void m_9999_mcs_error_handler () throws Exception {
+         m_9999_terminate_for_error();
     }
-    public void 9999_MCS_ERROR_HANDLER () throws Exception {
-        
-        
+    public void m_9999_getsqlstatetext () throws Exception {
     }
-    public void 9999_GetSQLStateText () throws Exception {
-    }
-    public void 9999_DB2_DISCONNECT () throws Exception {
+    public void m_9999_db2_disconnect () throws Exception {
     }
 }
