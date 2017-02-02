@@ -6320,21 +6320,29 @@
     "name" : "0000-COMMON-INIT",
     "typeName" : "FUNCTION",
     "methods" : [ {
-      "name" : "0TOWS-PI-FUNCTION",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WS-PI-FUNCTION",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "0"
     }, {
-      "name" : "20TOWS-PI-SIZE",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WS-PI-SIZE",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "20"
     }, {
-      "name" : "2TOWS-PI-FLAGS",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WS-PI-FLAGS",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "2"
     }, {
-      "name" : "LENGTHOFWS-PI-NAME-BUFTOWS-PI-NAME-LEN",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WS-PI-NAME-LEN",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "LENGTHOFWS-PI-NAME-BUF"
     }, {
       "name" : "IF",
       "typeName" : "IF",
@@ -6375,13 +6383,17 @@
         } ]
       }
     }, {
-      "name" : "+0TOCSXXC020-STACK-SIZE",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "CSXXC020-STACK-SIZE",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "+0"
     }, {
-      "name" : "32000TOCSXXC920-MAX-ACCUMERRORS-LEN",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "CSXXC920-MAX-ACCUMERRORS-LEN",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "32000"
     }, {
       "name" : "IF",
       "typeName" : "IF",
@@ -6390,31 +6402,37 @@
       "body" : [ ],
       "stmElse" : null
     }, {
-      "name" : "ZEROESTOCSXXC020-ERROR-SEVERITYCSXXC020-ERR-HANDLER-RTNCD",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "CSXXC020-ERROR-SEVERITY",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "ZEROES"
     }, {
-      "name" : "1TOCSXXC020-ERROR-TEXT-LEN",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "CSXXC020-ERROR-TEXT-LEN",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "1"
     }, {
-      "name" : "SPACESTOCSXXC020-ERROR-TEXT-MSG(1:CSXXC920-MAX-ACCUMERRORS-LEN)",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "CSXXC020-ERROR-TEXT-MSG(1:CSXXC920-MAX-ACCUMERRORS-LEN)",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "SPACES"
     } ]
   }, {
     "name" : "0000-PROCESS",
     "typeName" : "FUNCTION",
     "methods" : [ {
-      "name" : "1000-INITIALIZE",
+      "name" : "1000-initialize",
       "typeName" : "CALL",
       "type" : null
     }, {
-      "name" : "2000-PROCESS",
+      "name" : "2000-process",
       "typeName" : "CALL",
       "type" : null
     }, {
-      "name" : "9999-RETURN-TO-CALLER",
+      "name" : "9999-return-to-caller",
       "typeName" : "CALL",
       "type" : null
     } ]
@@ -6422,115 +6440,165 @@
     "name" : "1000-INITIALIZE",
     "typeName" : "FUNCTION",
     "methods" : [ {
-      "name" : "WS-PGM-IDTOCSXXC920-ENVIRONMENT",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "CSXXC920-ENVIRONMENT",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "WS-PGM-ID"
     }, {
-      "name" : "9999-DB2-CONNECT",
+      "name" : "9999-db2-connect",
       "typeName" : "CALL",
       "type" : null
     }, {
-      "name" : "SPACESTOWBSRC09B-CARR-OWNR-CDWBSRC09B-CARR-MRKWBSRC09B-CO-NAMEWBSRC09B-MCS-IMPL-LVLWBSRC09B-NEXT-CH-RUN-TMSTMPWBSRC09B-LAST-CH-RUN-TMSTMPWBSRC09B-CREATE-TMSTMPWBSRC09B-CREATE-PGM-NAMEWBSRC09B-CREATE-USERIDWBSRC09B-LAST-UPDT-TMSTMPWBSRC09B-LAST-UPDT-PGM-NAMEWBSRC09B-LAST-UPDT-USERIDWBSRC09B-CSTM-SCACWBSRC09B-WAYB-MANL-VRF-FLAGWBSRC09B-WB-TMPLT-EXEC-FLGWBSRC09B-EXTRNL-REV-SYS-INDWBSRC09B-EFF-DTWBSRC09B-EXP-DTWBSRC09B-PREV-CARR-MRKWBSRC09B-PREV-R260-CARR-IDWBSRC09B-EXP-AREA",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WBSRC09B-CARR-OWNR-CD",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "SPACES"
     }, {
-      "name" : "ZEROESTOWBSRC09B-US-SCRTY-ALRT-LVL",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WBSRC09B-US-SCRTY-ALRT-LVL",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "ZEROES"
     } ]
   }, {
     "name" : "2000-PROCESS",
     "typeName" : "FUNCTION",
     "methods" : [ {
-      "name" : "CARR-OWNR-CDOFCO-SYS-PRFLTOWBSRC09B-CARR-OWNR-CD",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WBSRC09B-CARR-OWNR-CD",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "CARR-OWNR-CDOFCO-SYS-PRFL"
     }, {
-      "name" : "CARR-MRKOFCO-SYS-PRFLTOWBSRC09B-CARR-MRK",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WBSRC09B-CARR-MRK",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "CARR-MRKOFCO-SYS-PRFL"
     }, {
-      "name" : "CO-NAMEOFCO-SYS-PRFLTOWBSRC09B-CO-NAME",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WBSRC09B-CO-NAME",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "CO-NAMEOFCO-SYS-PRFL"
     }, {
-      "name" : "MCS-IMPL-LVLOFCO-SYS-PRFLTOWBSRC09B-MCS-IMPL-LVL",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WBSRC09B-MCS-IMPL-LVL",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "MCS-IMPL-LVLOFCO-SYS-PRFL"
     }, {
-      "name" : "NEXT-CH-RUN-TMSTMPOFCO-SYS-PRFLTOWBSRC09B-NEXT-CH-RUN-TMSTMP",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WBSRC09B-NEXT-CH-RUN-TMSTMP",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "NEXT-CH-RUN-TMSTMPOFCO-SYS-PRFL"
     }, {
-      "name" : "LAST-CH-RUN-TMSTMPOFCO-SYS-PRFLTOWBSRC09B-LAST-CH-RUN-TMSTMP",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WBSRC09B-LAST-CH-RUN-TMSTMP",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "LAST-CH-RUN-TMSTMPOFCO-SYS-PRFL"
     }, {
-      "name" : "CREATE-TMSTMPOFCO-SYS-PRFLTOWBSRC09B-CREATE-TMSTMP",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WBSRC09B-CREATE-TMSTMP",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "CREATE-TMSTMPOFCO-SYS-PRFL"
     }, {
-      "name" : "CREATE-PGM-NAMEOFCO-SYS-PRFLTOWBSRC09B-CREATE-PGM-NAME",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WBSRC09B-CREATE-PGM-NAME",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "CREATE-PGM-NAMEOFCO-SYS-PRFL"
     }, {
-      "name" : "CREATE-USERIDOFCO-SYS-PRFLTOWBSRC09B-CREATE-USERID",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WBSRC09B-CREATE-USERID",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "CREATE-USERIDOFCO-SYS-PRFL"
     }, {
-      "name" : "LAST-UPDT-TMSTMPOFCO-SYS-PRFLTOWBSRC09B-LAST-UPDT-TMSTMP",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WBSRC09B-LAST-UPDT-TMSTMP",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "LAST-UPDT-TMSTMPOFCO-SYS-PRFL"
     }, {
-      "name" : "LAST-UPDT-PGM-NAMEOFCO-SYS-PRFLTOWBSRC09B-LAST-UPDT-PGM-NAME",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WBSRC09B-LAST-UPDT-PGM-NAME",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "LAST-UPDT-PGM-NAMEOFCO-SYS-PRFL"
     }, {
-      "name" : "LAST-UPDT-USERIDOFCO-SYS-PRFLTOWBSRC09B-LAST-UPDT-USERID",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WBSRC09B-LAST-UPDT-USERID",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "LAST-UPDT-USERIDOFCO-SYS-PRFL"
     }, {
-      "name" : "CSTM-SCACOFCO-SYS-PRFLTOWBSRC09B-CSTM-SCAC",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WBSRC09B-CSTM-SCAC",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "CSTM-SCACOFCO-SYS-PRFL"
     }, {
-      "name" : "WAYB-MANL-VRF-FLGOFCO-SYS-PRFLTOWBSRC09B-WAYB-MANL-VRF-FLAG",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WBSRC09B-WAYB-MANL-VRF-FLAG",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "WAYB-MANL-VRF-FLGOFCO-SYS-PRFL"
     }, {
-      "name" : "US-SCRTY-ALRT-LVLOFCO-SYS-PRFLTOWBSRC09B-US-SCRTY-ALRT-LVL",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WBSRC09B-US-SCRTY-ALRT-LVL",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "US-SCRTY-ALRT-LVLOFCO-SYS-PRFL"
     }, {
-      "name" : "WB-TMPLT-EXEC-FLGOFCO-SYS-PRFLTOWBSRC09B-WB-TMPLT-EXEC-FLG",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WBSRC09B-WB-TMPLT-EXEC-FLG",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "WB-TMPLT-EXEC-FLGOFCO-SYS-PRFL"
     }, {
-      "name" : "EXTRNL-REV-SYS-INDOFCO-SYS-PRFLTOWBSRC09B-EXTRNL-REV-SYS-IND",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WBSRC09B-EXTRNL-REV-SYS-IND",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "EXTRNL-REV-SYS-INDOFCO-SYS-PRFL"
     }, {
-      "name" : "EFF-DTOFCO-SYS-PRFLTOWBSRC09B-EFF-DT",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WBSRC09B-EFF-DT",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "EFF-DTOFCO-SYS-PRFL"
     }, {
-      "name" : "EXP-DTOFCO-SYS-PRFLTOWBSRC09B-EXP-DT",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WBSRC09B-EXP-DT",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "EXP-DTOFCO-SYS-PRFL"
     }, {
-      "name" : "PREV-CARR-MRKOFCO-SYS-PRFLTOWBSRC09B-PREV-CARR-MRK",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WBSRC09B-PREV-CARR-MRK",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "PREV-CARR-MRKOFCO-SYS-PRFL"
     }, {
-      "name" : "PREV-R260-CARR-IDOFCO-SYS-PRFLTOWBSRC09B-PREV-R260-CARR-ID",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "WBSRC09B-PREV-R260-CARR-ID",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "PREV-R260-CARR-IDOFCO-SYS-PRFL"
     }, {
-      "name" : "'2000-PROCESS'TOCSXXC920-SUBVAL3",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "CSXXC920-SUBVAL3",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "'2000-PROCESS'"
     }, {
-      "name" : "9999-DB2-UNEXPECTED-ERROR",
+      "name" : "9999-db2-unexpected-error",
       "typeName" : "CALL",
       "type" : null
     } ]
@@ -6538,23 +6606,29 @@
     "name" : "9999-DB2-UNEXPECTED-ERROR",
     "typeName" : "FUNCTION",
     "methods" : [ {
-      "name" : "900001TOCSXXC920-ERRORNUM",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "CSXXC920-ERRORNUM",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "900001"
     }, {
-      "name" : "9999-GETSQLSTATETEXT",
+      "name" : "9999-getsqlstatetext",
       "typeName" : "CALL",
       "type" : null
     }, {
-      "name" : "SQLSTATETOCSXXC920-SUBVAL1",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "CSXXC920-SUBVAL1",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "SQLSTATE"
     }, {
-      "name" : "DB2ERROR-BUFFERTOCSXXC920-SUBVAL2",
-      "typeName" : "METHOD",
-      "type" : null
+      "name" : "CSXXC920-SUBVAL2",
+      "typeName" : "MOVE",
+      "type" : null,
+      "varName" : null,
+      "value" : "DB2ERROR-BUFFER"
     }, {
-      "name" : "9999-UNEXPECTED-ERROR",
+      "name" : "9999-unexpected-error",
       "typeName" : "CALL",
       "type" : null
     } ]
@@ -6562,11 +6636,11 @@
     "name" : "9999-UNEXPECTED-ERROR",
     "typeName" : "FUNCTION",
     "methods" : [ {
-      "name" : "9999-MCS-ERROR-HANDLER",
+      "name" : "9999-mcs-error-handler",
       "typeName" : "CALL",
       "type" : null
     }, {
-      "name" : "9999-RETURN-TO-CALLER",
+      "name" : "9999-return-to-caller",
       "typeName" : "CALL",
       "type" : null
     } ]
@@ -6574,7 +6648,7 @@
     "name" : "9999-TERMINATE-FOR-ERROR",
     "typeName" : "FUNCTION",
     "methods" : [ {
-      "name" : "9999-RETURN-TO-CALLER",
+      "name" : "9999-return-to-caller",
       "typeName" : "CALL",
       "type" : null
     } ]
@@ -6582,7 +6656,7 @@
     "name" : "9999-RETURN-TO-CALLER",
     "typeName" : "FUNCTION",
     "methods" : [ {
-      "name" : "9999-DB2-DISCONNECT",
+      "name" : "9999-db2-disconnect",
       "typeName" : "CALL",
       "type" : null
     } ]
@@ -6590,7 +6664,7 @@
     "name" : "9999-MCS-ERROR-HANDLER",
     "typeName" : "FUNCTION",
     "methods" : [ {
-      "name" : "9999-TERMINATE-FOR-ERROR",
+      "name" : "9999-terminate-for-error",
       "typeName" : "CALL",
       "type" : null
     } ]

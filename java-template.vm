@@ -14,16 +14,15 @@ import khs.cobol.transformer.runtime.OutItem;
 /**
  * Java source, file $program.name$javaExt generated from Cobol source, $program.name$cobolExt
  *
- * @version 0.0.2
+ * @version 0.0.3
  * @author Keyhole Software LLC
  */
 public class $program.name   {
     private static Logger Log = LoggerFactory.getLogger("$program.name");
-
 #foreach( $variable in $program.variables )
  	$variable.expression()
 #end
-
+    // Procedure division entry:
     public static void main(String[] args) {
         try {
             $program.name instance = new $program.name$parenPair;
@@ -32,12 +31,12 @@ public class $program.name   {
             e.printStackTrace();
         }
     }
-
 #foreach( $function in $program.functions )
     public void $function.name () throws Exception {
 #foreach( $method in $function.methods)
         $method.expression()
 #end
     }
+
 #end
 }

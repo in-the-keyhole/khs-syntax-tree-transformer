@@ -169,10 +169,10 @@ public class Method {
             expression = String.format("Display.display( %s )", getValue());
 
         } else if (MOVE.equalsIgnoreCase(getTypeName())) {
-            expression = Syntax.var(this.getType().getVarName()) + " = " + Syntax.val(this.getType().getValue());
+            expression = String.format("%s = %s;", Syntax.var(getName()), Syntax.val(getValue()));
 
         } else if (CALL.equalsIgnoreCase(getTypeName())) {
-            expression = String.format(" m_%s();", getName().toLowerCase().replace('-', '_'));
+            expression = String.format("%s();", Syntax.method(getName()));
         }
 
         return expression;

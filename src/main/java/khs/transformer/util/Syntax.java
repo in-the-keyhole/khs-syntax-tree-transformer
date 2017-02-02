@@ -13,6 +13,7 @@ public class Syntax {
 		return s.replace(c,' ');
 	}
 
+	// Validate method syntax
 	public static String method(String value){
 		String validated = var(value);
 		if (null != validated) {
@@ -24,6 +25,9 @@ public class Syntax {
 	// Validate variable syntax
 	public static String var(String value) {
 		String validated = value != null ? value.replace('-', '_') : value;
+		if (null != validated) {
+			validated = "v_" + validated.toLowerCase();
+		}
 		return validated;
 	}
 
