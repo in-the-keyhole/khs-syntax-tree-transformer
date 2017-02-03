@@ -1905,15 +1905,15 @@ public class WBSRS009   {
     public static void main(String[] args) {
         try {
             WBSRS009 instance = new WBSRS009();
-            instance.m_v_procdiv();
+            instance.m_procdiv();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    public void m_v_procdiv () throws Exception {
+    public void m_procdiv () throws Exception {
     }
 
-    public void m_v_0000_common_init () throws Exception {
+    public void m_0000_common_init () throws Exception {
         // MOVE ...
 		v_ws_pi_function = 0.0;
         // MOVE ...
@@ -1947,20 +1947,20 @@ public class WBSRS009   {
 		v_csxxc020_error_text_msg(1:csxxc920_max_accumerrors_len) = SPACES;
     }
 
-    public void m_v_0000_process () throws Exception {
+    public void m_0000_process () throws Exception {
         // PERFORM ...
-		m_v_1000_initialize();
+		m_1000_initialize();
         // PERFORM ...
-		m_v_2000_process();
+		m_2000_process();
         // PERFORM ...
-		m_v_9999_return_to_caller();
+		m_9999_return_to_caller();
     }
 
-    public void m_v_1000_initialize () throws Exception {
+    public void m_1000_initialize () throws Exception {
         // MOVE ...
 		v_csxxc920_environment = WS-PGM-ID;
         // PERFORM ...
-		m_v_9999_db2_connect();
+		m_9999_db2_connect();
         // MOVE ...
 		v_wbsrc09b_carr_ownr_cd = SPACES;
         // MOVE ...
@@ -2007,7 +2007,7 @@ public class WBSRS009   {
 		v_wbsrc09b_us_scrty_alrt_lvl = ZEROES;
     }
 
-    public void m_v_2000_process () throws Exception {
+    public void m_2000_process () throws Exception {
         // MOVE ...
 		v_wbsrc09b_carr_ownr_cd = CARR-OWNR-CDOFCO-SYS-PRFL;
         // MOVE ...
@@ -2053,54 +2053,54 @@ public class WBSRS009   {
         // MOVE ...
 		v_csxxc920_subval3 = "2000-PROCESS";
         // PERFORM ...
-		m_v_9999_db2_unexpected_error();
+		m_9999_db2_unexpected_error();
     }
 
-    public void m_v_9999_db2_unexpected_error () throws Exception {
+    public void m_9999_db2_unexpected_error () throws Exception {
         // SET ...
 		v_csxxc020_rc_system_severe = TRUE;
         // MOVE ...
 		v_csxxc920_errornum = 900001;
         // PERFORM ...
-		m_v_9999_getsqlstatetext();
+		m_9999_getsqlstatetext();
         // MOVE ...
 		v_csxxc920_subval1 = SQLSTATE;
         // MOVE ...
 		v_csxxc920_subval2 = DB2ERROR-BUFFER;
         // PERFORM ...
-		m_v_9999_unexpected_error();
+		m_9999_unexpected_error();
     }
 
-    public void m_v_9999_unexpected_error () throws Exception {
+    public void m_9999_unexpected_error () throws Exception {
         // PERFORM ...
-		m_v_9999_mcs_error_handler();
+		m_9999_mcs_error_handler();
         // PERFORM ...
-		m_v_9999_return_to_caller();
+		m_9999_return_to_caller();
     }
 
-    public void m_v_9999_terminate_for_error () throws Exception {
+    public void m_9999_terminate_for_error () throws Exception {
         // SET ...
 		v_csxxc020_rc_system_severe = TRUE;
         // PERFORM ...
-		m_v_9999_return_to_caller();
+		m_9999_return_to_caller();
     }
 
-    public void m_v_9999_return_to_caller () throws Exception {
+    public void m_9999_return_to_caller () throws Exception {
         // PERFORM ...
-		m_v_9999_db2_disconnect();
+		m_9999_db2_disconnect();
         // GOBACK ...
 		return;
     }
 
-    public void m_v_9999_mcs_error_handler () throws Exception {
+    public void m_9999_mcs_error_handler () throws Exception {
         // PERFORM ...
-		m_v_9999_terminate_for_error();
+		m_9999_terminate_for_error();
     }
 
-    public void m_v_9999_getsqlstatetext () throws Exception {
+    public void m_9999_getsqlstatetext () throws Exception {
     }
 
-    public void m_v_9999_db2_disconnect () throws Exception {
+    public void m_9999_db2_disconnect () throws Exception {
         // EXIT ...
 		System.Exit(0);
     }

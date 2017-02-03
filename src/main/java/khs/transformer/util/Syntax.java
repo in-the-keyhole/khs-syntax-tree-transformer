@@ -7,15 +7,13 @@ public class Syntax {
 	public static String Body = "\t %s \n";
 	public static String Result = "\treturn %s;\n }\n";
 
-
 	public static String strip(char c,String s) {
-
 		return s.replace(c,' ');
 	}
 
 	// Validate method syntax
 	public static String method(String value){
-		String validated = var(value);
+		String validated = value != null ? value.replace('-', '_') : value;
 		if (null != validated) {
 			validated = "m_" + validated.toLowerCase();
 		}
