@@ -6797,6 +6797,10 @@
       "name" : "9999-db2-disconnect",
       "typeName" : "CALL",
       "type" : null
+    }, {
+      "name" : null,
+      "typeName" : "GOBACK",
+      "type" : null
     } ]
   }, {
     "name" : "9999-MCS-ERROR-HANDLER",

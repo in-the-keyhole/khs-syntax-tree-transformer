@@ -7,17 +7,18 @@ import org.slf4j.LoggerFactory;
 public class Method {
     private static final Logger Log = LoggerFactory.getLogger(Method.class);
 
-    public static String EXIT = "EXIT";
-    public static String MOVE = "MOVE";
-    public static String SET = "SET";
-    public static String ADD = "ADD";
-    public static String MULTI = "MULTI";
-    public static String CALL = "CALL";
-    public static String DISPLAY = "DISPLAY";
-    public static String IF = "IF";
-    public static String ELSE = "ELSE";
-    public static String DBMETHOD = "DB_METHOD";
-    public static String PROC_DIV = "procdiv";
+    private static String GOBACK = "GOBACK";
+    private static String EXIT = "EXIT";
+    private static String MOVE = "MOVE";
+    private static String SET = "SET";
+    private static String ADD = "ADD";
+    private static String MULTI = "MULTI";
+    private static String CALL = "CALL";
+    private static String DISPLAY = "DISPLAY";
+    private static String IF = "IF";
+    private static String ELSE = "ELSE";
+    private static String DBMETHOD = "DB_METHOD";
+    private static String PROC_DIV = "procdiv";
 
     private String name;
     private String typeName;
@@ -185,6 +186,10 @@ public class Method {
         } else if (EXIT.equalsIgnoreCase(getTypeName())) {
             expression = "// EXIT ...\n\t\t";
             expression += "System.Exit(0);";
+
+        } else if (GOBACK.equalsIgnoreCase(getTypeName())) {
+            expression = "// GOBACK ...\n\t\t";
+            expression += "return;";
         }
 
         return expression;

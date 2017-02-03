@@ -2088,6 +2088,8 @@ public class WBSRS009   {
     public void m_v_9999_return_to_caller () throws Exception {
         // PERFORM ...
 		m_v_9999_db2_disconnect();
+        // GOBACK ...
+		return;
     }
 
     public void m_v_9999_mcs_error_handler () throws Exception {
