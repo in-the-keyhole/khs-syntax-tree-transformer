@@ -183,7 +183,8 @@ public class Method {
             expression += String.format("%s();", Syntax.method(getName()));
 
         } else if (EXIT.equalsIgnoreCase(getTypeName())) {
-            expression = "System.Exit(0);";
+            expression = "// EXIT ...\n\t\t";
+            expression += "System.Exit(0);";
         }
 
         return expression;
