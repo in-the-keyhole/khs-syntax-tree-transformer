@@ -6813,7 +6813,11 @@
   }, {
     "name" : "9999-DB2-DISCONNECT",
     "typeName" : "FUNCTION",
-    "methods" : [ ]
+    "methods" : [ {
+      "name" : null,
+      "typeName" : "EXIT",
+      "type" : null
+    } ]
   } ],
   "sequence" : "1"
 }

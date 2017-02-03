@@ -2099,6 +2099,7 @@ public class WBSRS009   {
     }
 
     public void m_v_9999_db2_disconnect () throws Exception {
+        System.Exit(0);
     }
 
 }

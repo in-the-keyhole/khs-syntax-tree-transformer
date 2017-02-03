@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 public class Method {
     private static final Logger Log = LoggerFactory.getLogger(Method.class);
 
+    public static String EXIT = "EXIT";
     public static String MOVE = "MOVE";
     public static String SET = "SET";
     public static String ADD = "ADD";
@@ -180,6 +181,9 @@ public class Method {
         } else if (CALL.equalsIgnoreCase(getTypeName())) {
             expression = "// PERFORM ...\n\t\t";
             expression += String.format("%s();", Syntax.method(getName()));
+
+        } else if (EXIT.equalsIgnoreCase(getTypeName())) {
+            expression = "System.Exit(0);";
         }
 
         return expression;
