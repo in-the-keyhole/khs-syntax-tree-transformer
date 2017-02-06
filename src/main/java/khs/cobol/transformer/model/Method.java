@@ -57,12 +57,18 @@ public class Method {
     private String value;
 
     public String getValue() {
+
+        // Hack around issue of Cobol vars coming into this process with numeric prefixes and minuss in the name
+        // TODO fix Cobol-to-Java var name fixup (do it at another point)
+        for( Variable var : Program.singleInstance.getVariables() ){
+            if (var.getName().replace('-', '_').equalsIgnoreCase(value)) {
+                return "v_" + value;
+            }
+        }
         return value;
     }
 
-    public void setValue(String value) {
-        this.value = value;
-    }
+    public void setValue(String value) { this.value = value; }
 
     // ---- db2 stuff ----
     private String sql;
@@ -126,7 +132,7 @@ public class Method {
             sep = "\n\t\t\t";
             for (String item : getSqlArgs()) {
                 sb.append(sep);
-                sb.append(String.format("s -> %s = (String)s", item));
+                sb.append(String.format("s -> v_%s = (String)s", item));
                 sep = ",\n\t\t\t";
             }
             sb.append("\n\t\t};\n");
@@ -185,7 +191,7 @@ public class Method {
 
         } else if (EXIT.equalsIgnoreCase(getTypeName())) {
             expression = "// EXIT ...\n\t\t";
-            expression += "System.Exit(0);";
+            expression += "System.exit(0);";
 
         } else if (GOBACK.equalsIgnoreCase(getTypeName())) {
             expression = "// GOBACK ...\n\t\t";

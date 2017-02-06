@@ -1,9 +1,9 @@
 package khs.cobol.transformer.model;
 
+import khs.transformer.util.Syntax;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import khs.transformer.util.Syntax;
 
 public class Variable {
 
@@ -77,12 +77,8 @@ public class Variable {
 		this.fileLevel = fileLevel;
 	}
 
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
+	public String getName() { return name; 	}
+	public void setName(String name) { this.name = name;}
 
 	public String getTypeName() {
 		return typeName;
@@ -114,35 +110,33 @@ public class Variable {
 		}
 
 		if (getVarLevel().equalsIgnoreCase("sqlca")) {
-		    // Transfigure SQLCA into int sqlcode
+		    // Morph SQLCA into int sqlcode
 		    setName("sqlcode");
 		    dataType = "int";
         }
 
 		if (this.variables.isEmpty()) {
-		   	// no levels, just define variable
+			// no levels, just define variable
 			if (this.name.equalsIgnoreCase("FILLER")) {
-				expression ="";
+				expression = "";
 			} else {
-                String level = getVarLevel().equalsIgnoreCase("sqlca") ? "" : " Level";
-				expression = String.format("//%s %s\n\tprivate %s %s;\n", level,  getVarLevel().toUpperCase(), dataType, Syntax.var(getName()));
+				String level = getVarLevel().equalsIgnoreCase("sqlca") ? "" : " Level";
+				expression = String.format("//%s %s\n\tprivate %s %s;\n", level, getVarLevel().toUpperCase(), dataType, Syntax.var(getName()));
 			}
 		} else {
-		    // get workstorage levels
-		   List<String> vars = new ArrayList<String>();
-		   expression = expressionLevels(vars,this.variables);
+			// get workstorage levels
+			List<String> vars = new ArrayList<String>();
+			expression = expressionLevels(vars, this.variables);
 
-//            expression += String.format("// Level %s\n\tpublic String[] %s = new String[]{ ",  getVarLevel(), Syntax.var(getName()) );
-            expression += String.format("// Level %s\n\tprivate InItem[] %s = new InItem[]{ ",  getVarLevel(), Syntax.var(getName()) );
+			expression += String.format("// Level %s\n\tprivate InItem[] %s = new InItem[]{ ", getVarLevel(), Syntax.var(getName()));
 
-		   String sep = "";
+			String sep = "";
 			for (String var : vars) {
-//                expression += String.format("%s\"%s\"", sep, var);
-                expression += String.format("%s() -> %s", sep, var);
+				expression += String.format("%s() -> %s", sep, var);
 				sep = ", ";
 			}
 
-		   expression+=" };";
+			expression += " };";
 
 		}
 

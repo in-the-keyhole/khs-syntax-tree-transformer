@@ -10,51 +10,52 @@ import khs.cobol.transformer.runtime.OutItem;
 /**
  * Java source, file COBOLDB2.java generated from Cobol source, COBOLDB2.cbl
  *
- * @version 0.0.2
+ * @version 0.0.3
  * @author Keyhole Software LLC
  */
 public class COBOLDB2   {
     private static Logger Log = LoggerFactory.getLogger("COBOLDB2");
-
  	// SQLCA
 	private int sqlcode;
 
  	// Level 05
-	private String ws_empno;
+	private String v_ws_empno;
 
 	// Level 05
-	private String ws_last_name;
+	private String v_ws_last_name;
 
 	// Level 05
-	private String ws_first_name;
+	private String v_ws_first_name;
 
 	// Level 01
-	private InItem[] ws_employee_record = new InItem[]{ () -> ws_empno, () -> ws_last_name, () -> ws_first_name };
-
+	private InItem[] v_ws_employee_record = new InItem[]{ () -> v_ws_empno, () -> v_ws_last_name, () -> v_ws_first_name };
+    // Procedure division entry:
     public static void main(String[] args) {
         try {
             COBOLDB2 instance = new COBOLDB2();
-            instance.procDiv();
+            instance.m_procdiv();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-
-    public void procDiv () throws Exception {
+    private void m_procdiv () throws Exception {
         final String sql = "SELECT EMPNO, LASTNAME, FIRSTNME FROM EMPLOYEE WHERE EMPNO=200310";
 
 		final OutItem[] into = new OutItem[]{
-			s -> ws_empno = (String)s,
-			s -> ws_last_name = (String)s,
-			s -> ws_first_name = (String)s
+			s -> v_ws_empno = (String)s,
+			s -> v_ws_last_name = (String)s,
+			s -> v_ws_first_name = (String)s
 		};
 
 		sqlcode = Database.getInstance().selectInto( sql, into );
 
         if ( sqlcode == 0 ) {
-			Display.display( ws_employee_record );
+			Display.display( v_ws_employee_record );
 		} else {
 			Display.display( "Error" );
 		}
+        // EXIT ...
+		System.exit(0);
     }
+
 }

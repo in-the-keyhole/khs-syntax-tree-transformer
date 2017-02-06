@@ -32,7 +32,7 @@ public class $program.name   {
         }
     }
 #foreach( $function in $program.functions )
-    public void $function.name () throws Exception {
+    private void $function.name () throws Exception {
 #foreach( $method in $function.methods)
         $method.expression()
 #end

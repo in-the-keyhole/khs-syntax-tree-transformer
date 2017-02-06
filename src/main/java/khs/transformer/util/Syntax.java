@@ -23,7 +23,7 @@ public class Syntax {
 	// Validate variable syntax
 	public static String var(String value) {
 		String validated = value != null ? value.replace('-', '_') : value;
-		if (null != validated) {
+		if (null != validated && !"sqlcode".equalsIgnoreCase(value)) {
 			validated = "v_" + validated.toLowerCase();
 		}
 		return validated;

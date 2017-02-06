@@ -83,6 +83,10 @@
           "value" : "\"Error\""
         } ]
       }
+    }, {
+      "name" : null,
+      "typeName" : "EXIT",
+      "type" : null
     } ]
   } ],
   "sequence" : "1"
