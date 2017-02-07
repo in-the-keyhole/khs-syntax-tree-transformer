@@ -240,7 +240,7 @@ Following is input `demo.json` created elswhwere by a parser of Cobol:
 
 ## DB2
 
-The POC aims to translate Cobol programs or stored proceudres that use DB2, to Java code that uses an ORM. As a first 
+The POC aims to translate Cobol programs or stored procedures that use DB2, to Java code that uses an ORM. As a first 
 step in proof-of-concdpt persistence, we translate simple DB2 programs to demo Java code that uses DB2 Express.
 
 The DB2 Express runs in a Docker container. There are no pooled connections. This is just a POC step.
@@ -256,7 +256,7 @@ Use this Docker image for initial DB2 binding:
 ```
 
 docker run --name db2 -d -it -p 50000:50000 -e DB2INST1_PASSWORD=db2inst1-pwd -e LICENSE=accept -v  $(pwd)/dbstore:/dbstore ibmcom/db2express-c:latest db2start
-docker exet -it db2 bash
+docker exec -it db2 bash
 
 ```
 
