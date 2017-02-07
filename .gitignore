@@ -17,7 +17,7 @@ TODO.txt
 *.ear
 *.db
 
-# Allow all jars under lib director
+# Allow all jars under lib directory
 !lib/**/*.jar
 
 ######################
