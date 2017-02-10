@@ -5,10 +5,10 @@ PACKAGE="khs.res.db2demo"
 DESTDIR="./src/main/java/khs/res/db2demo"
 XFORMER="khs.transformer.CommandLine"
 
-echo Translating $NAME.json to $NAME.java
+echo Translating $NAME.json to $NAME.java in package $PACKAGE
 
-# exec:java -Dexec.mainClass=$XFORMER -Dexec.args=./$NAME.json $PACKAGE
-mvn exec:java
+mvn exec:java -Dexec.mainClass=$XFORMER -Dexec.args=./$NAME.json $PACKAGE
+#mvn exec:java
 
 cp ./$NAME.java $DESTDIR/$NAME.java
 echo copyied ./$NAME.java to $DESTDIR/$NAME.java
