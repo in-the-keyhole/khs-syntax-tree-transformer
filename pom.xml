@@ -59,14 +59,8 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                    </execution>
-                </executions>
                 <configuration>
+                    <executable>java</executable>
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
