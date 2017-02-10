@@ -1,11 +1,9 @@
 package khs.cobol.transformer.model;
 
 import khs.transformer.util.Syntax;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 public class Method {
-    private static final Logger Log = LoggerFactory.getLogger(Method.class);
 
     private static String GOBACK = "GOBACK";
     private static String EXIT = "EXIT";

@@ -243,6 +243,18 @@ Following is input `demo.json` created by an [Antlr](http://www.antlr.org/) pars
 The POC aims to translate Cobol programs or stored procedures that use DB2, to Java code that uses an ORM. As a first 
 step in proof-of-concept persistence, we translate simple DB2 programs to demo Java code that uses DB2 Express.
 
+There's an example COBOL application that accesses in the projects `cobol` folder
+
+Transform JSON into java program with the following command. 
+
+```
+        java khs.transformer.CommandLine COBOLDB2.json khs.example 
+```
+
+A COBOLDB2.JAVA file will be created in your project directory
+
+To execute the DB2 application follow these instructions to create a sample database using [Docker](https://docker.com)
+
 The DB2 Express runs in a Docker container. There are no pooled connections. This is just a POC step.
 
 ### Docker DB2 Express Container
@@ -319,20 +331,10 @@ an exercise for the reader.
 
 ```
 
-With the sample database created transform COBOLDB2.json into Java application with the following commands
+With the sample database created run the converted applicaiton
 
 ```
-        java khs.transformer.CommandLine COBOLDB2.json khs.example 
-```
-
-A COBOLDB2.JAVA file will be created in your project directory
-
-
-
-
+        java khs.res.db2demo.COBOLDB2
 ```
 
 
-
-
------------------------------------------------------------

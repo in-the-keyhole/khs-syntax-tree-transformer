@@ -17,7 +17,6 @@ import org.apache.velocity.app.Velocity;
 import org.apache.velocity.exception.MethodInvocationException;
 import org.apache.velocity.exception.ParseErrorException;
 import org.apache.velocity.exception.ResourceNotFoundException;
-import org.springframework.stereotype.Service;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -25,7 +24,7 @@ import com.google.gson.reflect.TypeToken;
 import khs.cobol.transformer.model.Function;
 import khs.cobol.transformer.model.Program;
 
-@Service
+
 public class TransformService {
 
 	private final static Logger LOG = Logger.getLogger(TransformService.class.getName());
