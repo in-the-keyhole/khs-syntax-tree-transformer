@@ -53,29 +53,25 @@
     <build>
       
 
-        <plugins>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.5.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <mainClass>khs.transformer.CommandLine</mainClass>
-                    <arguments>
-                        <argument>./COBOLDB2.json</argument>
-                        <argument>khs.res.db2demo</argument>
-                    </arguments>
-                </configuration>
-               <!-- <configuration>
-                    <mainClass>khs.res.db2demo.COBOLDB2</mainClass>
-                </configuration>-->
-            </plugin>
+        <plugins>      	
+ 
+	      <plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-compiler-plugin</artifactId>
+	        <version>3.6.1</version>
+	        <configuration>
+	          <source>1.8</source>
+	          <target>1.8</target>
+	             <configuration> 
+                     <mainClass>khs.transformer.CommandLine</mainClass> 
+                     <arguments>
+                   <argument>./COBOLDB2.json</argument> 
+                   <argument>khs.res.db2demo</argument> 
+                   </arguments> 
+                 </configuration> 
+	        </configuration>
+	      </plugin>
+         
         </plugins>
     </build>
 
