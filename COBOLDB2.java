@@ -1,4 +1,4 @@
-package khs.res.db2demo;
+package khs.dallas;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

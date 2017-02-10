@@ -2,8 +2,8 @@
 
 ## Cobol JSON Syntax Tree to Java Source Code
 
-Transforms a Cobol JSON Syntax tree into a Java Program ... 
-eventually it will produce a Spring Boot program. 
+Transforms a Cobol JSON Syntax tree created using [Antlr](http://www.antlr.org/) parse application into a Java Program ... 
+ 
 
 ## Installation and Execution
 
@@ -18,7 +18,7 @@ e.g.
         java khs.transformer.CommandLine demo.json khs.example 
 ```
   
-> Produces an emitted `Program.java` program in the project directory:
+> Produces an emitted `Program.java` program in the project directory and system.out:
 
 ``` java 
 
@@ -55,7 +55,7 @@ public class Program   {
 
 ```
 
-Following is input `demo.json` created elswhwere by a parser of Cobol:
+Following is input `demo.json` created by an [Antlr](http://www.antlr.org/) parser for Cobol:
 
 ``` json
 
@@ -241,7 +241,7 @@ Following is input `demo.json` created elswhwere by a parser of Cobol:
 ## DB2
 
 The POC aims to translate Cobol programs or stored procedures that use DB2, to Java code that uses an ORM. As a first 
-step in proof-of-concdpt persistence, we translate simple DB2 programs to demo Java code that uses DB2 Express.
+step in proof-of-concept persistence, we translate simple DB2 programs to demo Java code that uses DB2 Express.
 
 The DB2 Express runs in a Docker container. There are no pooled connections. This is just a POC step.
 
@@ -318,6 +318,14 @@ on the shared volume, `dbstore` in the local host directory where you invoked `d
 an exercise for the reader. 
 
 ```
+
+With the sample database created transform COBOLDB2.json into Java application with the following commands
+
+```
+        java khs.transformer.CommandLine COBOLDB2.json khs.example 
+```
+
+A COBOLDB2.JAVA file will be created in your project directory
 
 
 
