@@ -329,12 +329,22 @@ Note that the database disappears after we stop the Docker machine. To avoid thi
 on the shared volume, `dbstore` in the local host directory where you invoked `docker run`. This is left as
 an exercise for the reader. 
 
+
 ```
 
 With the sample database created run the converted applicaiton
+=======
+With the sample database created transform COBOLDB2.json into Java application with the following commands
+
 
 ```
         java khs.res.db2demo.COBOLDB2
 ```
 
+=======
+A COBOLDB2.JAVA file will be created in your project directory
+
+
+
+-----------------------------------------------------------
 
