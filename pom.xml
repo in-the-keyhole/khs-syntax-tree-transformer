@@ -46,20 +46,33 @@
 			<version>1.7.22</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.ibm/db2jcc -->
-		<dependency>
-			<groupId>com.ibm</groupId>
-			<artifactId>db2jcc</artifactId>
-			<version>9</version>
-		</dependency>
+        <!-- https://mvnrepository.com/artifact/com.ibm.db2.jcc/db2jcc4 -->
+        <dependency>
+            <groupId>com.ibm.db2.jcc</groupId>
+            <artifactId>db2jcc4</artifactId>
+            <version>10.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.ibm/db2jcc_license_cu -->
+        <dependency>
+            <groupId>com.ibm</groupId>
+            <artifactId>db2jcc_license_cu</artifactId>
+            <version>9</version>
+        </dependency>
+
+
 	</dependencies>
 
-	<repositories>
-		<repository>
-			<id>geotools.net</id>
-			<url>http://download.osgeo.org/webdav/geotools/</url>
-		</repository>
-	</repositories>
+    <repositories>
+        <repository>
+            <id>geotools.net</id>
+            <url>http://download.osgeo.org/webdav/geotools/</url>
+        </repository>
+        <repository>
+            <id>alfresco</id>
+            <url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url>
+        </repository>
+    </repositories>
 
 	<dependencyManagement>
 		<dependencies>

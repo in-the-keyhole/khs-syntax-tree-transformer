@@ -15,20 +15,20 @@ import khs.cobol.transformer.runtime.OutItem;
  */
 public class COBOLDB2   {
     private static Logger Log = LoggerFactory.getLogger("COBOLDB2");
- 	// SQLCA
-	private int sqlcode;
+    // SQLCA
+    private int sqlcode;
 
- 	// Level 05
-	private String v_ws_empno;
+    // Level 05
+    private String v_ws_empno;
 
-	// Level 05
-	private String v_ws_last_name;
+    // Level 05
+    private String v_ws_last_name;
 
-	// Level 05
-	private String v_ws_first_name;
+    // Level 05
+    private String v_ws_first_name;
 
-	// Level 01
-	private InItem[] v_ws_employee_record = new InItem[]{ () -> v_ws_empno, () -> v_ws_last_name, () -> v_ws_first_name };
+    // Level 01
+    private InItem[] v_ws_employee_record = new InItem[]{ () -> v_ws_empno, () -> v_ws_last_name, () -> v_ws_first_name };
     // Procedure division entry:
     public static void main(String[] args) {
         try {
@@ -41,21 +41,21 @@ public class COBOLDB2   {
     private void m_procdiv () throws Exception {
         final String sql = "SELECT EMPNO, LASTNAME, FIRSTNME FROM EMPLOYEE WHERE EMPNO=200310";
 
-		final OutItem[] into = new OutItem[]{
-			s -> v_ws_empno = (String)s,
-			s -> v_ws_last_name = (String)s,
-			s -> v_ws_first_name = (String)s
-		};
+        final OutItem[] into = new OutItem[]{
+                s -> v_ws_empno = (String)s,
+                s -> v_ws_last_name = (String)s,
+                s -> v_ws_first_name = (String)s
+        };
 
-		sqlcode = Database.getInstance().selectInto( sql, into );
+        sqlcode = Database.getInstance().selectInto( sql, into );
 
         if ( sqlcode == 0 ) {
-			Display.display( v_ws_employee_record );
-		} else {
-			Display.display( "Error" );
-		}
+            Display.display( v_ws_employee_record );
+        } else {
+            Display.display( "Error" );
+        }
         // EXIT ...
-		System.exit(0);
+        System.exit(0);
     }
 
 }
