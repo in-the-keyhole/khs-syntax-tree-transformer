@@ -9,8 +9,9 @@ Transforms a Cobol JSON Syntax tree created using [Antlr](http://www.antlr.org/)
 
 1. Clone Repo
 2. Import as Maven Project into Eclipse or Intellij 
-3. Execute main method with command line arguments for JSON input file and emitted 
-Java package name.
+3. mvn install
+4. Execute main method with command line arguments for JSON input file and emitted 
+Java package name (Maven taget classes must be on classpath)
 
 e.g.
 
@@ -18,40 +19,72 @@ e.g.
         java khs.transformer.CommandLine demo.json khs.example 
 ```
   
-> Produces an emitted `Program.java` program in the project directory and system.out:
+This produces an emitted `Program.java` program in the project directory and system.out:
 
 ``` java 
 
-package khs.res.example.Program
+package khs.res.db2demo;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import khs.cobol.transformer.runtime.Display;
+import khs.cobol.transformer.runtime.Database;
+import khs.cobol.transformer.runtime.InItem;
+import khs.cobol.transformer.runtime.OutItem;
 
-public class Program   {
+/**
+ * Java source, file COBOLDB2.java generated from Cobol source, COBOLDB2.cbl
+ *
+ * @version 0.0.3
+ * @author Keyhole Software LLC
+ */
+public class COBOLDB2   {
+    private static Logger Log = LoggerFactory.getLogger("COBOLDB2");
+ 	// SQLCA
+	private int sqlcode;
 
-            private Double CONST-PI = null;  
-            private Double WORK-1 = 0;  
-            private Double WORK-2 = 0;  
-            private Double PRINT-LINE = null;  
-        
-    public void static main(String[] args) {
-         Program job = new Program ();
-        job.A-PARA ();
-    }   
-    
-      public void A-PARA () {
-               	      WORK-1 = 123.46
-               	      WORK-2 = WORK-2+2
-               	      WORK-2 = WORK-3*3
-               	      C-PARA()
-              }
-      public void B-PARA () {
-               	      CONST-PI = Math.PI;
-               	      EDT-ID = ZERO
-              }
-      public void C-PARA () {
-               	      B-PARA()
-              }
-      
+ 	// Level 05
+	private String v_ws_empno;
+
+	// Level 05
+	private String v_ws_last_name;
+
+	// Level 05
+	private String v_ws_first_name;
+
+	// Level 01
+	private InItem[] v_ws_employee_record = new InItem[]{ () -> v_ws_empno, () -> v_ws_last_name, () -> v_ws_first_name };
+    // Procedure division entry:
+    public static void main(String[] args) {
+        try {
+            COBOLDB2 instance = new COBOLDB2();
+            instance.m_procdiv();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    private void m_procdiv () throws Exception {
+        final String sql = "SELECT EMPNO, LASTNAME, FIRSTNME FROM EMPLOYEE WHERE EMPNO=200310";
+
+		final OutItem[] into = new OutItem[]{
+			s -> v_ws_empno = (String)s,
+			s -> v_ws_last_name = (String)s,
+			s -> v_ws_first_name = (String)s
+		};
+
+		sqlcode = Database.getInstance().selectInto( sql, into );
+
+        if ( sqlcode == 0 ) {
+			Display.display( v_ws_employee_record );
+		} else {
+			Display.display( "Error" );
+		}
+        // EXIT ...
+		System.exit(0);
+    }
+
 }
+
 
 ```
 
@@ -59,181 +92,98 @@ Following is input `demo.json` created by an [Antlr](http://www.antlr.org/) pars
 
 ``` json
 
- {
-  "name" : "Program",
+{
+  "name" : "COBOLDB2",
   "typeName" : "CLASS",
   "variables" : [ {
-    "name" : "CONST-PI",
+    "name" : "sqlca",
+    "typeName" : "sqlca",
+    "value" : "sqlca",
+    "isLocal" : true,
+    "isWorking" : true,
+    "isArray" : false,
+    "varLevel" : "sqlca",
+    "picture" : null,
+    "variables" : [ ]
+  }, {
+    "name" : "ws-employee-record",
     "typeName" : "VARIABLE",
     "value" : null,
-    "isLocal" : false,
-    "isWorking" : true,
-    "isArray" : false,
-    "fileLevel" : null,
-    "variables" : [ ]
-  }, {
-    "name" : "WORK-1",
-    "typeName" : "VARIABLE",
-    "value" : "ZERO",
-    "isLocal" : false,
-    "isWorking" : true,
-    "isArray" : false,
-    "fileLevel" : null,
-    "variables" : [ ]
-  }, {
-    "name" : "WORK-2",
-    "typeName" : "VARIABLE",
-    "value" : "ZERO",
-    "isLocal" : false,
-    "isWorking" : true,
-    "isArray" : false,
-    "fileLevel" : null,
-    "variables" : [ ]
-  }, {
-    "name" : "PRINT-LINE",
-    "typeName" : "VARIABLE",
-    "value" : null,
-    "isLocal" : false,
-    "isWorking" : true,
+    "isLocal" : true,
+    "isWorking" : false,
     "isArray" : true,
-    "fileLevel" : null,
+    "varLevel" : "01",
+    "picture" : null,
     "variables" : [ {
-      "name" : "EDT-ID",
-      "typeName" : "VARIABLE",
-      "value" : "SPACES",
-      "isLocal" : false,
-      "isWorking" : true,
-      "isArray" : false,
-      "fileLevel" : null,
-      "variables" : [ ]
-    }, {
-      "name" : "FILLER",
-      "typeName" : "VARIABLE",
-      "value" : "' Perimeter '",
-      "isLocal" : false,
-      "isWorking" : true,
-      "isArray" : false,
-      "fileLevel" : null,
-      "variables" : [ ]
-    }, {
-      "name" : "EDT-3-15-CIR",
+      "name" : "ws-empno",
       "typeName" : "VARIABLE",
       "value" : null,
-      "isLocal" : false,
-      "isWorking" : true,
+      "isLocal" : true,
+      "isWorking" : false,
       "isArray" : false,
-      "fileLevel" : null,
+      "varLevel" : "05",
+      "picture" : "XXXXXX",
       "variables" : [ ]
     }, {
-      "name" : "FILLER",
-      "typeName" : "VARIABLE",
-      "value" : "' Radius '",
-      "isLocal" : false,
-      "isWorking" : true,
-      "isArray" : false,
-      "fileLevel" : null,
-      "variables" : [ ]
-    }, {
-      "name" : "EDT-3-15-RAD",
+      "name" : "ws-last-name",
       "typeName" : "VARIABLE",
       "value" : null,
-      "isLocal" : false,
-      "isWorking" : true,
+      "isLocal" : true,
+      "isWorking" : false,
       "isArray" : false,
-      "fileLevel" : null,
+      "varLevel" : "05",
+      "picture" : "XXXXXXXXXXXXXXX",
       "variables" : [ ]
     }, {
-      "name" : "FILLER",
-      "typeName" : "VARIABLE",
-      "value" : "' Pi '",
-      "isLocal" : false,
-      "isWorking" : true,
-      "isArray" : false,
-      "fileLevel" : null,
-      "variables" : [ ]
-    }, {
-      "name" : "EDT-1-15-PI",
+      "name" : "ws-first-name",
       "typeName" : "VARIABLE",
       "value" : null,
-      "isLocal" : false,
-      "isWorking" : true,
+      "isLocal" : true,
+      "isWorking" : false,
       "isArray" : false,
-      "fileLevel" : null,
+      "varLevel" : "05",
+      "picture" : "XXXXXXXXXXXX",
       "variables" : [ ]
     } ]
   } ],
   "functions" : [ {
-    "name" : "A-PARA",
+    "name" : "procDiv",
     "typeName" : "FUNCTION",
     "methods" : [ {
-      "name" : "123.46TOWORK-1",
-      "typeName" : "METHOD",
-      "type" : {
-        "name" : null,
-        "typeName" : "MOVE",
-        "varName" : "WORK-1",
-        "value" : "123.46"
+      "name" : "DB_METHOD",
+      "typeName" : "DB_METHOD",
+      "type" : null,
+      "sql" : " SELECT EMPNO, LASTNAME, FIRSTNME FROM EMPLOYEE WHERE EMPNO=200310 ",
+      "sqlArgs" : [ "ws_empno", "ws_last_name", "ws_first_name" ]
+    }, {
+      "name" : "IF",
+      "typeName" : "IF",
+      "type" : null,
+      "expr" : "sqlcode == 0",
+      "body" : [ {
+        "name" : "DISPLAY",
+        "typeName" : "DISPLAY",
+        "type" : null,
+        "value" : "ws_employee_record"
+      } ],
+      "stmElse" : {
+        "name" : "ELSE",
+        "typeName" : "ELSE",
+        "type" : null,
+        "body" : [ {
+          "name" : "DISPLAY",
+          "typeName" : "DISPLAY",
+          "type" : null,
+          "value" : "\"Error\""
+        } ]
       }
     }, {
-      "name" : "2TOWORK-2",
-      "typeName" : "METHOD",
-      "type" : {
-        "typeName" : "ADD",
-        "value" : "2",
-        "var1" : "WORK-2",
-        "var2" : null
-      }
-    }, {
-      "name" : "3GIVINGWORK-3",
-      "typeName" : "METHOD",
-      "type" : {
-        "typeName" : "MULTI",
-        "value" : "3",
-        "var1" : "WORK-2",
-        "var2" : "WORK-3"
-      }
-    }, {
-      "name" : "C-PARA",
-      "typeName" : "METHOD",
-      "type" : {
-        "name" : "C-PARA",
-        "typeName" : "CALL"
-      }
+      "name" : null,
+      "typeName" : "EXIT",
+      "type" : null
     } ]
-  }, {
-    "name" : "B-PARA",
-    "typeName" : "FUNCTION",
-    "methods" : [ {
-      "name" : "PITOCONST-PI",
-      "typeName" : "METHOD",
-      "type" : {
-        "name" : null,
-        "typeName" : "MOVE",
-        "varName" : "CONST-PI",
-        "value" : "PI"
-      }
-    }, {
-      "name" : "ZEROTOEDT-ID",
-      "typeName" : "METHOD",
-      "type" : {
-        "name" : null,
-        "typeName" : "MOVE",
-        "varName" : "EDT-ID",
-        "value" : "ZERO"
-      }
-    } ]
-  }, {
-    "name" : "C-PARA",
-    "typeName" : "FUNCTION",
-    "methods" : [ {
-      "name" : "B-PARA",
-      "typeName" : "METHOD",
-      "type" : {
-        "name" : "B-PARA",
-        "typeName" : "CALL"
-      }
-    } ]
-  } ]
+  } ],
+  "sequence" : "1"
 }
 
 ```
@@ -256,6 +206,8 @@ A COBOLDB2.JAVA file will be created in your project directory
 To execute the DB2 application follow these instructions to create a sample database using [Docker](https://docker.com)
 
 The DB2 Express runs in a Docker container. There are no pooled connections. This is just a POC step.
+
+-----------------------------------------------------------
 
 ### Docker DB2 Express Container
 
@@ -325,25 +277,24 @@ db2 select deptnumb, deptname, manager, division, location from org order by loc
 
 ```
 
-Note that the database disappears after we stop the Docker machine. To avoid this, use create the sample db
-on the shared volume, `dbstore` in the local host directory where you invoked `docker run`. This is left as
-an exercise for the reader. 
+Note that the database disappears if we delete the Docker DB2 container. To avoid this, one could script the image
+toprovision itself from a mounted Docker volume.
 
+-----------------------------------------------------------
 
-```
+## Run Generated Java Class
 
-With the sample database created run the converted applicaiton
+With the sample database created, transform COBOLDB2.json into Java application with the CoomandLine runnable class.
+Pass the path to the JSON file as an argument. The Maven target files should be on the classpath. That execution 
+creates a COBOLDB2.JAVA file in the project root directory. Drag it to package `khs.res.db2demo` (This could be 
+incorporated into an ant script or a bash script).
 
-With the sample database created transform COBOLDB2.json into Java application with the following commands
-
+Build-and-run the converted application after ensuring the DB2 DBMS is running 
+(again, Maven target classes must be on the classpath).
 
 ```
         java khs.res.db2demo.COBOLDB2
 ```
-
-
-A COBOLDB2.JAVA file will be created in your project directory
-
 
 -----------------------------------------------------------
 
