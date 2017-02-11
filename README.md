@@ -296,5 +296,15 @@ Build-and-run the converted application after ensuring the DB2 DBMS is running
         java khs.res.db2demo.COBOLDB2
 ```
 
+The Cobol program carried out a DB2 SELECT .. INTO query of employee number 200310. If the result was good, it
+displayed the employee record on the console. The Java translation maps this behavior accordingly:
+
+```
+
+2017-02-11 16:39:14 INFO  DB2DEMO:83 - jdbc:db2://0.0.0.0:50000/sample
+200310 SPRINGER MICHELLE
+
+```
+
 -----------------------------------------------------------
 
