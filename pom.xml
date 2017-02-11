@@ -51,6 +51,7 @@
             <groupId>com.ibm.db2.jcc</groupId>
             <artifactId>db2jcc4</artifactId>
             <version>10.1</version>
+            <scope>runtime</scope>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.ibm/db2jcc_license_cu -->
@@ -58,6 +59,7 @@
             <groupId>com.ibm</groupId>
             <artifactId>db2jcc_license_cu</artifactId>
             <version>9</version>
+            <scope>runtime</scope>
         </dependency>
 
 
